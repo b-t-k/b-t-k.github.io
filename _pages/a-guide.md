@@ -1,5 +1,6 @@
 ---
-permalink: /non.html
+layout: default
+title: Github.io, Test Site
 ---
 
 # A non-programmers guide to contributing to Standard Ebooks
