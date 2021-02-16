@@ -1,10 +1,9 @@
 ---
 layout: page
-title: "A non-programmers guide"
-permalink: /test
+title: "A non-programmers guide to contributing to Standard Ebooks"
+permalink: /a-guide
 ---
 
-# A non-programmers guide to contributing to Standard Ebooks
 ## Introduction
 ### Why this guide
 [Standard Ebooks](https://standardebooks.org/) is a project started by Alex Cabal 
