@@ -91,6 +91,8 @@ To install and maintain the tools on a Mac you use the Brew package manager. Thi
 #### Terminal
 Most of the Standard ebook tools are not housed in a GUI (Graphical User Interface) — the thing you point and click with your mouse. You will need to be fairly comfortable with the Terminal interface to work on a project. But again it’s mostly cut and paste from the Manual.
 
+![terminal window](/images/terminal.png "A Terminal window")
+
 ### regex
 Regular Expressions, generally known as regexes,  are, roughly speaking, a way to search and manipulate text through a series of wildcards. I will freely admit that, while I am pretty bad at constructing proper regexes, I am a huge fanboy. Imagine being able to replace every instance of a particular word in the first paragraph of a chapter across multiple files with Title Case. It saves a whole lot of legwork. Standard Ebooks step by step includes a bunch of regexes to replace a lot of manual labor and you can quickly learn to build some yourself.
 
