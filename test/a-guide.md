@@ -1,6 +1,7 @@
 ---
-layout: default
-title: Github.io, Test Site
+layout: page
+title: "A non-programmers guide"
+permalink: /test
 ---
 
 # A non-programmers guide to contributing to Standard Ebooks
