@@ -1,9 +1,6 @@
 ---
-layout: default
-title: Github.io Site
+permalink: /non.html
 ---
-
-<div class="blurb">
 
 # A non-programmers guide to contributing to Standard Ebooks
 ## Introduction
@@ -169,4 +166,4 @@ Escape text page
 
 ## My notes
 Forking
-</div><!-- /.blurb -->
+
