@@ -44,9 +44,8 @@ ul.posts li {
 
 code{
     background-color: #888;
-    display: block;
-    color: #000;
+    color: #FFF;
     font-family: monospace;
-  padding: .1rem .3rem .2rem;
-  border-radius: .2rem;
+    padding: .1rem .3rem .2rem;
+    border-radius: .2rem;
 }
