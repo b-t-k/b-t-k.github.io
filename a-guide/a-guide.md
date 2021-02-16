@@ -91,8 +91,6 @@ To install and maintain the tools on a Mac you use the Brew package manager. Thi
 #### Terminal
 Most of the Standard ebook tools are not housed in a GUI (Graphical User Interface) — the thing you point and click with your mouse. You will need to be fairly comfortable with the Terminal interface to work on a project. But again it’s mostly cut and paste from the Manual.
 
-![terminal window](/images/terminal.png "A Terminal window")
-
 ### regex
 Regular Expressions, generally known as regexes,  are, roughly speaking, a way to search and manipulate text through a series of wildcards. I will freely admit that, while I am pretty bad at constructing proper regexes, I am a huge fanboy. Imagine being able to replace every instance of a particular word in the first paragraph of a chapter across multiple files with Title Case. It saves a whole lot of legwork. Standard Ebooks step by step includes a bunch of regexes to replace a lot of manual labor and you can quickly learn to build some yourself.
 
@@ -127,12 +125,18 @@ Terminal is an app like any other, but it opens a window into the functions that
 
 Its helpful to know a bare minimum of Terminal commands. Depending on how old your OS is you will likely be using *bash* or *zsh* as your shell (this is inherited from the unix underpinnings of OSX) but you don’t really need to know that beyond perhaps wanting to google “bash how to change directory” or something similar.
 
+![terminal window](/images/terminal.png "A Terminal window")
+
+
 When you open Terminal it will give you a prompt similar to `bob@my-mac ~ %`. As I said it will vary from shell to shell. You will general start in your user folder. If your user name is Bob then it will be in the Bob ‘home’ folder. Typing ‘ls’ and hitting enter will list the folders and files so you can check if that’s where you are.
 
 #### Basic terminal commands
 - **`ls`** list — lists files and folders
 - **`cd`** change directory — allows you to change your directory. For example `cd /bob/Documents/Projects` would switch you to the Projects folder found in your Documents folder. Just like if you had double-clicked on the Document folder and then double-clicked on the Project folder.
   - Don’t panic! You can — and I always do — simply type `cd` followed by a space and then drag the folder you want to be in  from the GUI/Finder onto Terminal and, voila, you have the correct path name automatically ready for you to hit `enter`. Saves on the frustration.
+  
+![terminal window](/images/terminal-directory.png "A Terminal window with a directory")
+
 - **`cd ..`** Change directory up one level. If yo are in /Projects/Bob’s book and you want to be in /Projects/ the will do the trick.
 
 And finally there is a whole raft of Standard ebook commands that are again cut and paste from the guide. Here’s a common one: 
