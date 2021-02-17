@@ -150,6 +150,10 @@ The last tool you will have to use is an image editor. All you really need to us
 
 I have Photoshop as a part of my working suite but [GIMP](https://www.gimp.org/) is a totally free and open source image editor that is pretty highly regarded.
 
+###Ebook Reader
+Of course it always good to have a stand alone ebook reader( i.e. a Kindle or a Kobo) to try out your projects on but a desktop one is easier (in  my opinion) to use when proofing. I generally use the built in Apple Books, but occasionally also use the Calibre ebook reader built into the excellent [Calibre e-book Management](https://calibre-ebook.com/) software. There are plenty of options out there.
+
+
 ## Get Started
 So. Time to start. First off you need to subscribe to the [Standard Ebooks Google Group](https://groups.google.com/g/standardebooks) which is where 99% of the communication back and forth happens.
 
