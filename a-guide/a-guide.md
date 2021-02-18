@@ -157,24 +157,37 @@ Of course it always good to have a stand alone ebook reader( i.e. a Kindle or a 
 ## Get Started
 So. Time to start. First off you need to subscribe to the [Standard Ebooks Google Group](https://groups.google.com/g/standardebooks) which is where 99% of the communication back and forth happens.
 
-Then you need to visit [Wanted Books](https://standardebooks.org/contribute/wanted-ebooks) page and find a book that appeals to you from the **First Production** section. Alex (and everyone else who has reviewed a book project) will strongly discourage you from choosing a book that isn’t on the list for a first project. Not only do you have to learn all the ins and outs but then a reviewer has to go through it closely to ensure you’ve done everything correctly. The longer and more complex the book, the harder it is for both parties.
+Then you need to visit [Wanted Books](https://standardebooks.org/contribute/wanted-ebooks) page and find a book that appeals to you from the **First Production** section. Alex (and everyone else who has reviewed a book project) will strongly discourage you from choosing a book that isn’t on the list for a first project. Not only do you have to learn all the ins and outs but then a reviewer has to go through it closely to ensure you’ve done everything correctly. The longer and more complex the book, the harder it is for both parties. After you've done your first project successfully you will likely be invited to try something a bit harder.
 
 Start a new thread in the Google Group and send off a note with your chosen book and wait (patiently) to see if it's approved. Then you are on your way and can follow the [Step by Step](https://standardebooks.org/contribute/producing-an-ebook-step-by-step).
 
-
-
-After you've done your first project successfully you will likely be invited to try something a bit harder
-
 ***
-## Methodologies
-This section focuses a bit more on  specific methods I use and some hints and tricks I have discovered along the way.
 
+At this point you can start following the provided *Step by Step* pretty closely feeling free to ask questions as often as necessary.
+
+
+# Methodologies
+This section focuses a bit more on  specific methods I use and some hints and tricks I have discovered along the way and some in-depth tips on specific actions.
+
+## BBEdit
+### opening projects
+Open the project using File:Open but then click on the folder containing the project instead of any individual file and hit Open.
+![bbedit window](/images/bbedit-folder.png “BBEdit folders”)
+
+Now you can open individual files simply by selecting them in the left column.
+
+![bbedit window](/images/bbedit-openfolder.png “BBEdit folders open”)
+
+### Seeing code in colours
 ### Search and Replaces
+### Change Case
 
 ## Hints & Tips
 - first projects
 - escaped text
 - Make it easy on reviewers: links to repos, attachments with images etc.
+
+### Search and Replaces
 
 ## Important links
 Step by step
