@@ -171,12 +171,12 @@ This section focuses a bit more on  specific methods I use and some hints and tr
 
 ## BBEdit
 ### opening projects
-Open the project using File:Open but then click on the folder containing the project instead of any individual file and hit Open.
-![bbedit window](/images/bbedit-folder.png “BBEdit folders”)
+Open the project using File:Open but then click on the folder containing the project instead of any individual file and hit Open. 
+![bbedit window](/images/bbedit-folder.png "BBEdit folders"")
 
 Now you can open individual files simply by selecting them in the left column.
 
-![bbedit window](/images/bbedit-openfolder.png “BBEdit folders open”)
+![bbedit window](/images/bbedit-openfolder.png "BBEdit folders open")
 
 ### Seeing code in colours
 ### Search and Replaces
