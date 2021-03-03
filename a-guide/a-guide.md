@@ -186,7 +186,8 @@ The SE toolset offer a way to change case, but frankly the workflow I’ve devel
 - Capitalize Words,
 - Capitalize Sentences,
 - Capitalize Words.
-But BBEdit is highly customizable and it is easy enough to go to BBEDit > Preferences > Menus & Shortcuts > Text and assign a keyboard short to one of the above (or any other menu function).
+
+But BBEdit is highly customizable and it is easy enough to go to *BBEDit > Preferences > Menus & Shortcuts > Text* and assign a keyboard short to one of the above (or any other menu function).
 
 ### External scripts
 BBEdit also  offers a way to  run external scripts to extend its functionality. I have made a few to cover some of the more repetitive tasks like “rename file to clipboard” and “lowercase and dashes” (makes text url friendly) and they again have keyboard shortcuts assigned to them. 
@@ -238,9 +239,9 @@ end tell
 There are lots of help files available but essentially you just drop these files in the BBEdit scripts folder and then assign a shortcut to them.
 
 ### Search and Replaces
-This is where using an editor like BBEdit shines. Much of the work you do in creating a Standard ebook is searching out patterns created by the original producer and replacing them with a properly formatted ‘standard’ pattern. BBEDit’s Multi-File Search can make short work of a lot of the tediousness.
+This is where using an editor like BBEdit shines. Much of the work you do in creating a Standard ebook is searching out patterns created by the original producer and replacing them with a properly formatted ‘standard’ pattern. BBEDit’s *Multi-File Search* can make short work of a lot of the tediousness.
 
-Remember to open your project (see above) rather than individual files. The select Multi-File Search and ensure your project folder is selected in the *Search in:* box. You will also want to ensure that in most cases Case Sensitive, Entire Word and Grep are selected. Grep stands for “global regular expression print” and is the utility that uses any regexes you build to search the files.
+Remember to open your project (see above) rather than individual files. The select *Multi-File Search* and ensure your project folder is selected in the *Search in:* box. You will also want to ensure that in most cases Case Sensitive, Entire Word and Grep are selected. Grep stands for “global regular expression print” and is the utility that uses any regexes you build to search the files.
 
 ![multi file find window](/images/multi-file.png "BBEdit Multi-file find")
 
@@ -250,7 +251,7 @@ The search and replace in the image will find words in all caps and replace them
 ### First Projects
 You will be ***strongly*** encouraged to pick a book off the [First Production list](https://standardebooks.org/contribute/wanted-ebooks) as your first project. Many people come to the list because they have a project in mind and balk at this restriction. After what is often a lot of  argument, some reluctantly agree to do it the Standard Ebooks way and some depart unhappily. 
 
-The reason for this restriction is two-fold.As a producer you will discover in some cases it is harder than it looks to balance the editorial and structural demands of a text (even little things like letters or posters pose some semantic and  coding problems). And length is a big factor in being able to  balance  the many dimensions of producing a quality project—many projects are abandoned each year because the producer just couldn’t sustain the effort. The other main reason is it is highly likely you will make errors on your first attempt and the review assigned to you is left having to scrutinize not only the basics, but all the extra length and/or complexities involved in a molter more complicated book.
+The reason for this restriction is two-fold. As a producer you will discover in some cases it is harder than it looks to balance the editorial and structural demands of a text (even little things like letters or posters pose some semantic and  coding problems). And length is a big factor in being able to  balance the many dimensions of producing a quality project—many projects are abandoned each year because the producer just couldn’t sustain the effort. The other main reason is it is highly likely you will make errors on your first attempt and the reviewer assigned to you is left having to scrutinize not only the basics, but all that extra length and/or complexities involved in a longer, more complicated book.
 
 So stick to some thing say for the first book—and if you are new to coding, maybe the fist couple of books—before you strike out  in an attempt to bring your favourite piece of literature to the world. The good new is that a first production was categorized as 40,000 words when I started and is now, thanks to improvements in the toolset, set at < 100,000 words.
 
@@ -258,23 +259,29 @@ Remember though, even given the restrictions you are free to use the methodology
 
 #### Some quick hints
 - Make it easy on reviewers: include the links to your repos (repositories), include attachments with images, link to specific pages when providing source material etc.
-- escaped text ?
+- You need to use escaped html text for the long description in the content.opf file. But you also need to ensure that each paragraph is indented by 3 tabs. This might be corrected by the latest version of lint.
 - ??
 
 ### Sources
 As a Canadian, finding texts (especially for cover searches) can often be problematic. Because of geo-blocking due to territorial rights and differing copyright periods often books that are freely available in the U.S. are not available to Canadian producers—I find Google Books especially  frustrating on the score and rarely use it. 
-- [HathiTrust](https://www.hathitrust.org/)
-- [Internet Archive](https://archive.org/)
-- [Google books](https://books.google.com/)
-- [Distributed Proofreaders](https://www.pgdp.org/ols/index.php) — the online home of the proofreads who are supplying the main Gutenberg  projects. Page scans are available as individual files so it makes it more cumbersome to work with.
 
-### Search and Replaces
+There are often multiple sources for finding original texts and sorting through them to find the best, copyright free version is just another challenge.
 
-## Important links
-Step by step
-One page style guide
-Escape text page
+- [Internet Archive](https://archive.org/) — The go-to. 
+- [HathiTrust](https://www.hathitrust.org/) — Not quite as user friendly as the Internet Archive, but a good source for scanned books if you strike out.
+- [Google books](https://books.google.com/) — As mentioned above, not as accessible to non-American locations.
+- [Distributed Proofreaders](https://www.pgdp.org/ols/index.php) — The online home of the proofreaders who are supplying the main Gutenberg  projects. Page scans are available as individual files so it makes it more cumbersome to work with.
+
+### Search and Replaces and Regexes
+**Coming soon:** a beginners guide to regexes
+
+## Handy links
+Start with the Standard Ebook [Get Involved](https://standardebooks.org/contribute) page. It has most of the links you’ll need.
+- [Step by step](https://standardebooks.org/contribute/producing-an-ebook-step-by-step) — This is the one to read first to see if you are up to the challenge.
+- [One page style guide](https://standardebooks.org/manual/latest/single-page) — There is an extensive style guide but this version displays it all on one huge page making it easer to search.
+- [Escaped text page](https://www.freeformatter.com/xml-escape.html) — You will be asked to use escaped text for the long description and this site can help do that automatically.
 
 ## My notes
-Forking
+### Forking
+### CSS
 
