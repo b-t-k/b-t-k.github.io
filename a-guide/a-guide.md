@@ -241,8 +241,10 @@ There are lots of help files available but essentially you just drop these files
 This is where using an editor like BBEdit shines. Much of the work you do in creating a Standard ebook is searching out patterns created by the original producer and replacing them with a properly formatted ‘standard’ pattern. BBEDit’s Multi-File Search can make short work of a lot of the tediousness.
 
 Remember to open your project (see above) rather than individual files. The select Multi-File Search and ensure your project folder is selected in the *Search in:* box. You will also want to ensure that in most cases Case Sensitive, Entire Word and Grep are selected. Grep stands for “global regular expression print” and is the utility that uses any regexes you build to search the files.
-![multi file find window](/images/multi-file.png "BBEdit Multi-file find”)
-The search and replace in the image will find words in all caps and replace them with upper/lower. We will look at eh specifics of that later.
+
+![multi file find window](/images/multi-file.png "BBEdit Multi-file find")
+
+The search and replace in the image will find words in all caps and replace them with upper/lower. We will look at the specifics of that later.
 
 ## Hints & Tips
 ### First Projects
