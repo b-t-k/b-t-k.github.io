@@ -92,14 +92,14 @@ To install and maintain the tools on a Mac you use the Brew package manager. Thi
 Most of the Standard ebook tools are not housed in a GUI (Graphical User Interface) — the thing you point and click with your mouse. You will need to be fairly comfortable with the Terminal interface to work on a project. But again it’s mostly cut and paste from the [Manual](https://standardebooks.org/manual/).
 
 ### regex
-Regular Expressions, generally known as regexes,  are, roughly speaking, a way to search and manipulate text through a series of wildcards. I will freely admit that, while I am pretty bad at constructing proper regexes, I am a huge fanboy. Imagine being able to replace every instance of a particular word in the first paragraph of a chapter across multiple files with Title Case. It saves a whole lot of legwork. Standard Ebooks step by step includes a bunch of regexes to replace a lot of manual labour, and you can quickly learn to build some yourself.
+Regular Expressions, generally known as regexes, are, roughly speaking, a way to search and manipulate text through a series of wildcards and pattern matching. I will freely admit that, while I am pretty bad at constructing proper regexes, I am a huge fanboy. Imagine being able to replace every instance of a particular word in the first paragraph of a chapter across multiple files with Title Case. It saves a whole lot of legwork. Standard Ebooks step by step includes a bunch of regexes to replace a lot of manual labour, and you can quickly learn to build some yourself.
 
 More on this later.
 
 ### Github
-[Github](https://github.com/) is what Standard Ebooks uses to manage and control the various projects. I am a real noob at using `git` and Github and I frequently have to resort to using google-foo to figure out how to fix what I did wrong.
+[Github](https://github.com/) is a website that employs  [Git](https://www.atlassian.com/git/tutorials/what-is-git), a source control system. Normally used as a way of managing source code, it’s what Standard Ebooks uses to manage and control the various projects.  I am a real noob at using `Git` and Github and I frequently have to resort to using google-foo to figure out how to fix what I did wrong.
 
-In a nutshell, `git` is a process to exercise version control over your project and  Github is a website that allows you store this online.. You create an initial repository (folder container your files) and as you move through the steps, you sync your local version to the GitHub website. This allows you to keep track of the steps you have taken and, more importantly, to revert any changes you made that weren’t appropriate or were outright mistakes.
+In a nutshell, `Git` is a process to exercise version control over your project and  Github is a website that allows you store this online.. You create an initial repository (folder container your files) and as you move through the steps, you sync your local version to the GitHub website. This allows you to keep track of the steps you have taken and, more importantly, to revert any changes you made that weren’t appropriate or were outright mistakes.
 
 You will have to create a GitHub account and store your work as you progress. When it is finalized and approved then Standard Ebooks will clone it to their [own GitHub repositories](https://github.com/standardebooks/) in preparation to publishing. Incidentally those repositories gives you access to all the ebooks that were already published, providing a plethora of examples on how to solve various issues.
 
@@ -178,14 +178,93 @@ Now you can open individual files simply by selecting them in the left column.
 
 ![bbedit window](/images/bbedit-openfolder.png "BBEdit folders open")
 
-### Seeing code in colours
-### Search and Replaces
 ### Change Case
+The SE toolset offer a way to change case, but frankly the workflow I’ve developed makes using BBEdit’s built in Change Case function. Out of the box there is no keyboard shortcut assigned to  the various change case functions—
+- All Upper Case,
+- All Lower Case,
+- Make Title Case,
+- Capitalize Words,
+- Capitalize Sentences,
+- Capitalize Words.
+But BBEdit is highly customizable and it is easy enough to go to BBEDit > Preferences > Menus & Shortcuts > Text and assign a keyboard short to one of the above (or any other menu function).
+
+### External scripts
+BBEdit also  offers a way to  run external scripts to extend its functionality. I have made a few to cover some of the more repetitive tasks like “rename file to clipboard” and “lowercase and dashes” (makes text url friendly) and they again have keyboard shortcuts assigned to them. 
+
+Macs come from with a program called *Script Editor* and its pretty easy to write (or download) simple scripts:
+
+**Rename Active Document to clipboard.scpt**
+```
+on run
+	tell application "BBEdit"
+		activate
+		
+		set doc to active document of text window 1
+		set oldName to name of doc
+		set newName to my promptForName(oldName)
+		-- If the name did not change we can bail.
+		if newName = oldName then return true
+		my renameDoc(doc, oldName, newName)
+		
+	end tell
+end run
+```
+
+**lowercase and dashes.scpt**
+```
+tell application "BBEdit"
+	tell window 1
+		change case selection making lower case with replacing target
+		copy selection
+		set theString to the clipboard
+		set L to length of theString
+		set P to the offset of space in theString
+		repeat until P = 0
+			if P = 1 then
+				set theString to "_" & texts 2 through -1 of theString
+			else if P = L then		
+				set theString to texts 1 through (L - 1) of theString & "_"
+			else
+				set theString to texts 1 through (P - 1) of theString & "-" & texts (P + 1) through -1 of theString
+			end if
+			set P to the offset of space in theString
+		end repeat
+		set the clipboard to theString
+		paste
+		select
+	end tell
+end tell
+```
+There are lots of help files available but essentially you just drop these files in the BBEdit scripts folder and then assign a shortcut to them.
+
+### Search and Replaces
+This is where using an editor like BBEdit shines. Much of the work you do in creating a Standard ebook is searching out patterns created by the original producer and replacing them with a properly formatted ‘standard’ pattern. BBEDit’s Multi-File Search can make short work of a lot of the tediousness.
+
+Remember to open your project (see above) rather than individual files. The select Multi-File Search and ensure your project folder is selected in the *Search in:* box. You will also want to ensure that in most cases Case Sensitive, Entire Word and Grep are selected. Grep stands for “global regular expression print” and is the utility that uses any regexes you build to search the files.
+![multi file find window](/images/multi-file.png "BBEdit Multi-file find”)
+The search and replace in the image will find words in all caps and replace them with upper/lower. We will look at eh specifics of that later.
 
 ## Hints & Tips
-- first projects
-- escaped text
-- Make it easy on reviewers: links to repos, attachments with images etc.
+### First Projects
+You will be ***strongly*** encouraged to pick a book off the [First Production list](https://standardebooks.org/contribute/wanted-ebooks) as your first project. Many people come to the list because they have a project in mind and balk at this restriction. After what is often a lot of  argument, some reluctantly agree to do it the Standard Ebooks way and some depart unhappily. 
+
+The reason for this restriction is two-fold.As a producer you will discover in some cases it is harder than it looks to balance the editorial and structural demands of a text (even little things like letters or posters pose some semantic and  coding problems). And length is a big factor in being able to  balance  the many dimensions of producing a quality project—many projects are abandoned each year because the producer just couldn’t sustain the effort. The other main reason is it is highly likely you will make errors on your first attempt and the review assigned to you is left having to scrutinize not only the basics, but all the extra length and/or complexities involved in a molter more complicated book.
+
+So stick to some thing say for the first book—and if you are new to coding, maybe the fist couple of books—before you strike out  in an attempt to bring your favourite piece of literature to the world. The good new is that a first production was categorized as 40,000 words when I started and is now, thanks to improvements in the toolset, set at < 100,000 words.
+
+Remember though, even given the restrictions you are free to use the methodology and toolset to produce you own book—it just won’t be eligible for inclusion in the Standard Ebook corpus.
+
+#### Some quick hints
+- Make it easy on reviewers: include the links to your repos (repositories), include attachments with images, link to specific pages when providing source material etc.
+- escaped text ?
+- ??
+
+### Sources
+As a Canadian, finding texts (especially for cover searches) can often be problematic. Because of geo-blocking due to territorial rights and differing copyright periods often books that are freely available in the U.S. are not available to Canadian producers—I find Google Books especially  frustrating on the score and rarely use it. 
+- [HathiTrust](https://www.hathitrust.org/)
+- [Internet Archive](https://archive.org/)
+- [Google books](https://books.google.com/)
+- [Distributed Proofreaders](https://www.pgdp.org/ols/index.php) — the online home of the proofreads who are supplying the main Gutenberg  projects. Page scans are available as individual files so it makes it more cumbersome to work with.
 
 ### Search and Replaces
 
