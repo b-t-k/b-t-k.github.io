@@ -46,12 +46,14 @@ Some common html tags you will need to know:
 - **br**: `<br/>` — an exception to the opening/closing tag rule, a br (break) is a line break that goes at the end of a line where you want it to break. The forward slash at the end indicates it is acting as both an opening and closing tag.
 - **hr**: `<hr/>` — another exception. The hr (horizontal rule) tag is used to indicate section breaks that are usually shown by white space or glyphs (e.g. * * * ) in a printed book.
 - **blockquote**: Essentially a ‘quote’ that is formatted to stand out from the rest of the text e.g. a letter or a sign
+
 ```
  <blockquote> 
       <p>May contain multiple paragraphs<br/>
       Or other parts.</p>
  </blockquote>
- ```
+```
+
 - **abbr**: `<abbr>Mr.</abbr> James <abbr>H.</abbr> Smythe-Jones` — Indicates abbreviations, all of which should be marked appropriately in Standard ebooks—otherwise how would a screen reader know who to pronounce them?.
 
 ##### CSS & Classes
