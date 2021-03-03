@@ -61,9 +61,11 @@ Many tags will also accept additional parameters which are part of the CSS (Casc
 
 Briefly, the purpose of css is to add “custom” styles to blocks of text. For example if you want the signature line of a letter to be right justified you could enclose that line in a `p` tag and add a class: `<p class=“signature”>Bob Smith</p>`. You would then also add the appropriate css to the local.css stylesheet:
 
-`.signature{` 
-&nbsp;&nbsp;&nbsp;`text-align: right;` 
-`}`
+```
+.signature{
+    `text-align: right;
+}
+```
 
 But don’t worry. Almost all of the necessary css is detailed in [The Standard Ebooks Manual of Style](https://standardebooks.org/manual/latest) and is simply a matter of cutting and pasting.
 
