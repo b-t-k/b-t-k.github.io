@@ -289,11 +289,13 @@ There are often multiple sources for finding original texts and sorting through 
 ### Search and Replaces and Regexes
 **Coming soon:** 
 - a beginners guide to regexes
+#### BBEdit searches
+
 #### A Basic Pattern
 Let's say you wanted to search for `<h2>This is the title</h2>` and replace it with `<h2 epub:type="title">This is the title</h2>`. First you identify the pattern, which in this case is text between two `<h2>` tags. Then you build a regex to identify this pattern:
 - `<h2>.*?</h2>`
 
-The `.*?` wildcards will find the `<h2>` tags with all text and characters between the two h2s. But in order to replace it we need to copy the text between the tags into the replace statement. This is accomplished by placing the wildcard pattern between in parentheses: `(.*?)`. This essentially writes that text into memory and can then be called back on the replace statement using a backslash and the number of the occurence. So...
+The `.*?` wildcards will find the `<h2>` tags with all text and characters between the two h2s. But in order to replace it we need to copy the text between the tags into the replace statement. This is accomplished by placing the wildcard pattern between in parentheses: `(.*?)`. This essentially writes that text into memory and can then be called back on the replace statement using a backslash and the number of the occurrence. So...
 
 Find: `<h2>(.*?)</h2>`
 
@@ -305,13 +307,66 @@ Find: `<p class="nind">(.*?)<small>(.*?)</small>(.*?)</p>`
 
 Replace: `<p>\1\2\3</p>`
 
-This will result in `<p>A GIRL stood on the shingle that fringes Millbourne Bay</p>`. You will then have to run another regex to change the all caps to lowercase. You can see if you needed to change the opening paragraphs across one or two chapters it might be easier to do it by hand, but if you had 30 or 40 chapters to fix it is definitely easier to spend a moment building the regex.
+This will result in `<p>A GIRL stood on the shingle that fringes Millbourne Bay</p>`. 
+
+You will then have to run another regex to change the all caps to lowercase. You can see if you needed to change the opening paragraphs across one or two chapters it might be easier to do it by hand, but if you had 30 or 40 chapters to fix it is definitely easier to spend a moment building the regex.
+
+#### Basic wildcards/metacharacters
+- `\n` — find new line (i.e paragraph break)
+- `\t` — find a tab
+- `\s` — find white space (including line breaks)
+- `^` beginning of a line
+- `$` end of line
+- `[]` — find set e.g. `[A-Z]` capital letters between A and Z
+- `{x,y}` — limit set e.g. `[A-Z]` 
+
+**Note:** if you need to search for characters like a period, dollar sign or question mark etc. you will need to 'escape' it by preceding it with a backslash e.g. `\$` will find any dollar signs and `$` will find the end of a line.
+
+- `|` — Or i.e. `this|that` will find 'this' or 'that'
+- `.*?` — is your basic wildcard e.g. \<p>.*?\</p> will find everything between the two tags. See *Advanced Patterns* for a breakdown
+
+#### Basic replace functions
+- `\L` — set all text to the right as lowercase
+- `\l` — first letter to the right as lowercase
+- `\U` — set all text to the right as uppercase
+- `\u` — first letter to the right as uppercase
+- `\E` — end change case i.e. \U or \L 
+
+#### Look ahead or Look behind
+- `(?=text)` — finds the position that immediately follows 'text'
+- `(?<=text)` — finds the position that immediately precedes 'text'
+- `(?!text)` — asserts that what immediately follows the position is not 'text'
+- `(?<!text)` — asserts that what immediately precedes the position is not 'text'
+
+In other words if you have two sentences:
+> 1. This is a fact about dogs.
+>
+> 2. This is a fact about bad dogs.
+
+`(?<!bad) dogs` will find the position before dogs in #1 but not in #2 and you could then alter the text.
+
+Find: `(?<!bad) dogs`
+
+Replace: ` stray dogs`
+
+would result in:
+
+> 1. This is a fact about stray dogs.
+>
+> 2. This is a fact about bad dogs.
+
 
 #### Some Advanced Patterns
 Here is a handy [RegEx Cheat Sheet](https://gist.github.com/ccstone/5385334) to get you started.
+ - `.*?` 
+	- `.` means any character except returns
+	- `\*` means 0 or more of the . (If you use + instead it will only find things if there are 1 or more)
+	- `?` makes it non greedy i.e. it will only grab until the first instance.
+		- Thus `<.*?>` will find \<h2> but <.+?> will find \<h2>This is a head\</h2>
+- `[0-9]{2,}` — find any 2 digit numbers containing 0 to 9
+- `([A-Z])([A-Z]{2,})` with `\U\1\L\2`
+	- This would replace a word that starts with a capital and is followed by 2 or more capitals (e.g. SOD) with a single capital and the rest lowercase (e.g. Sod), but it would not change AD or BC.
 
-- `{0-9}{2,}`
-- `\n`, `\t`, 
 
 ## Handy links
 Start with the Standard Ebook [Get Involved](https://standardebooks.org/contribute) page. It has most of the links you’ll need.
