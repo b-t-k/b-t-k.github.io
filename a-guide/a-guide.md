@@ -3,6 +3,17 @@ layout: page
 title: "A non-programmers guide to contributing to Standard Ebooks"
 permalink: /a-guide
 ---
+### Table of Contents
+1. [Introduction](#introduction)
+2. [Key Concepts](#key-concepts)
+3. [Tools](#tools)
+4. [Get Started](#get-started)
+5. [Methodologies](#methodologies)
+	1. [BBEdit](#bbedit)
+	2. [Search & Replaces and Regexes](#search-&-replaces-and-regexes)
+6. [Hints & Tips](#hints-&-tips)
+7. [Handy links](#handy-links)
+8. [My Notes](#my-notes)
 
 ## Introduction
 ### Why this guide
@@ -286,7 +297,7 @@ There are often multiple sources for finding original texts and sorting through 
 - [Google books](https://books.google.com/) — As mentioned above, not as accessible to non-American locations.
 - [Distributed Proofreaders](https://www.pgdp.org/ols/index.php) — The online home of the proofreaders who are supplying the main Gutenberg projects. Page scans are available as individual files so it makes it more cumbersome to work with.
 
-### Search and Replaces and Regexes
+## Search & Replaces and Regexes
 **Coming soon:** 
 - a beginners guide to regexes
 #### BBEdit searches
