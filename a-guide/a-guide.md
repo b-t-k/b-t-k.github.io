@@ -323,7 +323,7 @@ You will then have to run another regex to change the all caps to lowercase. You
 **Note:** if you need to search for characters like a period, dollar sign or question mark etc. you will need to 'escape' it by preceding it with a backslash e.g. `\$` will find any dollar signs and `$` will find the end of a line.
 
 - `|` — Or i.e. `this|that` will find 'this' or 'that'
-- `.*?` — is your basic wildcard e.g. \<p>.*?\</p> will find everything between the two tags. See *Advanced Patterns* for a breakdown
+- `.*?` — is your basic wildcard e.g. \<p>.*?\</p> will find everything between the two tags. See *Advanced Patterns* for a breakdown of this combination.
 
 #### Basic replace functions
 - `\L` — set all text to the right as lowercase
@@ -374,9 +374,43 @@ Start with the Standard Ebook [Get Involved](https://standardebooks.org/contribu
 - [One page style guide](https://standardebooks.org/manual/latest/single-page) — There is an extensive style guide but this version displays it all on one huge page making it easer to search.
 - [Escaped text page](https://www.freeformatter.com/xml-escape.html) — You will be asked to use escaped text for the long description and this site can help do that automatically.
 
-## My notes
-### Forking
-**Coming soon:**
+
+## Some of My Notes
+### Forking (copying)
+Forking is a way to make a copy of an existing repo, apply some changes and then resubmit it. Its much more than that, but for Standard Ebook purposes it acts as a way to submit changes to a book. Here is a basic guide to forking for further reference: [fork-a-repo](https://help.github.com/articles/fork-a-repo/).
+
+This is my step-by-step to fork a project  so you can work on it.
+
+#### Make a Fork
+Go to [Standard Ebook repository](https://github.com/standardebooks) and find the repository you want to edit.
+- Click fork (upper right). This make a fork (copy) of the project in your Github account.
+- Go to Github Desktop on your computer.
+- Click on the arrow that says curent repository and select *Add*.
+- Select *Clone Repository* and find the fork you just made. 
+  - Ensure you are going to download it to the proper folder for where you store your projects and click *Clone*.
+
+Open the project (in BBEdit) and make changes.
+
+#### Submit Changes
+Once you've made all the changes , now you need to submit it to the original "owner" for a approval and integration into the main  project. This is where the usage of  version management schemes like Github are  really useful. The owner of the project can continue to make changes to their files and still be able integrate changes from outside teven though the original project isn't the same.
+
+- Navigate to the original repository you created your fork from.
+- Select *Pull requests* from beside *Issues*.
+  - Click New pull request.
+- Select the link that says *Compare across forks*. Its at the end of the sentence under the heading **Compare changes**.
+
+There are drop-down menus for choosing the head and base repositories.
+- The **base repository** is where the main files are (the repository you originally got the files from and where you'd like to merge changes into.
+- Use the **head repository** drop-down menu to select the branch you made your changes in.
+	
+- Edit the Pull request title and description fields
+  - Type a title and description for your pull request.
+
+- Create pull request button
+  - To create a pull request that is ready for review, click *Create Pull Request*.
+  
+You will be notified if the/when the changes are accepted.
+
 ### CSS
 **Coming soon:**
 - targeting 
