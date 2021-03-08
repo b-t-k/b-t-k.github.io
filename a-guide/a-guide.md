@@ -190,10 +190,10 @@ For your first projects you should start by following the provided *Step by Step
 
 ***
 
-# <a id="methodologies">Methodologies [↺](#toc)
+# <a id="methodologies"></a>Methodologies [↺](#toc)
 This section focuses a bit more on specific methods I use, some hints and tricks I have discovered along the way and some in-depth tips on specific actions.
 
-## <a id="bbedit">BBEdit [↺](#toc)
+## <a id="bbedit"></a>BBEdit [↺](#toc)
 ### opening projects
 Open the project using File:Open but then click on the folder containing the project instead of any individual file and hit Open. 
 ![bbedit window](/images/bbedit-folder.png "BBEdit folders"")
@@ -353,12 +353,12 @@ Here is a handy [RegEx Cheat Sheet](https://gist.github.com/ccstone/5385334) to 
 	- This would replace a word that starts with a capital and is followed by 2 or more capitals (e.g. SOD) with a single capital and the rest lowercase (e.g. Sod), but it would not change AD or BC.
 
 
-## <a id="css">CSS [↺](#toc)
+## <a id="css"></a>CSS [↺](#toc)
 **Coming soon:**
 - targeting 
 
 
-# <a id="hints_tips">Hints & Tips [↺](#toc)
+# <a id="hints_tips"></a>Hints & Tips [↺](#toc)
 ### First Projects
 You will be ***strongly*** encouraged to pick a book off the [First Production list](https://standardebooks.org/contribute/wanted-ebooks) as your first project. Many people come to the list because they have a project in mind and balk at this restriction. After what is often a lot of argument, some reluctantly agree to do it the Standard Ebooks way and some depart unhappily. 
 
@@ -390,14 +390,14 @@ There are often multiple sources for finding original texts and sorting through 
 
 
 
-## <a id="handy_links">Handy links [↺](#toc)
+## <a id="handy_links"></a>Handy links [↺](#toc)
 Start with the Standard Ebook [Get Involved](https://standardebooks.org/contribute) page. It has most of the links you’ll need.
 - [Step by step](https://standardebooks.org/contribute/producing-an-ebook-step-by-step) — This is the one to read first to see if you are up to the challenge.
 - [One page style guide](https://standardebooks.org/manual/latest/single-page) — There is an extensive style guide but this version displays it all on one huge page making it easer to search.
 - [Escaped text page](https://www.freeformatter.com/xml-escape.html) — You will be asked to use escaped text for the long description and this site can help do that automatically.
 
 
-## <a id="my_notes">Some of My Notes [↺](#toc)
+## <a id="my_notes"></a>Some of My Notes [↺](#toc)
 ### Forking (copying)
 Forking is a way to make a copy of an existing repo, apply some changes and then resubmit it. Its much more than that, but for Standard Ebook purposes it acts as a way to submit changes to a book. Here is a basic guide to forking for further reference: [fork-a-repo](https://help.github.com/articles/fork-a-repo/).
 
