@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "![standard ebooks logo](/images/selogo.svg)A non-programmers guide to contributing to Standard Ebooks"
+title: "A non-programmers guide to contributing to Standard Ebooks"
 permalink: /a-guide
 ---
 
