@@ -10,11 +10,11 @@ permalink: /a-guide
 4. [Get Started](#get_started)
 5. [Methodologies](#methodologies)
 	1. [BBEdit](#bbedit)
-	2. [Search & Replaces and Regexes](#search_&_replaces_and_regexes)
+	2. [Search & Replaces and Regexes](#search_replaces_and_regexes)
+	1. [CSS](#css)
 6. [Hints & Tips](#hints_tips)
-7. [Search & Replaces and Regexes](#search_replaces_and_regexes)
-7. [Handy links](#handy_links)
-8. [My Notes](#my_notes)
+	1. [Handy links](#handy_links)
+	2. [My Notes](#my_notes)
 
 ## <a id="introduction"></a>Introduction <span class="notbold">[↺](#toc)</span>
 ### Why this guide
@@ -34,7 +34,7 @@ A lot of my terms and concepts are not going to be strictly accurate. For one, I
 ### OS X-centric
 I am a Mac user. Most of what I write here will be focussed on working with a Mac. There won’t be much difference if you are using Linux (but then I assume by dint of being a linux user this guide won’t be as applicable to you) and if you are a Windows user the basics still apply but you will have to adjust your tools to suit the platform.
 
-## <a id="key-concepts"></a>Key concepts [↺](#toc)
+## <a id="key-concepts"></a>Key concepts <span class="notbold">[↺](#toc)</span>
 To make an ebook you are, at root, making something very similar to a website that is packaged according to some very specific rules. This means that a working knowledge of html and css is helpful. You also will need to get over any nervousness you have regarding the *command line prompt*. That’s that thing that looks like an olde-tymie computer interface with a blinking prompt, where you have to enter arcane and often incomprehensible commands. But don’t worry—most times it's simply a matter of cut and paste.
 
 ### Accessibility
@@ -268,36 +268,6 @@ Remember to open your project (see above) rather than individual files. The sele
 
 The search and replace in the image will find words in all caps and replace them with upper/lower. We will look at the specifics of that later.
 
-## <a id="hints_tips">Hints & Tips [↺](#toc)
-### First Projects
-You will be ***strongly*** encouraged to pick a book off the [First Production list](https://standardebooks.org/contribute/wanted-ebooks) as your first project. Many people come to the list because they have a project in mind and balk at this restriction. After what is often a lot of argument, some reluctantly agree to do it the Standard Ebooks way and some depart unhappily. 
-
-The reason for this restriction is two-fold. As a producer you will discover in some cases it is harder than it looks to balance the editorial and structural demands of a text (even little things like letters or posters pose some semantic and coding problems). And length is a big factor in being able to balance the many dimensions of producing a quality project—many projects are abandoned each year because the producer just couldn’t sustain the effort. The other main reason is it is highly likely you will make errors on your first attempt and the reviewer assigned to you is left having to scrutinize not only the basics, but all that extra length and/or complexities involved in a longer, more complicated book.
-
-So stick to some thing say for the first book—and if you are new to coding, maybe the fist couple of books—before you strike out in an attempt to bring your favourite piece of literature to the world. The good new is that a first production was categorized as 40,000 words when I started and is now, thanks to improvements in the toolset, set at < 100,000 words.
-
-Remember though, even given the restrictions you are free to use the methodology and toolset to produce you own book—it just won’t be eligible for inclusion in the Standard Ebook corpus.
-
-#### Some quick hints
-- Make it easy on reviewers: include the links to your repos (repositories), include attachments with images, link to specific pages when providing source material etc.
-- You need to use escaped html text for the long description in the content.opf file. But you also need to ensure that each paragraph is indented by 3 tabs. This might be corrected by the latest version of lint.
-- finding errors: (coming soon)
-- .DS_Store files: managing etc. (coming soon)
-
-### Semantication
-**Coming soon:** 
-- hints
-
-### Sources
-As a Canadian, finding texts (especially for cover searches) can often be problematic. Because of geo-blocking due to territorial rights and differing copyright periods often books that are freely available in the U.S. are not available to Canadian producers—I find Google Books especially frustrating on the score and rarely use it. 
-
-There are often multiple sources for finding original texts and sorting through them to find the best, copyright free version is just another challenge.
-
-- [Internet Archive](https://archive.org/) — The go-to. Start here when looking for page scans of pre-1925 books.
-- [HathiTrust](https://www.hathitrust.org/) — Not quite as user-friendly as the Internet Archive, but a good source for scanned books if you strike out there.
-- [Google books](https://books.google.com/) — As mentioned above, not as accessible to non-American locations.
-- [Distributed Proofreaders](https://www.pgdp.org/ols/index.php) — The online home of the proofreaders who are supplying the main Gutenberg projects. Page scans are available as individual files so it makes it more cumbersome to work with.
-
 ## <a id="search_replaces_and_regexes">Search & Replaces and Regexes [↺](#toc)
 **Coming soon:** 
 - a beginners guide to regexes
@@ -380,6 +350,43 @@ Here is a handy [RegEx Cheat Sheet](https://gist.github.com/ccstone/5385334) to 
 	- This would replace a word that starts with a capital and is followed by 2 or more capitals (e.g. SOD) with a single capital and the rest lowercase (e.g. Sod), but it would not change AD or BC.
 
 
+## <a id="css">CSS [↺](#toc)
+**Coming soon:**
+- targeting 
+
+
+# <a id="hints_tips">Hints & Tips [↺](#toc)
+### First Projects
+You will be ***strongly*** encouraged to pick a book off the [First Production list](https://standardebooks.org/contribute/wanted-ebooks) as your first project. Many people come to the list because they have a project in mind and balk at this restriction. After what is often a lot of argument, some reluctantly agree to do it the Standard Ebooks way and some depart unhappily. 
+
+The reason for this restriction is two-fold. As a producer you will discover in some cases it is harder than it looks to balance the editorial and structural demands of a text (even little things like letters or posters pose some semantic and coding problems). And length is a big factor in being able to balance the many dimensions of producing a quality project—many projects are abandoned each year because the producer just couldn’t sustain the effort. The other main reason is it is highly likely you will make errors on your first attempt and the reviewer assigned to you is left having to scrutinize not only the basics, but all that extra length and/or complexities involved in a longer, more complicated book.
+
+So stick to some thing say for the first book—and if you are new to coding, maybe the fist couple of books—before you strike out in an attempt to bring your favourite piece of literature to the world. The good new is that a first production was categorized as 40,000 words when I started and is now, thanks to improvements in the toolset, set at < 100,000 words.
+
+Remember though, even given the restrictions you are free to use the methodology and toolset to produce you own book—it just won’t be eligible for inclusion in the Standard Ebook corpus.
+
+#### Some quick hints
+- Make it easy on reviewers: include the links to your repos (repositories), include attachments with images, link to specific pages when providing source material etc.
+- You need to use escaped html text for the long description in the content.opf file. But you also need to ensure that each paragraph is indented by 3 tabs. This might be corrected by the latest version of lint.
+- finding errors: (coming soon)
+- .DS_Store files: managing etc. (coming soon)
+
+### Semantication
+**Coming soon:** 
+- hints
+
+### Sources
+As a Canadian, finding texts (especially for cover searches) can often be problematic. Because of geo-blocking due to territorial rights and differing copyright periods often books that are freely available in the U.S. are not available to Canadian producers—I find Google Books especially frustrating on the score and rarely use it. 
+
+There are often multiple sources for finding original texts and sorting through them to find the best, copyright free version is just another challenge.
+
+- [Internet Archive](https://archive.org/) — The go-to. Start here when looking for page scans of pre-1925 books.
+- [HathiTrust](https://www.hathitrust.org/) — Not quite as user-friendly as the Internet Archive, but a good source for scanned books if you strike out there.
+- [Google books](https://books.google.com/) — As mentioned above, not as accessible to non-American locations.
+- [Distributed Proofreaders](https://www.pgdp.org/ols/index.php) — The online home of the proofreaders who are supplying the main Gutenberg projects. Page scans are available as individual files so it makes it more cumbersome to work with.
+
+
+
 ## <a id="handy_links">Handy links [↺](#toc)
 Start with the Standard Ebook [Get Involved](https://standardebooks.org/contribute) page. It has most of the links you’ll need.
 - [Step by step](https://standardebooks.org/contribute/producing-an-ebook-step-by-step) — This is the one to read first to see if you are up to the challenge.
@@ -423,6 +430,3 @@ There are drop-down menus for choosing the head and base repositories.
   
 You will be notified if the/when the changes are accepted.
 
-### CSS
-**Coming soon:**
-- targeting 
