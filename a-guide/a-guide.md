@@ -1,8 +1,11 @@
 ---
 layout: page
-title: "A non-programmers guide to contributing to Standard Ebooks"
+title: "![standard ebooks logo](/images/selogo.svg)A non-programmers guide to contributing to Standard Ebooks"
 permalink: /a-guide
 ---
+
+![standard ebooks logo](/images/selogo.svg)
+
 ### <a id="toc"></a>Table of Contents
 1. [Introduction](#introduction)
 2. [Key Concepts](#key_concepts)
@@ -28,7 +31,7 @@ And that’s what this tutorial is all about. I think it would be great if more 
 
 Be sure to visit the [Contributors page](https://standardebooks.org/contribute) if you want see the various ways you can help out even if this guide still leaves you too nervous to give it a try. 
 
-#### Disclaimer<a
+#### Disclaimer
 A lot of my terms and concepts are not going to be strictly accurate. For one, I don’t actually understand some of them myself, and for two, the analogies I offer are just that: analogies. You can do more research yourself if you really want to know more about what’s going on. My aim is just to demystify some of the more intimidating steps. Feel free to correct me if I am egregiously misleading anyone.
 
 ### OS X-centric
