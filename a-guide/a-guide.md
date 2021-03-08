@@ -4,7 +4,7 @@ title: "A non-programmers guide to contributing to Standard Ebooks"
 permalink: /a-guide
 ---
 
-![standard ebooks logo](/images/selogo-2.svg)
+![standard ebooks logo](/images/selogo.svg)
 
 ### <a id="toc"></a>Table of Contents
 1. [Introduction](#introduction)
