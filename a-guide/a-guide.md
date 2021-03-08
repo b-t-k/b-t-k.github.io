@@ -3,19 +3,20 @@ layout: page
 title: "A non-programmers guide to contributing to Standard Ebooks"
 permalink: /a-guide
 ---
-### Table of Contents
+### <a id="toc"></a>Table of Contents
 1. [Introduction](#introduction)
-2. [Key Concepts](#key-concepts)
+2. [Key Concepts](#key_concepts)
 3. [Tools](#tools)
-4. [Get Started](#get-started)
+4. [Get Started](#get_started)
 5. [Methodologies](#methodologies)
 	1. [BBEdit](#bbedit)
-	2. [Search & Replaces and Regexes](#search-&-replaces-and-regexes)
-6. [Hints & Tips](#hints-&-tips)
-7. [Handy links](#handy-links)
-8. [My Notes](#my-notes)
+	2. [Search & Replaces and Regexes](#search_&_replaces_and_regexes)
+6. [Hints & Tips](#hints_tips)
+7. [Search & Replaces and Regexes](#search_replaces_and_regexes)
+7. [Handy links](#handy_links)
+8. [My Notes](#my_notes)
 
-## Introduction
+## <a id="introduction"></a>Introduction <span class="notbold">[↺](#toc)</span>
 ### Why this guide
 [Standard Ebooks](https://standardebooks.org/) is a project started by Alex Cabal that…
 > takes ebooks from sources like Project Gutenberg, formats and typesets them using a carefully designed and professional-grade style manual, fully proofreads and corrects them, and then builds them to create a new edition that takes advantage of state-of-the-art ereader and browser technology.
@@ -27,13 +28,13 @@ And that’s what this tutorial is all about. I think it would be great if more 
 
 Be sure to visit the [Contributors page](https://standardebooks.org/contribute) if you want see the various ways you can help out even if this guide still leaves you too nervous to give it a try. 
 
-#### Disclaimer
+#### Disclaimer<a
 A lot of my terms and concepts are not going to be strictly accurate. For one, I don’t actually understand some of them myself, and for two, the analogies I offer are just that: analogies. You can do more research yourself if you really want to know more about what’s going on. My aim is just to demystify some of the more intimidating steps. Feel free to correct me if I am egregiously misleading anyone.
 
 ### OS X-centric
 I am a Mac user. Most of what I write here will be focussed on working with a Mac. There won’t be much difference if you are using Linux (but then I assume by dint of being a linux user this guide won’t be as applicable to you) and if you are a Windows user the basics still apply but you will have to adjust your tools to suit the platform.
 
-## Key concepts
+## <a id="key-concepts"></a>Key concepts [↺](#toc)
 To make an ebook you are, at root, making something very similar to a website that is packaged according to some very specific rules. This means that a working knowledge of html and css is helpful. You also will need to get over any nervousness you have regarding the *command line prompt*. That’s that thing that looks like an olde-tymie computer interface with a blinking prompt, where you have to enter arcane and often incomprehensible commands. But don’t worry—most times it's simply a matter of cut and paste.
 
 ### Accessibility
@@ -121,7 +122,7 @@ In a nutshell, `Git` is a process to exercise version control over your project 
 
 You will have to create a GitHub account and store your work as you progress. When it is finalized and approved then Standard Ebooks will clone it to their [own GitHub repositories](https://github.com/standardebooks/) in preparation to publishing. Incidentally those repos give you access to all the ebooks that have been already published, providing a plethora of examples on how to solve various issues.
 
-## Tools
+## <a id="tools"></a>Tools [↺](#toc)
 Ok. Now we are into the meat of it. This is my setup. There are many ways to skin this particular furry mammal but this is what I use.
 
 ### BBEdit & Text Editors
@@ -174,7 +175,7 @@ I have Photoshop as a part of my working suite but [GIMP](https://www.gimp.org/)
 Of course it always good to have a stand alone ebook reader( i.e. a Kindle or a Kobo) to try out your projects on but a desktop one is easier (in my opinion) to use when proofing. I generally use the built in Apple Books, but occasionally also use the Calibre ebook reader built into the excellent [Calibre e-book Management](https://calibre-ebook.com/) software. There are plenty of options out there.
 
 
-## Get Started
+## <a id="get_started"></a>Get Started [↺](#toc)
 So. Time to start. First off you need to subscribe to the [Standard Ebooks Google Group](https://groups.google.com/g/standardebooks) which is where 99% of the communication back and forth happens.
 
 Then you need to visit [Wanted Books](https://standardebooks.org/contribute/wanted-ebooks) page and find a book that appeals to you from the **First Production** section. Alex (and everyone else who has reviewed a book project) will strongly discourage you from choosing a book that isn’t on the list for a first project. Not only do you have to learn all the ins and outs but then a reviewer has to go through it closely to ensure you’ve done everything correctly. The longer and more complex the book, the harder it is for both parties. After you've done your first project successfully you will likely be invited to try something a bit harder.
@@ -186,10 +187,10 @@ For your first projects you should start by following the provided *Step by Step
 
 ***
 
-# Methodologies
+# <a id="methodologies">Methodologies [↺](#toc)
 This section focuses a bit more on specific methods I use, some hints and tricks I have discovered along the way and some in-depth tips on specific actions.
 
-## BBEdit
+## <a id="bbedit">BBEdit [↺](#toc)
 ### opening projects
 Open the project using File:Open but then click on the folder containing the project instead of any individual file and hit Open. 
 ![bbedit window](/images/bbedit-folder.png "BBEdit folders"")
@@ -267,7 +268,7 @@ Remember to open your project (see above) rather than individual files. The sele
 
 The search and replace in the image will find words in all caps and replace them with upper/lower. We will look at the specifics of that later.
 
-## Hints & Tips
+## <a id="hints_tips">Hints & Tips [↺](#toc)
 ### First Projects
 You will be ***strongly*** encouraged to pick a book off the [First Production list](https://standardebooks.org/contribute/wanted-ebooks) as your first project. Many people come to the list because they have a project in mind and balk at this restriction. After what is often a lot of argument, some reluctantly agree to do it the Standard Ebooks way and some depart unhappily. 
 
@@ -297,7 +298,7 @@ There are often multiple sources for finding original texts and sorting through 
 - [Google books](https://books.google.com/) — As mentioned above, not as accessible to non-American locations.
 - [Distributed Proofreaders](https://www.pgdp.org/ols/index.php) — The online home of the proofreaders who are supplying the main Gutenberg projects. Page scans are available as individual files so it makes it more cumbersome to work with.
 
-## Search & Replaces and Regexes
+## <a id="search_replaces_and_regexes">Search & Replaces and Regexes [↺](#toc)
 **Coming soon:** 
 - a beginners guide to regexes
 #### BBEdit searches
@@ -379,14 +380,14 @@ Here is a handy [RegEx Cheat Sheet](https://gist.github.com/ccstone/5385334) to 
 	- This would replace a word that starts with a capital and is followed by 2 or more capitals (e.g. SOD) with a single capital and the rest lowercase (e.g. Sod), but it would not change AD or BC.
 
 
-## Handy links
+## <a id="handy_links">Handy links [↺](#toc)
 Start with the Standard Ebook [Get Involved](https://standardebooks.org/contribute) page. It has most of the links you’ll need.
 - [Step by step](https://standardebooks.org/contribute/producing-an-ebook-step-by-step) — This is the one to read first to see if you are up to the challenge.
 - [One page style guide](https://standardebooks.org/manual/latest/single-page) — There is an extensive style guide but this version displays it all on one huge page making it easer to search.
 - [Escaped text page](https://www.freeformatter.com/xml-escape.html) — You will be asked to use escaped text for the long description and this site can help do that automatically.
 
 
-## Some of My Notes
+## <a id="my_notes">Some of My Notes [↺](#toc)
 ### Forking (copying)
 Forking is a way to make a copy of an existing repo, apply some changes and then resubmit it. Its much more than that, but for Standard Ebook purposes it acts as a way to submit changes to a book. Here is a basic guide to forking for further reference: [fork-a-repo](https://help.github.com/articles/fork-a-repo/).
 

@@ -22,6 +22,7 @@ a:hover {
 h1 {
     font-size: 3em;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    color: red;
 }
 p {
     font-size: 1em;
@@ -59,3 +60,7 @@ pre code {
     white-space: pre;
     overflow-x: auto;
 }
+
+.notbold{
+    font-weight:normal
+}​
