@@ -103,10 +103,10 @@ We talked about what an ebook is: essentially a self-contained website. The cons
 ### xhtml
 Html stands for *hypertext markup language* and is the basic format that web browsers read. XML stands for *extensible markup language* and can be thought of as a “programable” version of html. The ebook is based on xhtml files which are, in a way, just a mashup of the two.
 
-![xhtml](/images/xhtml_before.png "xhtml”)  
+![xhtml](/images/xhtml_before.png "xhtml")  
 *Code view*
 
-![xhtml](/images/xhtml_after.png "xhtml")  
+![xhtml](/images/xhtml_after.png "xhtml in epub")  
 *Epub view*
 
 If you open an xhtml file in your web browser it will appear just like a web page — handy for proofing and checking if and where any errors might be lurking.
