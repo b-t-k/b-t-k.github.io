@@ -38,43 +38,48 @@ A lot of my terms and concepts are not going to be strictly accurate. For one, I
 I am a Mac user. Most of what I write here will be focussed on working with a Mac. There won’t be much difference if you are using Linux (but then I assume by dint of being a linux user this guide won’t be as applicable to you) and if you are a Windows user the basics still apply but you will have to adjust your tools to suit the platform.
 
 ## <a id="key-concepts"></a>Key concepts <span class="notbold">[↺](#toc)</span>
-To make an ebook you are, at root, making something very similar to a website that is packaged according to some very specific rules. This means that a working knowledge of html and css is helpful. You also will need to get over any nervousness you have regarding the *command line prompt*. That’s that thing that looks like an olde-tymie computer interface with a blinking prompt, where you have to enter arcane and often incomprehensible commands. But don’t worry—most times it's simply a matter of cut and paste.
+To make an ebook you are, at root, making something very similar to a website. One that is packaged according to some very specific rules. This means that a working knowledge of html and css is helpful—but don’t let that daunt you. You will also need to get over any nervousness you have regarding the *command line prompt*. That’s that thing that looks like an olde-tymie computer interface with a blinking prompt, where you have to enter arcane, and often incomprehensible, commands. But don’t worry—most times it's simply a matter of cut and paste.
 
 ### Accessibility
 One of the keys to understanding how and why a Standard ebook is formatted the way it is, is realizing it is designed to be as *accessible* as possible — that means it can be used on multiple readers including screen readers for the visually impaired. As an example, it’s important that the computerized reader can distinguish between the article “I” and the Roman numeral I —something our brains do automatically. So if in the course of working on a project you are confused about whether to mark something up or not, a good touchstone is to ask yourself if a computer would be able to distinguish what it is without further context.
 
-Meta-data is also very important to the overall accessibility of the ebook. But more on that later.
+Metadata is also very important to the overall accessibility of the ebook. But more on that later.
  
 ### html & css
-Html is a programming language used to make web pages. It has a few conventions you need to know.
+Html is the “programming” language used to make web pages. It has a few conventions you will need to know.
+
 #### tags
-Html is formed by surrounding text with tags. Each tag set has an opening and a closing tag. `p`, the tag that marks paragraphs is used like this: 
+Html (hyper text markup language) is formed by surrounding text with tags. Each tag set has an opening and a closing tag. The web browser (or in this case reader)  reads the text between the tags and intreats according to the appropriate html rules. For example `p`, the tag that marks paragraphs is used like this: 
 
 > `<p>This is a paragraph. It may have all sorts of text in it.</p>`
+
+The text will then be displayed as a paragraph with whatever settings (first line indent, space after etc.) that have been assigned to paragraphs.
 
 Some common html tags you will need to know: 
 - **emphasis**: `<em>…</em>` — This is used in place of italics in most cases.
 - **italics**: `<i>…</i>` — generally only used where italics are grammatically correct e.g. foreign languages, names of books etc.
 - **strong**: `<strong>…</strong>` — This is used instead of bold in almost all cases.
 - **bold**: `<b>…</b>` — very rarely used.
-- **span**: `<span>…</span>` — generally used mid-sentence to surround something you might want to add information to when it isn’t appropriate to use any of the above tags. `<span class="poetry"> ... </span>` We will get into classes later.
+- **span**: `<span>…</span>` — generally used mid-sentence to surround something you might want to add information to when it isn’t appropriate to use any of the above tags i.e.`<span class="poetry"> ... </span>`. We will get into classes later.
 - **br**: `<br/>` — an exception to the opening/closing tag rule, a br (break) is a line break that goes at the end of a line where you want it to break. The forward slash at the end indicates it is acting as both an opening and closing tag.
 - **hr**: `<hr/>` — another exception. The hr (horizontal rule) tag is used to indicate section breaks that are usually shown by white space or glyphs (e.g. * * * ) in a printed book.
+- **abbr**: `<abbr>Mr.</abbr> James <abbr>H.</abbr> Smythe-Jones` — Indicates abbreviations, all of which should be marked appropriately in Standard ebooks—otherwise how would a screen reader know who to pronounce them?
 - **blockquote**: Essentially a ‘quote’ that is formatted to stand out from the rest of the text e.g. a letter or a sign
 
 ```
  <blockquote> 
       <p>May contain multiple paragraphs<br/>
-      Or other parts.</p>
+      lines, or other parts.</p>
  </blockquote>
 ```
 
-- **abbr**: `<abbr>Mr.</abbr> James <abbr>H.</abbr> Smythe-Jones` — Indicates abbreviations, all of which should be marked appropriately in Standard ebooks—otherwise how would a screen reader know who to pronounce them?.
 
 ##### CSS & Classes
-Many tags will also accept additional parameters which are part of the CSS (Cascading Style Sheet) file. A Standard ebook usually has 3 style sheets (core.css, se.css, and local.css) found in the css folder. The only one you as a producer will ever touch is **local.css** — at the beginning of the project it will be empty.
+Many tags accept additional parameters which are part of the CSS (Cascading Style Sheet) file. This is where you would set such things as the size of the `p`’s first line indent or top and bottom margins.
 
-Briefly, the purpose of css is to add “custom” styles to blocks of text. For example if you want the signature line of a letter to be right justified you could enclose that line in a `p` tag and add a class: `<p class=“signature”>Bob Smith</p>`. You would then also add the appropriate css to the local.css stylesheet:
+A Standard ebook usually has 3 style sheets (core.css, se.css, and local.css) found in the css folder. The only one you as a producer will ever touch is **local.css** — at the beginning of the project it will be empty.
+
+Briefly, the purpose of css is to define the standard style and then allow you to add “custom” styles to tags and blocks of text. For example if you want the signature line of a letter to be right justified you could enclose that line in a `p` tag and add a class: `<p class=“signature”>Bob Smith</p>`. You would then add the appropriate css to the local.css stylesheet:
 
 ```
 .signature{
@@ -82,25 +87,39 @@ Briefly, the purpose of css is to add “custom” styles to blocks of text. For
 }
 ```
 
-But don’t worry. Almost all of the necessary css is detailed in [The Standard Ebooks Manual of Style](https://standardebooks.org/manual/latest) and is simply a matter of cutting and pasting.
+But don’t worry. Almost all of the necessary css for a beginner is detailed in [The Standard Ebooks Manual of Style](https://standardebooks.org/manual/latest) and is simply a matter of cutting and pasting.
 
-This is a huge part of a Standard ebook production, referred to as semanticating. Adding semantics is very important to the well-formed nature of the final product and takes a lot of time and close reading to get correct, especially in more complex productions like plays or epistalory texts. More about that later.
+###### Semantics
+Adding classes is a huge part of a Standard ebook production, in general referred to as semanticating. Adding semantics to individual parts of the text is very important to the well-formed nature of the final product and takes a lot of time and close reading to get correct, especially in more complex productions like plays or epistolary texts. More about that later.
 
 ### Ebook Structure
-We’ve talked a bit about what an ebook is: essentially a self-contained website. When you start a new Standard ebook project a basic template will be created for you. But here is a brief description of the parts you will need to understand:
-- **content.opf** — This is the file that houses most of the metadata about the book and contains the “manifest” which details all the constituent parts of the ebook.
-- **css folder** — Contains all the css files to control how the book looks.
+We talked about what an ebook is: essentially a self-contained website. The constituent files have been compressed into an archive and that forms the basic epub file. When you start a new Standard ebook project a basic template will be created for you. But here is a brief description of the parts you will need to understand:
+- **content.opf** — This is the file that houses most of the metadata about the book and contains the “manifest” which details all the constituent parts of the ebook, and the “spine” which sets out the reading order.
+- **css folder** — Contains all the css files to control how the book looks. Remember you will only ever edit the local.css file.
 - **images folder** — Contains the cover image (which is generated as one of the production steps).
-- **onix.xml** — Ignore it. Essentially a metadata file for book distributors. 
 - **toc.xhtml** — The Table of Contents. Automatically generated but *very* occasionally will need to be tweaked.
-- **text folder** — Contains the text files for your project including several standard files common to all Standard ebook projects.
+- **text folder** — Contains the text files for your project including several standard files common to all Standard ebook projects: title page.xhtml, chapter-1.xhtml etc.
 
 ### xhtml
 Html stands for *hypertext markup language* and is the basic format that web browsers read. XML stands for *extensible markup language* and can be thought of as a “programable” version of html. The ebook is based on xhtml files which are, in a way, just a mashup of the two.
 
+![xhtml](/images/xhtml_before.png "xhtml”)  
+*Code view*
+
+![xhtml](/images/xhtml_after.png "xhtml")  
+*Epub view*
+
 If you open an xhtml file in your web browser it will appear just like a web page — handy for proofing and checking if and where any errors might be lurking.
 
+![xhtml](/images/xhtml_web.png "xhtml on the web")
 
+
+### Metadata
+Coming Soon
+
+### file types
+Epub, kepub, azw3 and advanced pub (epub3)
+ 
 ### Python, Brew and the Command line
 This is the programming stuff. But it’s not actually as daunting as it seems.
 
@@ -196,6 +215,7 @@ This section focuses a bit more on specific methods I use, some hints and tricks
 ## <a id="bbedit"></a>BBEdit [↺](#toc)
 ### opening projects
 Open the project using File:Open but then click on the folder containing the project instead of any individual file and hit Open. 
+
 ![bbedit window](/images/bbedit-folder.png "BBEdit folders"")
 
 Now you can open individual files simply by selecting them in the left column.
