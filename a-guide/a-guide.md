@@ -113,8 +113,8 @@ Html stands for *hypertext markup language* and is the basic format that web bro
 
 If you open an xhtml file in your web browser it will appear just like a web page — handy for proofing and checking if and where any errors might be lurking.
 
-<img src="/images/xhtml_web.png" width=“400" alt=“xhtml on the web">
-<img src="/images/screen_error.png" width=“400" alt="errors on the web">
+<img src="/images/xhtml_web.png" width="400" alt="xhtml on the web">
+<img src="/images/screen_error.png" width="400" alt="errors on the web">
 
 *Sometimes using a web browser can be a convenient way of finding errors.*
 
