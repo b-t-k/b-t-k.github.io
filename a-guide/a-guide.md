@@ -197,7 +197,7 @@ Github Desktop provides a visual/graphical tool to manage your repository. I pre
 
 The red highlighted text above was the original, the green highlighted text contains the sole change I made between versions. This can be really helpful and in fact makes at least one of the steps in the official step-by-step redundant.
 
-### Terminal x
+### Terminal
 On a Mac the command line interface is accessed through a program called *Terminal*. Simply hit cmd+spacebar and type "terminal" or go to *Applications: Utilities* and double click on the Terminal icon.
 
 Terminal is an app like any other, but it opens a window into the functions that underpin how your computer works. Anyone who remembers the DOS days will already be familiar with the concept. You will use it a lot so adding it to your Dock wouldn’t be the worse idea.

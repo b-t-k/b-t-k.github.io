@@ -1,6 +1,7 @@
 body {
     margin: 60px auto;
     width: 70%;
+    line-height: 1.8em;
 }
 
 nav ul, footer ul {
@@ -39,7 +40,6 @@ h2.notbold{
 
 p {
     font-size: 1em;
-    line-height: 2em;
     color: #333;
 }
 
