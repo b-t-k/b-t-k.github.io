@@ -13,7 +13,8 @@ permalink: /a-guide
 4. [Get Started](#get_started)
 5. [Methodologies](#methodologies)
 	1. [BBEdit](#bbedit)
-	2. [Search & Replaces and Regexes](#search_replaces_and_regexes)
+		2. [Search & Replaces and Regexes](#search_replaces_and_regexes)
+	1. [GitHub Desktop](#github_desktop)
 	1. [CSS](#css)
 6. [Hints & Tips](#hints_tips)
 	1. [Handy links](#handy_links)
@@ -172,39 +173,40 @@ Ok enough background. I remember this making my head explode way back when, but 
 
 But to review:
 - ebooks are essentially packaged websites
+- xhtml is easy—just give it a chance to grow on you.
 - Standard Ebooks are designed  to be well formed and accessible
-- Python is as easy as cut & paste.
--Github will try to be your friend. Let it.
+- Python is as simple as cut & paste.
+- Github will try to be your friend. Let it.
 
 ## <a id="tools"></a>Tools [↺](#toc)
-Ok. Now we are into the meat of it. This is my setup. There are many ways to skin this particular furry mammal but this is what I use. Try to remember that each tools can be approached by ignoring 90% of its functionality and you can add in  bits and pieces as they start to make sense.
+Ok. Now we are into the meat of it. This is my setup. There are many ways to skin this particular furry mammal but this is what I use. Try to remember that each tool can be approached by ignoring 90% of its functionality and then you can add in bits and pieces as they start to make sense.
 
 ### BBEdit & Text Editors
 [BBEdit](https://www.barebones.com/products/bbedit/index.html) is basically a text editor — but it is one especially designed for coding. There are a lot of other options ([Visual Studio Code](https://code.visualstudio.com/), [Brackets](http://brackets.io/) etc.), all of which are more or less free.
 
 And, in case you haven’t figured it out, editing text is a large part of what making an ebook is about. And editing text means exactly that: you will be editing raw text. Not rich text with bolds and italics and definitely not word processor text with all sorts of hidden code. Raw [ASCII](https://en.wikipedia.org/wiki/ASCII) text. 
 
-The advantage of BBEdit (or other code editors) is that it allows you to work more efficiently — you can do things like open entire folders in one window; or do regex-based search-and-replaces across the entire project. Its a tool mostly designed to doing exactly this job, s while you can use textedit why not use something that will bring added functionality the process?
+The advantage of BBEdit (or other code/xml editors) is that it allows you to work more efficiently — you can do things like open entire folders in one window, do regex-based search-and-replaces across the entire project, or  see hidden characters like spaces and tabs (very important that last one). It’s a tool mostly designed to doing exactly this job so why not use something that will bring added functionality the process? I use the free version—there is very little reason to upgrade to the paid one.
 
 ### Github Desktop
-As I mentioned above, you will have to use Github. Access to Github is generally managed using the command line. It is one of the more arcane processes when working on a project — frankly it almost made me give up when I first started. Thankfully I found [Github Desktop](https://desktop.github.com/) which is a GUI interface, which brought most of the process back to the click-my-mouse world and that made my life a lot easier.
+As I mentioned above, you will have to use Github. Access to Github is usually managed by “real” coders using the command line. It is one of the more arcane processes when working on a SE project — frankly it almost made me give up when I first started. Thankfully I found [Github Desktop](https://desktop.github.com/) which is a GUI interface, which brought most of the process back to the click-my-mouse world and that made my life a lot easier.
 
 Github Desktop provides a visual/graphical tool to manage your repository. I pretty much ignore the command line when using git and GitHub these days. The general sequence is that any changes you make in a file will be represented in the Github Desktop GUI. You elect which files you want to sync; give that selection a name (e.g. initial commit or fixed typo) and then “commit” it. Then you can “push” the various commits up to the website or undo them.
 
 ![GitHub Desktop](/images/github-desktop.png "A GitHub Desktop window")
 
-The red highlighted text above was the original, the green highlighted text contains the sole change I made between versions.
+The red highlighted text above was the original, the green highlighted text contains the sole change I made between versions. This can be really helpful and in fact makes at least one of the steps in the official step-by-step redundant.
 
 ### Terminal
 On a Mac the command line interface is accessed through a program called *Terminal*. Simply hit cmd-spacebar and type "terminal" or go to *Applications: Utilities* and double click on the Terminal icon.
 
-Terminal is an app like any other, but it opens a window into the functions that underpin how your computer works. Anyone who remembers the DOS days will already be familiar with the concept.
+Terminal is an app like any other, but it opens a window into the functions that underpin how your computer works. Anyone who remembers the DOS days will already be familiar with the concept. You will use it a lot so adding it to your Dock wouldn’t be the worse idea.
 
 It's helpful to know a bare minimum of Terminal commands. Depending on how old your OS is you will likely be using *bash* or *zsh* as your shell (this is inherited from the unix underpinnings of OSX) but you don’t really need to know about that beyond perhaps wanting to google “bash how to change directory” or something similar.
 
 ![terminal window](/images/terminal.png "A Terminal window")
 
-When you open Terminal it will give you a prompt similar to `bob@my-mac ~ %`. As I said it will vary from shell to shell. You will generally start in your user/home folder. If your user name is Bob then it will be in the Bob ‘home’ folder. Typing `ls` and hitting enter will list the folders and files so you can check if that’s where you are—you can compare it to the Finder window and should be able to see exactly the same files and folders.
+When you open Terminal it will give you a prompt similar to `bob@my-mac ~ %`. As I said the exact prompt will vary from shell to shell. You will generally start in your user/home folder. If your user name is Bob then it will be in the Bob ‘home’ folder. Typing `ls` and hitting enter will list the folders and files so you can check if that’s where you are—you can compare it to the Finder window and should be able to see exactly the same files and folders.
 
 #### Basic terminal commands
 - **`ls`** list — lists files and folders
@@ -323,11 +325,11 @@ Remember to open your project (see above) rather than individual files. The sele
 The search and replace in the image will find words in all caps and replace them with upper/lower. We will look at the specifics of that later.
 
 ## <a id="search_replaces_and_regexes">Search & Replaces and Regexes [↺](#toc)
-**Coming soon:** 
+**More soon:** 
 - a beginners guide to regexes
-#### BBEdit searches
+- BBEdit and advanced searches
 
-#### A Basic Pattern
+### A Basic Pattern
 Let's say you wanted to search for `<h2>This is the title</h2>` and replace it with `<h2 epub:type="title">This is the title</h2>`. First you identify the pattern, which in this case is text between two `<h2>` tags. Then you build a regex to identify this pattern:
 - `<h2>.*?</h2>`
 
@@ -368,6 +370,9 @@ You will then have to run another regex to change the all caps to lowercase. You
 - `\u` — first letter to the right as uppercase
 - `\E` — end change case i.e. \U or \L 
 
+### A bit more advanced
+So what else can you do? In reality the options are unlimited but parsing the code can be a bit of a nightmare. There are online regex testers ([regextester.com](https://www.regextester.com/), [freeformatter.com/regex-tester.html](https://www.freeformatter.com/regex-tester.html) etc.) that will allow you to test out patterns before you try them on your project. Testing is often a good idea because while the undo function will often rescue you if you make a typo, every once in a while you will find you’ve made a mistake that is unrecoverable.
+
 #### Look ahead or Look behind
 - `(?=text)` — finds the position that immediately follows 'text'
 - `(?<=text)` — finds the position that immediately precedes 'text'
@@ -391,7 +396,6 @@ would result in:
 >
 > 2. This is a fact about bad dogs.
 
-
 #### Some Advanced Patterns
 Here is a handy [RegEx Cheat Sheet](https://gist.github.com/ccstone/5385334) to get you started.
  - `.*?` 
@@ -402,6 +406,10 @@ Here is a handy [RegEx Cheat Sheet](https://gist.github.com/ccstone/5385334) to 
 - `[0-9]{2,}` — find any 2 digit numbers containing 0 to 9
 - `([A-Z])([A-Z]{2,})` with `\U\1\L\2`
 	- This would replace a word that starts with a capital and is followed by 2 or more capitals (e.g. SOD) with a single capital and the rest lowercase (e.g. Sod), but it would not change AD or BC.
+
+## <a id="github_desktop"></a>Github Desktop [↺](#toc)
+**Coming soon:**
+- Step by step 
 
 
 ## <a id="css"></a>CSS [↺](#toc)
