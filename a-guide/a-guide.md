@@ -113,12 +113,10 @@ Html stands for *hypertext markup language* and is the basic format that web bro
 
 If you open an xhtml file in your web browser it will appear just like a web page — handy for proofing and checking if and where any errors might be lurking.
 
-![xhtml](/images/xhtml_web.png "xhtml on the web")
-
-<img src="/images/screen_error.png" width="100" alt="errors on the web">
+<img src="/images/xhtml_web.png" width=“400" alt=“xhtml on the web">
+<img src="/images/screen_error.png" width=“400" alt="errors on the web">
 
 *Sometimes using a web browser can be a convenient way of finding errors.*
-
 
 ### Metadata
 Coming Soon
@@ -179,7 +177,7 @@ But to review:
 -Github will try to be your friend. Let it.
 
 ## <a id="tools"></a>Tools [↺](#toc)
-Ok. Now we are into the meat of it. This is my setup. There are many ways to skin this particular furry mammal but this is what I use.
+Ok. Now we are into the meat of it. This is my setup. There are many ways to skin this particular furry mammal but this is what I use. Try to remember that each tools can be approached by ignoring 90% of its functionality and you can add in  bits and pieces as they start to make sense.
 
 ### BBEdit & Text Editors
 [BBEdit](https://www.barebones.com/products/bbedit/index.html) is basically a text editor — but it is one especially designed for coding. There are a lot of other options ([Visual Studio Code](https://code.visualstudio.com/), [Brackets](http://brackets.io/) etc.), all of which are more or less free.
