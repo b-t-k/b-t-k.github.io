@@ -37,7 +37,7 @@ A lot of my terms and concepts are not going to be strictly accurate. For one, I
 ### OS X-centric
 I am a Mac user. Most of what I write here will be focussed on working with a Mac. There won’t be much difference if you are using Linux (but then I assume by dint of being a linux user this guide won’t be as applicable to you) and if you are a Windows user the basics still apply but you will have to adjust your tools to suit the platform.
 
-## <a id="key-concepts"></a>Key concepts <span class="notbold">[↺](#toc)</span>
+## <a id="key_concepts"></a>Key concepts <span class="notbold">[↺](#toc)</span>
 To make an ebook you are, at root, making something very similar to a website. One that is packaged according to some very specific rules. This means that a working knowledge of html and css is helpful—but don’t let that daunt you. You will also need to get over any nervousness you have regarding the *command line prompt*. That’s that thing that looks like an olde-tymie computer interface with a blinking prompt, where you have to enter arcane, and often incomprehensible, commands. But don’t worry—most times it's simply a matter of cut and paste.
 
 ### Accessibility
@@ -104,49 +104,79 @@ We talked about what an ebook is: essentially a self-contained website. The cons
 Html stands for *hypertext markup language* and is the basic format that web browsers read. XML stands for *extensible markup language* and can be thought of as a “programable” version of html. The ebook is based on xhtml files which are, in a way, just a mashup of the two.
 
 ![xhtml](/images/xhtml_before.png "xhtml")  
+
 *Code view*
 
 ![xhtml](/images/xhtml_after.png "xhtml in epub")  
+
 *Epub view*
 
 If you open an xhtml file in your web browser it will appear just like a web page — handy for proofing and checking if and where any errors might be lurking.
 
 ![xhtml](/images/xhtml_web.png "xhtml on the web")
 
-<img src="/images/screen_error.png" width="48" alt="errors on the web">
-*Sometimes using a web browser can be a convenient way of finding errors*
+<img src="/images/screen_error.png" width="100" alt="errors on the web">
 
+*Sometimes using a web browser can be a convenient way of finding errors.*
 
 
 ### Metadata
 Coming Soon
+- purpose
+- format
 
-### file types
-Epub, kepub, azw3 and advanced pub (epub3)
+
+### Output File Types
+Coming Soon: Epub, kepub, azw3 and advanced pub (epub3)
  
 ### Python, Brew and the Command line
-This is the programming stuff. But it’s not actually as daunting as it seems.
-
-#### Python
-Standard Ebooks has a toolset that is based on the Python programming language. When you install the Standard Ebooks [tools](https://github.com/standardebooks/tools) it will install the latest version of Python 3 for you, so *dinnae fash yersel* as the Scots might say..
-
-#### Brew 
-To install and maintain the tools on a Mac you use the Brew package manager. This is similar to an “app store” that leaves the heavy lifting to someone else. There are instructions on the [tools Github](https://github.com/standardebooks/tools) (More on Github in the next section) to get up and running. It will take some time, all the while your terminal will be spitting out lines and line of gibberish. Just ignore and have a nice cup of tea or coffee.
+This is the programming stuff. But it’s not actually as daunting as it seems. Cut and paste is your friend, and along the way you will continue to build on your knowledge until soon you can strikeout on your own :-)
 
 #### Terminal
-Most of the Standard ebook tools are not housed in a GUI (Graphical User Interface) — the thing you point and click with your mouse. You will need to be fairly comfortable with the Terminal interface to work on a project. But again it’s mostly cut and paste from the [Manual](https://standardebooks.org/manual/).
+Most of the Standard ebook tools are not housed in a GUI (Graphical User Interface) — the thing you point and click with your mouse. You will need to become fairly comfortable with the terminal interface to work on a project. But again it’s mostly cut and paste from the [Manual](https://standardebooks.org/manual/).
 
-### Regular Expression (regex)
-Regular Expressions, generally known as regexes, are, roughly speaking, a way to search and manipulate text through a series of wildcards and pattern matching. I will freely admit that, while I am pretty bad at constructing proper regexes, I am a huge fanboy. Imagine being able to replace every instance of a particular word in the first paragraph of a chapter across multiple files with Title Case. It saves a whole lot of legwork. Standard Ebooks step by step includes a bunch of regexes to replace a lot of manual labour, and you can quickly learn to build some yourself.
+*Terminal* can be found by searching for terminal using Spotlight (Cmd+space) or navigating to to *Applications: Utilities* and double click on the Terminal icon. We will talk more about this later, but you will need to the program in order to install the tools.
 
-More on this later.
+#### Brew 
+To install and maintain the tools on a Mac you use the [Homebrew package manager](https://brew.sh/). This is similar to an “app store” — basically some non-gui software that leaves the heavy lifting of installing and updating to someone else. There are instructions on the [tools Github](https://github.com/standardebooks/tools) (More on Github in the next section) to get up and running. IN a nutshell you will copy the command from   the website into terminal and hit enter. At this point the this is the command (but it may changes be safe and copy it from the website).
+
+`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)”`
+
+It will take some time, all the while your terminal will be spitting out lines and line of gibberish. Just ignore and have a nice cup of tea or coffee.
+
+#### Python
+Standard Ebooks has a toolset that is based on the Python programming language. When you install the Standard Ebooks [tools](https://github.com/standardebooks/tools) it will install the latest version of Python 3 for you, so *dinnae fash yersel* as the Scots might say.
+
+Just follow the step by step in the tools repository README.md. Remember it’s all cut-and-paste. 
+- `brew` commands install the support software that the tools need to use
+- `pipx` commands install the python programs
+- `sudo` is a terminal command that allows the the install to take place at *root* level i.e as an administrator. It will likely  ask for your password for permission.
+
+I would ignore the *Optional* elements at the this point unless you know what they mean. From time to time you be required to update the SE software as new versions come out.
 
 ### Github
-[Github](https://github.com/) is a website that employs [Git](https://www.atlassian.com/git/tutorials/what-is-git), a source control system. Normally used as a way of managing source code, it’s what Standard Ebooks uses to manage and control the various projects. I am a real noob at using `Git` and Github and I frequently have to resort to using google-foo to figure out how to fix what I did wrong.
+[Github](https://github.com/) is a website that employs [Git](https://www.atlassian.com/git/tutorials/what-is-git), a source control system. Normally used as a way of managing source code (and if you think about it, that’s what making an ebook essentially is), it’s what Standard Ebooks uses to manage and control the various projects. I am a real noob at using `Git` and Github and I frequently have to resort to using google-foo to figure out how to fix what I did wrong.
 
 In a nutshell, `Git` is a process to exercise version control over your project and Github is a website that allows you store this online. You create an initial repository (with the folder containing your files) and as you move through the steps, you sync your local version to the GitHub website. This allows you to keep track of the steps you have taken and, more importantly, to revert any changes you made that weren’t appropriate or were outright mistakes. The repository is often referred to as the repo.
 
-You will have to create a GitHub account and store your work as you progress. When it is finalized and approved then Standard Ebooks will clone it to their [own GitHub repositories](https://github.com/standardebooks/) in preparation to publishing. Incidentally those repos give you access to all the ebooks that have been already published, providing a plethora of examples on how to solve various issues.
+You will have to create a [GitHub account](https://github.com/).  Its pretty standard and once you are signed up you will have your own place to store your work as you progress. 
+
+When a project is finalized and approved then Standard Ebooks will clone it to their [own GitHub repositories](https://github.com/standardebooks/) in preparation to publishing. Incidentally those repos give you access to all the ebooks that have been already published, providing a plethora of examples on how to solve various issues.
+
+### A brief introduction to Regular Expressions (regex)
+Regular Expressions, generally known as regexes, are, roughly speaking, a way to search and manipulate text through a series of wildcards and pattern matching. I will freely admit that, while I am pretty bad at constructing proper regexes, I am a huge fanboy. Imagine being able to replace every instance of a particular word in the first paragraph of a chapter across multiple files with Title Case. It saves a whole lot of legwork. Standard Ebooks step by step includes a bunch of regexes to replace a lot of manual labour, and you can quickly learn to build some yourself.
+
+More on this later. Much more.
+
+***
+
+Ok enough background. I remember this making my head explode way back when, but remember it’s made a lot easier by the range of tools you use to manage everything. Which is what the next section is about.
+
+But to review:
+- ebooks are essentially packaged websites
+- Standard Ebooks are designed  to be well formed and accessible
+- Python is as easy as cut & paste.
+-Github will try to be your friend. Let it.
 
 ## <a id="tools"></a>Tools [↺](#toc)
 Ok. Now we are into the meat of it. This is my setup. There are many ways to skin this particular furry mammal but this is what I use.
@@ -175,7 +205,6 @@ Terminal is an app like any other, but it opens a window into the functions that
 It's helpful to know a bare minimum of Terminal commands. Depending on how old your OS is you will likely be using *bash* or *zsh* as your shell (this is inherited from the unix underpinnings of OSX) but you don’t really need to know about that beyond perhaps wanting to google “bash how to change directory” or something similar.
 
 ![terminal window](/images/terminal.png "A Terminal window")
-
 
 When you open Terminal it will give you a prompt similar to `bob@my-mac ~ %`. As I said it will vary from shell to shell. You will generally start in your user/home folder. If your user name is Bob then it will be in the Bob ‘home’ folder. Typing `ls` and hitting enter will list the folders and files so you can check if that’s where you are—you can compare it to the Finder window and should be able to see exactly the same files and folders.
 
