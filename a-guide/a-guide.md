@@ -113,7 +113,7 @@ If you open an xhtml file in your web browser it will appear just like a web pag
 
 ![xhtml](/images/xhtml_web.png "xhtml on the web")
 
-<img src="/images/screen_error.png" width="48" alt=“errors on the web">
+<img src="/images/screen_error.png" width="48" alt="errors on the web">
 *Sometimes using a web browser can be a convenient way of finding errors*
 
 
