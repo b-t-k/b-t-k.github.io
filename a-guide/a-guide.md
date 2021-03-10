@@ -210,7 +210,7 @@ When you open Terminal it will give you a prompt similar to `bob@my-mac ~ %`. As
 
 #### Basic terminal commands
 - **`ls`** list — lists files and folders
-- **`cd`** change directory — allows you to change your directory. For example `cd /bob/Documents/Projects` would switch you to the Projects folder found in your Documents folder. Just like if you had double-clicked on the Document folder and then double-clicked on the Project folder.
+- **`cd`** change directory (followed by the directory you want to change to) — allows you to change your directory. For example `cd /bob/Documents/Projects` would switch you to the Projects folder found in your Documents folder. Just like if you had double-clicked on the Document folder and then double-clicked on the Project folder.
  - Don’t panic! You can — and I always do — simply type `cd` followed by a space and then drag the folder you want to be in from the Finder onto Terminal and, voila, you have the correct path name automatically ready for you to hit `enter`. Saves on the frustration.
  
 ![terminal window](/images/terminal-directory.png "A Terminal window with a directory")
