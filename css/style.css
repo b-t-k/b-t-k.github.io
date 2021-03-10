@@ -1,7 +1,6 @@
 body {
     margin: 60px auto;
     width: 70%;
-  font-family: Helvetica, arial, sans-serif;
   font-size: 14px;
   line-height: 1.6;
 }
@@ -39,12 +38,6 @@ h2 {
 h2.notbold{
     font-weight:normal
 }​
-
-p {
-    font-size: 4em;
-    color: red;
-    line-height: 1.6em;
-}
 
 footer {
     border-top: 1px solid #d5d5d5;

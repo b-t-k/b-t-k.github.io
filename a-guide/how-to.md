@@ -1,7 +1,7 @@
 ---
 layout: page
 title: “How to’s for contributing to Standard Ebooks"
-permalink: /how-to/
+permalink: /how-to
 
 ![standard ebooks logo](/images/selogo.png)
 
