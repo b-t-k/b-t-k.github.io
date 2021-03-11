@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "How to’s for contributing to Standard Ebooks"
+title: "How to’s for contributing to Standard ebooks"
 permalink: /a-guide/
 
 ![standard ebooks logo](/images/selogo.png)
