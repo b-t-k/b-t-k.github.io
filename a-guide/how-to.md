@@ -2,7 +2,8 @@
 layout: page
 title: "How to’s for contributing to Standard ebooks"
 permalink: how-to/
-
+---
+fix
 ![standard ebooks logo](/images/selogo.png)
 
 ### <a id="toc"></a>Table of Contents
