@@ -1,6 +1,6 @@
 ---
 layout: page
-title: “How to’s for contributing to Standard Ebooks"
+title: "How to’s for contributing to Standard Ebooks"
 permalink: /a-guide/
 
 ![standard ebooks logo](/images/selogo.png)
@@ -13,7 +13,7 @@ permalink: /a-guide/
 4. [Get Started](a-guide/#get_started)
 
 #### Part 2
-5. [[How To’s](howto/#howto)](#methodologies)
+5. [[How To’s](#howto)](#methodologies)
 	1. [BBEdit](#bbedit)
 		2. [Search & Replaces and Regexes](#search_replaces_and_regexes)
 	1. [GitHub Desktop](#github_desktop)
