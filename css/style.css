@@ -40,6 +40,10 @@ h2.notbold{
     font-weight:normal
 }​
 
+h4 {
+    margin-bottom:0;
+}
+
 footer {
     border-top: 1px solid #d5d5d5;
     border-bottom-color: red;
@@ -52,12 +56,11 @@ footer {
 }
 
 ol { 
-    margin: 20px auto 40px; 
-    font-size: 1.5em;
+    margin-left: 1em;
+    line-height: 1rem;
 }
 
 ol li {
-    list-style: none;
     color:red;
 }
 
