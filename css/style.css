@@ -1,10 +1,14 @@
 body {
     font-size: 1em;
+}
+
+p {
     line-height: 1.6;
+    margin: 0 0 1em;
 }
 
 #container{
-    margin: auto;
+    margin:0 auto;
     max-width:50rem;
 }
 
@@ -36,37 +40,53 @@ a:hover {
 h1 {
     font-size: 3em;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    line-height: 1.1;
 }
 
 h2 {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    margin-top: 3rem;
 }
 
-h2.notbold{
-    font-weight:normal
-}​
+h1, h2, h3 ,h4,h5, h6{
+margin-bottom:.3em;}
 
-h4 {
-    margin-bottom:0;
+h2 + h3,
+h3 + h4,
+h4 + h5{
+	margin-top: 0em;
+}
+
+h5 {
+      text-transform: uppercase;
+}
+
+h6 {
+    margin-left:2rem;
+    text-transform: uppercase;
 }
 
 footer {
     border-top: 1px solid #d5d5d5;
-    border-bottom-color: red;
-    border-bottom: 2px;
     font-size: .8em;
+    margin-bottom: 20px;
 }
 
+ul li{
+    margin-bottom: .5rem;
+}
 
 ol { 
-    margin: 0 1em;
-    padding-left:0;
-    line-height: 1.5rem;
+    margin: 0 1.2em;
+    padding:0;
+    line-height: 1.2rem;
 }
 
-ol li {
-    
+ol ol {
+    list-style-type: upper-roman;
+    }
+
+ol ol ol{
+    list-style-type: lower-roman;
 }
 
 code{
