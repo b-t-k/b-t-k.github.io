@@ -1,8 +1,11 @@
 body {
-    margin: 60px auto;
-    width: 70%;
     font-size: 1em;
     line-height: 1.6;
+}
+
+#container{
+    margin: 60px auto;
+    width: 70%;
 }
 
 nav ul, footer ul {
@@ -56,9 +59,9 @@ footer {
 }
 
 ol { 
-    margin: 0 .5em;
+    margin: 0 1em;
     padding-left:0;
-    line-height: 1.1rem;
+    line-height: 1.5rem;
 }
 
 ol li {

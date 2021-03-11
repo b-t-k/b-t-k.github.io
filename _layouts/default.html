@@ -6,21 +6,23 @@
 			<link rel="stylesheet" type="text/css" href="/css/style.css">
 		</head>
 		<body>
-			<nav>
+			<div id="container">
+				<nav>
+					<ul>
+						<li><a href="/">Home</a></li>
+						<li><a href="https://standardebooks.org/">Standard ebooks</a></li>
+					</ul>
+				</nav>
+				<div class="container">
+			
+				{{ content }}
+			
+				</div><!-- /.container -->
+				<footer>
 				<ul>
-					<li><a href="/">Home</a></li>
-					<li><a href="https://standardebooks.org/">Standard ebooks</a></li>
-	    		</ul>
-			</nav>
-			<div class="container">
-			
-			{{ content }}
-			
-			</div><!-- /.container -->
-			<footer>
-			<ul>
-				<li><a href="https://github.com/b-t-k/b-t-k.github.io">github.com/b-t-k/b-t-k.github.io</a></li>
-			</ul>
-			</footer>
+					<li><a href="https://github.com/b-t-k/b-t-k.github.io">github.com/b-t-k/b-t-k.github.io</a></li>
+				</ul>
+				</footer>
+			</div>
 		</body>
 	</html>
