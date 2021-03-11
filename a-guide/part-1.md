@@ -5,7 +5,7 @@ permalink: /a-guide/
 ---
 
 ![standard ebooks logo](/images/selogo.png)
-
+<div class="toc">
 ### <a id="toc"></a>Table of Contents
 #### Part 1
 1. [Introduction](#introduction)
@@ -22,6 +22,7 @@ permalink: /a-guide/
 6. [Hints & Tips](/how-to/#hints_tips)
 	1. [Handy links](/how-to/#handy_links)
 	2. [My Notes](/how-to/#my_notes)
+</div>
 
 ## <a id="introduction"></a>Introduction <span class="notbold">[↺](#toc)</span>
 ### Why this guide
