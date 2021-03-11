@@ -1,10 +1,10 @@
 ---
 layout: page
 title: "How to’s for contributing to Standard ebooks"
-permalink: /how-to/
+permalink: how-to/
 
 ![standard ebooks logo](/images/selogo.png)
-bob
+
 ### <a id="toc"></a>Table of Contents
 #### Part 1
 1. [Introduction](a-guide/#introduction)
