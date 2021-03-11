@@ -13,7 +13,7 @@ permalink: /a-guide/
 4. [Get Started](a-guide/#get_started)
 
 #### Part 2
-5. [[How To’s](#methodologies)
+5. [How To’s](#methodologies)
 	1. [BBEdit](#bbedit)
 		2. [Search & Replaces and Regexes](#search_replaces_and_regexes)
 	1. [GitHub Desktop](#github_desktop)
