@@ -56,12 +56,12 @@ footer {
 }
 
 ol { 
-    margin-left: 1em;
-    line-height: 1rem;
+    margin: 0 .5em;
+    line-height: 1.1rem;
 }
 
 ol li {
-    color:red;
+    
 }
 
 code{
