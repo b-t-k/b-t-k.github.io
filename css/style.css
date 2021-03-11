@@ -51,12 +51,12 @@ footer {
     max-width:50rem;
 }
 
-ul.toc { 
+ol { 
     margin: 20px auto 40px; 
     font-size: 1.5em;
 }
 
-ul.toc li {
+ol li {
     list-style: none;
     color:red;
 }
