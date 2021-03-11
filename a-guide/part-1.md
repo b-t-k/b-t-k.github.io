@@ -14,14 +14,14 @@ permalink: /a-guide/
 4. [Get Started](#get_started)
 
 #### Part 2
-5. [How To’s](how-to/#howto)
-	1. [BBEdit](how-to/#bbedit)
-		2. [Search & Replaces and Regexes](how-to/#search_replaces_and_regexes)
-	1. [GitHub Desktop](how-to/#github_desktop)
-	1. [CSS](how-to/#css)
-6. [Hints & Tips](how-to/#hints_tips)
-	1. [Handy links](how-to/#handy_links)
-	2. [My Notes](how-to/#my_notes)
+5. [How To’s](/how-to/#howto)
+	1. [BBEdit](/how-to/#bbedit)
+		2. [Search & Replaces and Regexes](/how-to/#search_replaces_and_regexes)
+	1. [GitHub Desktop](/how-to/#github_desktop)
+	1. [CSS](/how-to/#css)
+6. [Hints & Tips](/how-to/#hints_tips)
+	1. [Handy links](/how-to/#handy_links)
+	2. [My Notes](/how-to/#my_notes)
 
 ## <a id="introduction"></a>Introduction <span class="notbold">[↺](#toc)</span>
 ### Why this guide

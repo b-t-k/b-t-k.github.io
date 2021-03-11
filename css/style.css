@@ -1,8 +1,8 @@
 body {
     margin: 60px auto;
     width: 70%;
-  font-size: 1em;
-  line-height: 1.6;
+    font-size: 1em;
+    line-height: 1.6;
 }
 
 nav ul, footer ul {
@@ -53,8 +53,9 @@ ul.posts {
     font-size: 1.5em;
 }
 
-ul.posts li {
+ul.pages li {
     list-style: none;
+    color:red;
 }
 
 code{

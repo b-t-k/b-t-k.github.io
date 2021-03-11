@@ -3,15 +3,15 @@ layout: page
 title: "How to’s for contributing to Standard ebooks"
 permalink: how-to/
 ---
-fix
+
 ![standard ebooks logo](/images/selogo.png)
 
 ### <a id="toc"></a>Table of Contents
 #### Part 1
-1. [Introduction](a-guide/#introduction)
-2. [Key Concepts](a-guide/#key_concepts)
-3. [Tools](a-guide/#tools)
-4. [Get Started](a-guide/#get_started)
+1. [Introduction](/a-guide/#introduction)
+2. [Key Concepts](/a-guide/#key_concepts)
+3. [Tools](/a-guide/#tools)
+4. [Get Started](/a-guide/#get_started)
 
 #### Part 2
 5. [How To’s](#methodologies)
