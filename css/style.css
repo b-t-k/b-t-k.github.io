@@ -4,8 +4,12 @@ body {
 }
 
 #container{
-    margin: 60px auto;
-    width: 70%;
+    margin: auto;
+    max-width:50rem;
+}
+
+nav{
+    margin-top:50px;
 }
 
 nav ul, footer ul {
@@ -54,9 +58,6 @@ footer {
     font-size: .8em;
 }
 
-.container {
-    max-width:50rem;
-}
 
 ol { 
     margin: 0 1em;
