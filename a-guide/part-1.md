@@ -9,6 +9,7 @@ permalink: /a-guide/
 #### Part 1
 1. [Introduction](#introduction)
 2. [Key Concepts](#key_concepts)
+3. [The Computer Stuff](#computer_stuff)
 3. [Tools](#tools)
 4. [Get Started](#get_started)
 
@@ -25,10 +26,10 @@ permalink: /a-guide/
 ## <a id="introduction"></a>Introduction <span class="notbold">[↺](#toc)</span>
 ### Why this guide
 [Standard Ebooks](https://standardebooks.org/) is a project started by Alex Cabal that…
-> takes ebooks from sources like Project Gutenberg, formats and typesets them using a carefully designed and professional-grade style manual, fully proofreads and corrects them, and then builds them to create a new edition that takes advantage of state-of-the-art ereader and browser technology.
-It is a volunteer driven project. If you are interested in  adding to the availability of public domain literature or just want to learn about how ebooks are made, this is a great project to take part in.
+> takes ebooks from sources like Project Gutenberg, formats and typesets them using a carefully designed and professional-grade style manual, fully proofreads and corrects them, and then builds them into a new edition that takes advantage of state-of-the-art ereader and browser technology.
+It is a volunteer driven project and if you are interested in  adding to the availability of public domain literature or just want to learn about how ebooks are made, this is a great project to take part in.
 
-The downside is that it is very programmer-centric. A lot of what you need to know/do for complicated projects is beyond the ken of your basic computer user. But thankfully, with SE’s [detailed instructions](https://standardebooks.org/contribute/producing-an-ebook-step-by-step) and the provided [SE toolset](https://github.com/standardebooks/tools), getting started on basic projects is well within the means of the average user. You just have to have a grasp of some basics first.
+The downside is that it is very programmer-centric. While admittedly, a lot of what you need to know/do for complicated projects is beyond the ken of your basic computer user, thankfully, with SE’s [detailed instructions](https://standardebooks.org/contribute/producing-an-ebook-step-by-step) and the provided [SE toolset](https://github.com/standardebooks/tools), getting started on basic projects is well within the means of the average user. You just have to have a grasp of some basics first.
 
 And that’s what this tutorial is all about. I think it would be great if more of the right-brained set became a part of the project and I thought I would see if I could lay out the basics. 
 
@@ -38,35 +39,37 @@ Be sure to visit the [Contributors page](https://standardebooks.org/contribute) 
 A lot of my terms and concepts are not going to be strictly accurate. For one, I don’t actually understand some of them myself, and for two, the analogies I offer are just that: analogies. You can do more research yourself if you really want to know more about what’s going on. My aim is just to demystify some of the more intimidating steps. Feel free to correct me if I am egregiously misleading anyone.
 
 ### OS X-centric
-I am a Mac user. Most of what I write here will be focussed on working with a Mac. There won’t be much difference if you are using Linux (but then I assume by dint of being a linux user this guide won’t be as applicable to you) and if you are a Windows user the basics still apply but you will have to adjust your tools to suit the platform.
+I am a Mac user. Most of what I write here will be focussed on working with a Mac. There won’t be much difference if you are using Linux (but then I assume by dint of being a linux user this guide won’t be as applicable to you) and if you are a Windows user the basics still apply but you will have to jump through some hoops and adjust your tools to suit the platform. SE itself recommends that if you are a Windows user that you would be better off installing Linux on a virtual machine. That in itself is going to be a big stopper for beginners.
 
 ## <a id="key_concepts"></a>Key concepts <span class="notbold">[↺](#toc)</span>
-To make an ebook you are, at root, making something very similar to a website. One that is packaged according to some very specific rules. This means that a working knowledge of html and css is helpful—but don’t let that daunt you. You will also need to get over any nervousness you have regarding the *command line prompt*. That’s that thing that looks like an olde-tymie computer interface with a blinking prompt, where you have to enter arcane, and often incomprehensible, commands. But don’t worry—most times it's simply a matter of cut and paste.
 
-### Accessibility
-One of the keys to understanding how and why a Standard ebook is formatted the way it is, is realizing it is designed to be as *accessible* as possible — that means it can be used on multiple readers including screen readers for the visually impaired. As an example, it’s important that the computerized reader can distinguish between the article “I” and the Roman numeral I —something our brains do automatically. So if in the course of working on a project you are confused about whether to mark something up or not, a good touchstone is to ask yourself if a computer would be able to distinguish what it is without further context.
+### What it is?
+A lot of what the Standard ebook project is about is creating a consistent, updatable and functional ebook. So a lot of what follows is just the basics of how that goal is met at the production level.
 
-Metadata is also very important to the overall accessibility of the ebook. But more on that later.
+One of the keys to understanding how and why a Standard ebook is formatted the way it is, is realizing it is designed to be as *accessible* as possible — that means it can be used on multiple readers including screen readers for the visually impaired. As an example, a computerized reader needs to be able to distinguish between the article “I” and the Roman numeral I —something our brains do automatically from context. So if in the course of working on a project you are confused about whether to mark something up or not, a good touchstone is to ask yourself if a computer would be able to distinguish what it is without further context.
+
+To make an ebook you are, at root, making something very similar to a website. One that is packaged according to some very specific rules. This means that a working knowledge of html and css is helpful — but don’t let that daunt you. You will also need to get over any nervousness you have regarding the *command line prompt*. That’s that thing that looks like an olde-tymie computer interface with a blinking prompt, where you have to enter arcane, and often incomprehensible, commands. Again, don’t worry — most times it's simply a matter of cut and paste. You can figure out what the commands mean later.
  
-### html & css
-Html is the “programming” language used to make web pages. It has a few conventions you will need to know.
+### html, xhtml & css
+Html is the “programming” language used to make web pages. Html stands for *hypertext markup language* and is the basic format that web browsers read. XML stands for *extensible markup language* and can be thought of as a “programable” version of html. The ebook is based on xhtml files which are, in a way, just a mashup of the two.
+
+Html/xhtml has a few conventions you will need to know. 
 
 #### tags
-Html (hyper text markup language) is formed by surrounding text with tags. Each tag set has an opening and a closing tag. The web browser (or in this case reader)  reads the text between the tags and intreats according to the appropriate html rules. For example `p`, the tag that marks paragraphs is used like this: 
+Html is formed by surrounding text with tags. Each tag set has an opening and a closing tag. The web browser (or in this case reader) reads the text between the tags and treats it according to the appropriate html rules. For example `p`, the tag that marks paragraphs is used like this: 
 
 > `<p>This is a paragraph. It may have all sorts of text in it.</p>`
 
-The text will then be displayed as a paragraph with whatever settings (first line indent, space after etc.) that have been assigned to paragraphs.
+The text will then be displayed as a paragraph with whatever settings (first line indent, space after etc.) that have been assigned to paragraphs. Unlike  programs like Microsoft Word or other rich text editors, if you want something to appear bold or italics you will need to tag it e.g. `<b>This is bold</b>` and `<i>This is italic.</i>`.
 
 Some common html tags you will need to know: 
 - **emphasis**: `<em>…</em>` — This is used in place of italics in most cases.
-- **italics**: `<i>…</i>` — generally only used where italics are grammatically correct e.g. foreign languages, names of books etc.
+- **italics**: `<i>…</i>` — generally only used where italics are grammatically correct i.e. foreign languages, names of books etc.
 - **strong**: `<strong>…</strong>` — This is used instead of bold in almost all cases.
 - **bold**: `<b>…</b>` — very rarely used.
-- **span**: `<span>…</span>` — generally used mid-sentence to surround something you might want to add information to when it isn’t appropriate to use any of the above tags i.e.`<span class="poetry"> ... </span>`. We will get into classes later.
-- **br**: `<br/>` — an exception to the opening/closing tag rule, a br (break) is a line break that goes at the end of a line where you want it to break. The forward slash at the end indicates it is acting as both an opening and closing tag.
-- **hr**: `<hr/>` — another exception. The hr (horizontal rule) tag is used to indicate section breaks that are usually shown by white space or glyphs (e.g. * * * ) in a printed book.
-- **abbr**: `<abbr>Mr.</abbr> James <abbr>H.</abbr> Smythe-Jones` — Indicates abbreviations, all of which should be marked appropriately in Standard ebooks—otherwise how would a screen reader know who to pronounce them?
+- **br**: `<br/>` — an exception to the opening/closing tag rule, a br (break) is a line break that goes at the end of a line where you want it to break (as opposed to a paragraph break). The forward slash at the end indicates it is acting as both an opening and closing tag.
+- **hr**: `<hr/>` — another exception to that rule. The hr (horizontal rule) tag is used to indicate section breaks that are usually shown by white space or glyphs (e.g. * * * ) in a printed book.
+- **abbr**: `<abbr>Mr.</abbr> James <abbr>H.</abbr> Smythe-Jones` — Indicates abbreviations, all of which should be marked appropriately in Standard ebooks — otherwise how would a screen reader know who to pronounce them?
 - **blockquote**: Essentially a ‘quote’ that is formatted to stand out from the rest of the text e.g. a letter or a sign
 
 ```
@@ -76,67 +79,108 @@ Some common html tags you will need to know:
  </blockquote>
 ```
 
+- **span**: `<span>…</span>` — generally used mid-sentence to surround something you might want to add information to when it isn’t appropriate to use any of the above tags e.g.`<span class="poetry"> ... </span>`. We will get into classes next.
 
 ##### CSS & Classes
-Many tags accept additional parameters which are part of the CSS (Cascading Style Sheet) file. This is where you would set such things as the size of the `p`’s first line indent or top and bottom margins.
+Many tags accept additional parameters which are part of the CSS (Cascading Style Sheet) file. The CSS style sheet is where you would set such things as the size of the `p`’s first line indent or top and bottom margins.
 
 A Standard ebook usually has 3 style sheets (core.css, se.css, and local.css) found in the css folder. The only one you as a producer will ever touch is **local.css** — at the beginning of the project it will be empty.
 
-Briefly, the purpose of css is to define the standard style and then allow you to add “custom” styles to tags and blocks of text. For example if you want the signature line of a letter to be right justified you could enclose that line in a `p` tag and add a class: `<p class=“signature”>Bob Smith</p>`. You would then add the appropriate css to the local.css stylesheet:
+Briefly, the purpose of css is to define the overall style of the publication and then allow you to add “custom” styles to individual tags and blocks of text. For example if you want the signature line of a letter to be right justified you could enclose that line in a `p` tag and add a class: `<p class=“signature”>Bob Smith</p>`. To add the right align you would then add the appropriate css to the local.css stylesheet:
 
 ```
 .signature{
-    `text-align: right;
+    text-align: right;
 }
 ```
 
 But don’t worry. Almost all of the necessary css for a beginner is detailed in [The Standard Ebooks Manual of Style](https://standardebooks.org/manual/latest) and is simply a matter of cutting and pasting.
 
-###### Semantics
-Adding classes is a huge part of a Standard ebook production, in general referred to as semanticating. Adding semantics to individual parts of the text is very important to the well-formed nature of the final product and takes a lot of time and close reading to get correct, especially in more complex productions like plays or epistolary texts. More about that later.
+##### Semantics
+Adding specific classes to specific text is a huge part of a Standard ebook production, in general referred to as semanticating. Adding semantics to individual parts of the text is very important to the well-formed nature of the final product and takes a lot of time and close reading to get correct, especially in more complex productions like plays or epistolary texts. More about that later.
 
 ### Ebook Structure
-We talked about what an ebook is: essentially a self-contained website. The constituent files have been compressed into an archive and that forms the basic epub file. When you start a new Standard ebook project a basic template will be created for you. But here is a brief description of the parts you will need to understand:
+We talked about what an ebook is: essentially a self-contained website. The constituent files have been compressed into an archive that forms the basic epub file. When you start a new Standard ebook project a basic template with all the necessary files will be created for you, but here is a brief description of the parts you will need to understand:
 - **content.opf** — This is the file that houses most of the metadata about the book and contains the “manifest” which details all the constituent parts of the ebook, and the “spine” which sets out the reading order.
 - **css folder** — Contains all the css files to control how the book looks. Remember you will only ever edit the local.css file.
 - **images folder** — Contains the cover image (which is generated as one of the production steps).
 - **toc.xhtml** — The Table of Contents. Automatically generated but *very* occasionally will need to be tweaked.
-- **text folder** — Contains the text files for your project including several standard files common to all Standard ebook projects: title page.xhtml, chapter-1.xhtml etc.
+- **text folder** — Contains the text files for your project including several standard files common to all Standard ebook projects: titlepage.xhtml, chapter-1.xhtml etc.
 
 ### xhtml
-Html stands for *hypertext markup language* and is the basic format that web browsers read. XML stands for *extensible markup language* and can be thought of as a “programable” version of html. The ebook is based on xhtml files which are, in a way, just a mashup of the two.
+As stated, an ebook is made up of many xhtml pages. While they may look complex and a bit indecipherable they really are just a logical set of nested text. Depending on the text editor you use it will often colour code the various bits to make it easier to separate everything.
+
+What your reader does is parse the text document according to the tags you have specified and whatever metadata you have in your content.opf and displays it in a more familiar fashion.
 
 ![xhtml](/images/xhtml_before.png "xhtml")  
 
 *Code view*
 
+
 ![xhtml](/images/xhtml_after.png "xhtml in epub")  
 
 *Epub view*
 
-If you open an xhtml file in your web browser it will appear just like a web page — handy for proofing and checking if and where any errors might be lurking.
+It is helpful to realize that if you open an xhtml file in your web browser it will appear just like a web page — handy for proofing and checking if and where any errors might be lurking.
 
 <img src="/images/xhtml_web.png" width="400" alt="xhtml on the web">
 <img src="/images/screen_error.png" width="400" alt="errors on the web">
 
 *Sometimes using a web browser can be a convenient way of finding errors.*
 
-### Metadata
-Coming Soon
-- purpose
-- format
+#### Basic file structure
+Each individual xhtml file will follow a strictly hierarchical structure. The indents are used to indicate the various levels  of each unit in relation to each other. The `se` toolset includes a handy tool called ‘clean’ which will go through the whole document and set the appropriate level of indent so while it is important to try and keep things organized as you work, you can always  rung the command to  get things where they need to be.
 
+1. **html wrapper** — The whole document will be enclosed in an `<html>` tag. This will also set such things like language and which “official” formats the file adheres to.
+	1. **head** — The first section will be in a `<head>` tag. This generally declares the title of the file,  and where to look for the appropriate css files.
+	3. **body** — The body is the part that holds the text that will be displayed. It generally also declares what the section the file  appears in e.g. frontmatter, bodymatter, backmatter etc.
+		- **section** — Within the body matter will be a <section> which will have an id such as imprint, chapter-1, appendix etc.
+		- **header/title** — Most documents will then have a `<h2>` (header, level 2) header. This will be the chapter title to chapter number as displayed in the text.
+		- **paragraphs** — the next section is the individual paragraphs that make up the body. Occasionally there might be internal sections such as  scene 1, scene 2 in which case there might be several internal sections.
+```
+<section id=“scene-1-1” epub:type="z3998:scene">
+	<p>…</p>
+	<p>…</p>
+</section>
+<section id=“scene-1-2” epub:type="z3998:scene">
+	<p>…</p>
+	<p>…</p>
+</section>
+```
+
+### Metadata
+Coming Soon…
+- what’s it for?
+- how do you format it?
 
 ### Output File Types
-Coming Soon: Epub, kepub, azw3 and advanced pub (epub3)
- 
+Coming Soon…
+- Epub, kepub, azw3 and advanced pub (epub3)
+
+### Wrap up
+That’s a lot. But it really is very logical and rule bound. The rules can be come a bit convoluted (especially when dealing with complex css) but no more so that English grammar so its just a matter of learning the basics and checking back with rule book as much as necessary.
+
+***
+
+## <a id="computer_stuff"></a>The Computer Stuff <span class="notbold">[↺](#toc)</span>
 ### Python, Brew and the Command line
-This is the programming stuff. But it’s not actually as daunting as it seems. Cut and paste is your friend, and along the way you will continue to build on your knowledge until soon you can strikeout on your own :-)
+This is the programming/computer stuff. Don’t despair — it’s not actually as daunting as it seems. Cut and paste is your friend, and along the way you will continue to build on your knowledge until soon you can strikeout on your own :-)
 
 #### Terminal
-Most of the Standard ebook tools are not housed in a GUI (Graphical User Interface) — the thing you point and click with your mouse. You will need to become fairly comfortable with the terminal interface to work on a project. But again it’s mostly cut and paste from the [Manual](https://standardebooks.org/manual/).
+Most of the Standard ebook tools are not housed in a GUI (Graphical User Interface) — the thing you point and click with your mouse. You will need to become fairly comfortable with the terminal interface to work on a project. But again it’s mostly cut and paste from the [Manual](https://standardebooks.org/manual/). 
 
-*Terminal* can be found by searching for terminal using Spotlight (Cmd+space) or navigating to to *Applications: Utilities* and double click on the Terminal icon. We will talk more about this later, but you will need to the program in order to install the tools.
+> Hint: if you triple click on a command in the Step-by-Step it will select what you need. Keyboard commands are your friend. So if you triple click a command, then hit cmd-c, cmd-tab, cmd-v and then enter you can quickly accomplish a step.
+- triple click: select paragraph)
+- cmd-c: copy
+- cmd-tab: switch to previous window (presumable the terminal)
+- cmd-v: paste
+- enter: execute the command
+
+*Terminal* can be found by searching for terminal using Spotlight (Cmd+space) or by navigating to to *Applications: Utilities* and double clicking on the Terminal icon. 
+
+![GitHub Desktop](/images/terminal_icon.png)
+
+We will talk more about this later, but you will need to use this application in order to install the tools.
 
 #### Brew 
 To install and maintain the tools on a Mac you use the [Homebrew package manager](https://brew.sh/). This is similar to an “app store” — basically some non-gui software that leaves the heavy lifting of installing and updating to someone else. There are instructions on the [tools Github](https://github.com/standardebooks/tools) (More on Github in the next section) to get up and running. IN a nutshell you will copy the command from   the website into terminal and hit enter. At this point the this is the command (but it may changes be safe and copy it from the website).
