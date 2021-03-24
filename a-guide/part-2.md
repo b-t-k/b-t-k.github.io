@@ -28,8 +28,20 @@ permalink: how-to/
 This section focuses a bit more on specific methods I use, some hints and tricks I have discovered along the way and some in-depth tips on specific actions.
 
 ## The Mac Keyboard and Typography
-- r and l quotes
-- dashes
+We all know the difference between straight quotes and curly quotes right? How about a regular dash and an n-dash? These are important distinctions and unlike when using your helpful word processor, you are going to have to learn to enter them properly from the keyboard. 
+#### quotes
+- left quote (“): opt+[
+- right quote (”): opt+shift+[
+- left single quote (‘): opt+]
+- right single quote (’): opt+shift+]
+#### dashes
+- n-dash: opt+-
+- m-dash: opt+shift+-
+#### accents
+- grave (á): opt+e followed by the necessary letter.
+- acute (à): opt+` followed by letter.
+- circumflex (ê): opt+i followed by letter.
+- umlaut (ä): opt+u followed by letter.
 
 ## <a id="bbedit"></a>BBEdit [↺](#toc)
 ### opening projects

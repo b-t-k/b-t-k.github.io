@@ -274,14 +274,18 @@ The last tool you will have to use is an image editor. All you really need to us
 I have Photoshop as a part of my working suite but [GIMP](https://www.gimp.org/) is a totally free and open source image editor that is pretty highly regarded.
 
 ### Ebook Reader
-Of course it always good to have a stand alone ebook reader( i.e. a Kindle or a Kobo) to try out your projects on but a desktop one is easier (in my opinion) to use when proofing. I generally use the built in Apple Books, but occasionally also use the Calibre ebook reader built into the excellent [Calibre e-book Management](https://calibre-ebook.com/) software. There are plenty of options out there.
+Of course it always good to have a stand alone ebook reader (i.e. a Kindle or a Kobo) to try out your projects on but a desktop one is easier (in my opinion) to use when proofing. I generally use the built in Apple Books, but occasionally also use the Calibre ebook reader built into the excellent [Calibre e-book Management](https://calibre-ebook.com/) software. There are plenty of options out there.
 
 
 ## <a id="get_started"></a>Get Started [↺](#toc)
 So. Time to start. First off you need to subscribe to the [Standard Ebooks Google Group](https://groups.google.com/g/standardebooks) which is where 99% of the communication back and forth happens.
 
-Then you need to visit [Wanted Books](https://standardebooks.org/contribute/wanted-ebooks) page and find a book that appeals to you from the **First Production** section. Alex (and everyone else who has reviewed a book project) will strongly discourage you from choosing a book that isn’t on the list for a first project. Not only do you have to learn all the ins and outs but then a reviewer has to go through it closely to ensure you’ve done everything correctly. The longer and more complex the book, the harder it is for both parties. After you've done your first project successfully you will likely be invited to try something a bit harder.
+Then you need to visit [Wanted Books](https://standardebooks.org/contribute/wanted-ebooks) page and find a book that appeals to you from the **First Production** section. Alex (and everyone else who has reviewed a book project) will strongly discourage you from choosing a book that isn’t on the list for a first project. Not only do you have to learn all the ins and outs, but then a reviewer has to go through it closely to ensure you’ve done everything correctly. The longer and more complex the book, the harder it is for both parties. After you've done your first project successfully you will likely be invited to try something a bit harder.
 
 Start a new thread in the Google Group and send off a note with your chosen book and wait (patiently) to see if it's approved. Then you are on your way and can follow the [Step by Step](https://standardebooks.org/contribute/producing-an-ebook-step-by-step).
 
 For your first projects you should start by following the provided *Step by Step* pretty closely, feeling free to ask questions as often as necessary. People are generally pretty helpful with beginners but a lot of it can be found in the manual if you look there first.
+
+***
+
+On to [Part 2: How To’s](how-to/)
