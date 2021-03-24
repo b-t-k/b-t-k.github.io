@@ -137,16 +137,17 @@ Each individual xhtml file will follow a strictly hierarchical structure. The in
 		- **section** — Within the body matter will be a <section> which will have an id such as imprint, chapter-1, appendix etc.
 		- **header/title** — Most documents will then have a `<h2>` (header, level 2) header. This will be the chapter title to chapter number as displayed in the text.
 		- **paragraphs** — the next section is the individual paragraphs that make up the body. Occasionally there might be internal sections such as  scene 1, scene 2 in which case there might be several internal sections.
+
 ```
-<section id=“scene-1-1” epub:type="z3998:scene">
+<section id="scene-1-1" epub:type="z3998:scene">
 	<p>…</p>
 	<p>…</p>
 </section>
-<section id=“scene-1-2” epub:type="z3998:scene">
+<section id="scene-1-2" epub:type="z3998:scene">
 	<p>…</p>
 	<p>…</p>
 </section>
-```
+``` 
 
 ### Metadata
 Coming Soon…
