@@ -4,24 +4,6 @@ title: "A non-programmers guide to contributing to Standard Ebooks"
 permalink: /a-guide/
 ---
 
-![standard ebooks logo](/images/selogo.png)
-### <a id="toc"></a>Table of Contents
-#### Part 1
-1. [Introduction](#introduction)
-2. [Key Concepts](#key_concepts)
-3. [The Computer Stuff](#computer_stuff)
-3. [Tools](#tools)
-4. [Get Started](#get_started)
-
-#### Part 2
-5. [How To’s](/how-to/#howto)
-	1. [BBEdit](/how-to/#bbedit)
-		2. [Search & Replaces and Regexes](/how-to/#search_replaces_and_regexes)
-	1. [GitHub Desktop](/how-to/#github_desktop)
-	1. [CSS](/how-to/#css)
-6. [Hints & Tips](/how-to/#hints_tips)
-	1. [Handy links](/how-to/#handy_links)
-	2. [My Notes](/how-to/#my_notes)
 
 ## <a id="introduction"></a>Introduction <span class="notbold">[↺](#toc)</span>
 ### Why this guide

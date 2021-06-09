@@ -1,3 +1,5 @@
+![standard ebooks logo](/images/selogo.png)
+
 ### <a id="toc"></a>Table of Contents
 #### Part 1
 1. [Introduction](/a-guide/#introduction)
