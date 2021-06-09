@@ -29,7 +29,7 @@ I am a Mac user. Most of what I write here will be focussed on working with a Ma
 ### What it is?
 A lot of what the Standard ebook project is about is creating a consistent, updatable and functional ebook. So a lot of what follows is just the basics of how that goal is met at the production level.
 
-One of the keys to understanding how and why a Standard ebook is formatted the way it is, is realizing it is designed to be as *accessible* as possible — that means it can be used on multiple readers, including screen readers for the visually impaired. As an example, a computerized reader needs to be able to distinguish between the article “I” and the Roman numeral I —something our brains do automatically from context so the underlying code you will be applying will be to make this distinction for the ereader to parse. If in the course of working on a project you are confused about whether to mark something up or not, a good touchstone is to ask yourself if a computer would be able to distinguish what it is without further context.
+One of the keys to understanding how and why a Standard ebook is formatted the way it is, is realizing it is designed to be as *accessible* as possible — that means it can be used on multiple readers, including screen readers for the visually impaired. As an example, a computerized reader needs to be able to distinguish between the article “I” and the Roman numeral I — something our brains do automatically from context — so the underlying code you will be applying will be to make this distinction for the ereader to parse. If in the course of working on a project you are confused about whether to mark something up or not, a good touchstone is to ask yourself if a computer would be able to distinguish what it is without further context.
 
 To make an ebook you are, at root, making something very similar to a website. One that is packaged according to some very specific rules. This means that a working knowledge of html and css is helpful — but don’t let that daunt you. You will also need to get over any nervousness you have regarding the *command line prompt*. That’s that thing that looks like an olde-tymie computer interface with a blinking prompt, where you have to enter arcane, and often incomprehensible, commands. Again, don’t worry — most times it's simply a matter of cut and paste. You can figure out what the commands are doing later.
  
@@ -39,20 +39,20 @@ Html is the “programming” language used to make web pages. Html stands for *
 Html/xhtml has a few conventions you will need to know. 
 
 #### tags
-Html is formed by surrounding text with tags. Each tag set has an opening and a closing tag. The web browser (or in this case reader) reads the text between the tags and treats it according to the appropriate html rules. For example `p`, the tag that marks paragraphs is used like this: 
+Html is formed by surrounding text with tags. Each tag set has an opening and a closing tag. The web browser (or in this case ereader) reads the text between the tags and treats it according to the appropriate html rules. For example `p`, the tag that marks paragraphs is used like this: 
 
 > `<p>This is a paragraph. It may have all sorts of text in it.</p>`
 
 The text will then be displayed and treated as a paragraph with whatever settings (first line indent, space after etc.) that have been assigned to paragraphs. Unlike  programs like Microsoft Word or other rich text editors, if you want something to appear bold or italics you will need to tag it e.g. `<b>This is bold</b>` and `<i>This is italic.</i>`.
 
 Some common html tags you will need to know: 
-- **emphasis**: `<em>…</em>` — is usually visually identical to and used in place of italics in most cases.
+- **emphasis**: `<em>…</em>` — is usually visually identical to, and used in place of, italics.
 - **italics**: `<i>…</i>` — generally only used where italics are grammatically correct i.e. foreign languages, names of books etc.
 - **strong**: `<strong>…</strong>` — This is used instead of bold in almost all cases.
 - **bold**: `<b>…</b>` — very rarely used.
-- **br**: `<br/>` — an exception to the opening/closing tag rule, a `br` (break) is a line break that goes at the end of a line where you want it to break (as opposed to a paragraph break). The forward slash at the end indicates it is acting as both an opening and closing tag.
-- **hr**: `<hr/>` — another exception to that rule. The hr (horizontal rule) tag is used to indicate section breaks that are usually shown by a white space or glyphs (e.g. * * * ) in a printed book.
-- **abbr**: `<abbr>Mr.</abbr> James <abbr>H.</abbr> Smythe-Jones` — Indicates abbreviations, all of which should be marked appropriately in Standard ebooks — otherwise how would a screen reader know who to pronounce them?
+- **br**: `<br/>` — an exception to the opening/closing tag rule, a `br` (break) is a line break that goes at the end of a line where you want it to break (as opposed to a break created by a paragraph). The forward slash at the end indicates it is acting as both an opening and closing tag.
+- **hr**: `<hr/>` — another exception to the 2-tag rule. The hr (horizontal rule) tag is used to indicate section breaks that are usually shown by a white space or glyphs (e.g. * * * ) in a printed book.
+- **abbr**: `<abbr>Mr.</abbr> James <abbr>H.</abbr> Smythe-Jones` — Indicates abbreviations, all of which should be marked appropriately in Standard ebooks — otherwise how would a screen reader know who to pronounce them? (See [section 8.10 of the manual](https://standardebooks.org/manual/latest/8-typography#8.10) for different types of abbreviations like acronyms or initialisms.)
 - **blockquote**: Essentially a ‘block’ that is formatted to stand out from the rest of the text e.g. a letter or a sign
 
 ```
@@ -103,10 +103,13 @@ We talked about what an ebook is: essentially a self-contained website. The cons
 - **css folder** — Contains all the css files to control how the book looks. Remember you will only ever edit the local.css file.
 - **images folder** — Contains the cover image (which is generated as one of the production steps).
 - **toc.xhtml** — The Table of Contents. Automatically generated but *very* occasionally will need to be tweaked.
-- **text folder** — Contains the text files for your project including several standard files common to all Standard ebook projects: titlepage.xhtml, chapter-1.xhtml etc.
+- **text folder** — Contains the text files for your project including several standard files common to all Standard ebook projects: titlepage.xhtml, imprint.xhtml, chapter-1.xhtml etc.
 
 ### xhtml
-As stated, an ebook is made up of many xhtml files. Each file represents a section of the book: Title page, chapter, endnotes etc. While an xhtml file may look complex and a bit indecipherable they really are just made up of logical sets of nested text. Depending on the text editor you use it will often colour code the various bits to make it easier to separate everything.
+As stated, an ebook is made up of many xhtml files. Each file represents a section of the book: Title page, chapter, endnotes etc. While an xhtml file may look complex and a bit indecipherable they really are just made up of logical sets of nested text. Depending on the text editor you use it will often colour code the various bits to make it easier to separate everything. Some editors will hav ea little arrow on the right side that will allow you to hide all the text between two tags—this makes it all a lot less cluttered looking. This is a collapsed version of the page seen below:
+
+![collapsed](/images/collapsed.jpg "collapsed")
+
 
 What an ereader does is parse the text document according to the tags you have specified and whatever metadata you have in your content.opf and displays it in a more familiar fashion.
 
@@ -121,8 +124,9 @@ What an ereader does is parse the text document according to the tags you have s
 
 It is helpful to realize that if you open an xhtml file in your web browser it will appear just like a web page — handy for proofing and checking if and where any errors might be lurking.
 
-<img src="/images/xhtml_web.png" width="400" alt="xhtml on the web">
-<img src="/images/screen_error.png" width="400" alt="errors on the web">
+<img src="/images/xhtml_web.png" width="600" alt="xhtml on the web">
+
+<img src="/images/screen_error.png" width="600" alt="errors on the web">
 
 *Sometimes using a web browser can be a convenient way of finding errors.*
 

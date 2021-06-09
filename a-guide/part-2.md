@@ -255,7 +255,7 @@ If there was more than one blockquote and the poster was in the second one you c
 }
 ```
 
-**nth-** selectors are very, very useful for more complex selection tasks. If you encounter something that Neds special CSS, take a stab at it yourself with a little Googling, then ask the list to let you know if you are on the right track. Here are a few other [selectors](https://www.w3schools.com/cssref/css_selectors.asp) you might use:
+**nth-** selectors are very, very useful for more complex selection tasks. If you encounter something that needs special CSS, take a stab at it yourself with a little Googling, then ask the list to let you know if you are on the right track. Here are a few other [selectors](https://www.w3schools.com/cssref/css_selectors.asp) you might use:
 - :first-child
 - :only-child
 - :last-child
