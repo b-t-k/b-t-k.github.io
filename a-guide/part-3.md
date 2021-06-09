@@ -6,6 +6,8 @@ permalink: step_by_step/
 
 {% include menu.md %}
 
+# DRAFT NOTES ONLY!!!
+
 # <a id="step_by_step"></a>Intro [↺](#toc)
 This is just a brief look at the [step by step guide](https://standardebooks.org/contribute/producing-an-ebook-step-by-step) with a few additional hints/suggestions/explanations that might make it easier to understand as you go along.
 
@@ -109,7 +111,14 @@ There are often multiple sources for finding original texts and sorting through 
 
 ### 19. Create the Cover
 - yes, he's serious; no, you can't do that; yes it's **hard**
+Preview can:
+- Adjust the size with Tools/Adjust Size. I use this more often for downrezing than up; e.g. if a picture is 3000h x 4500w, depending on what crop I want, I might resize it to 2200h x <whatever that would turn out to be>w. Preview will scale proportionally as long as the checkbox is checked, which it is by default, so you only have to specify one dimension.
+- Identify a crop just by clicking and dragging the cursor (it shows you the dimensions as you drag, so you can see when you get to 2100x1400), then typing Cmd-C to copy it, and Cmd-N to open a new Preview window with that crop displayed full size in it, where it can then be saved, etc. The default file is PNG, so you have to change the file type before saving.
+- It can also do rudimentary visual adjustments via Tools/Adjust Color, e.g. exposure, contrast, temperature, etc. The usual major things you see in a photo editor.
+- It can also flip and rotate if needed.
 
+#### Gigapixel
+- ask and you shall recieve
 
 ### 20. Complete content.opf
 
