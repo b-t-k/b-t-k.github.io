@@ -6,7 +6,7 @@ permalink: how-to/
 
 {% include menu.md %}
 
-# <a id="howto"></a>Intro [↺](#toc)
+## <a id="howto"></a>Intro [↺](#toc)
 This section is a work in progress and focusses a bit more on specific methods I use, some hints and tricks I have discovered along the way and some in-depth tips on specific actions.
 
 ## The Mac Keyboard and Typography
