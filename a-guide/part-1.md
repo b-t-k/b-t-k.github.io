@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "A non-programmers guide to contributing to Standard Ebooks"
-permalink: /a-guide/
+permalink: a-guide/
 ---
 
 {% include menu.md %}
