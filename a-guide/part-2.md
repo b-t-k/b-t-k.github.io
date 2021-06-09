@@ -266,6 +266,17 @@ If there was more than one blockquote and the poster was in the second one you c
 - :only-of-type
 - :nth-of-type
 
+## <a id="quick_hints_"></a>Some quick hints [↺](#toc)
+- Make it easy on reviewers: include the links to your repos (repositories), include attachments with images, link to specific pages when providing source material etc.
+ soon)
+- .DS_Store files: managing etc. (coming soon)
+- Tor Browser for geo blocking (coming soon)
+
+### <a id="handy_links"></a>Handy links [↺](#toc)
+Start with the Standard Ebook [Get Involved](https://standardebooks.org/contribute) page. It has most of the links you’ll need.
+- [Step by step](https://standardebooks.org/contribute/producing-an-ebook-step-by-step) — This is the one to read first to see if you are up to the challenge.
+- [One page style guide](https://standardebooks.org/manual/latest/single-page) — There is an extensive style guide but this version displays it all on one huge page making it easer to search.
+
 ## More to come
 
 
