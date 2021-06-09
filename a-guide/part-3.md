@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "A Step by Step for the Step by Step
+title: "A Step by Step for the Step by Step"
 permalink: step-by-step/
 ---
 
