@@ -1,8 +1,10 @@
 ---
 layout: page
-title: "How to’s for contributing to Standard ebooks"
+title: "How To’s for contributing to Standard ebooks"
 permalink: how-to/
 ---
+
+{% include test.md %}
 
 ![standard ebooks logo](/images/selogo.png)
 
@@ -19,24 +21,23 @@ permalink: how-to/
 		2. [Search & Replaces and Regexes](#search_replaces_and_regexes)
 	1. [GitHub Desktop](#github_desktop)
 	1. [CSS](#css)
-6. [Hints & Tips](#hints_tips)
-	1. [Handy links](#handy_links)
-	2. [My Notes](#my_notes)
 
 
 # <a id="howto"></a>How To’s [↺](#toc)
 This section focuses a bit more on specific methods I use, some hints and tricks I have discovered along the way and some in-depth tips on specific actions.
 
 ## The Mac Keyboard and Typography
-We all know the difference between straight quotes and curly quotes right? How about a regular dash and an n-dash? These are important distinctions and unlike when using your helpful word processor, you are going to have to learn to enter them properly from the keyboard. 
+We all know the difference between straight quotes and curly quotes right?  ("" v. “”) How about a regular dash and an n-dash? These are important distinctions and unlike when using your helpful word processor, you are going to have to learn to enter them properly from the keyboard. 
 #### quotes
 - left quote (“): opt+[
 - right quote (”): opt+shift+[
 - left single quote (‘): opt+]
 - right single quote (’): opt+shift+]
+
 #### dashes
 - n-dash: opt+-
 - m-dash: opt+shift+-
+
 #### accents
 - grave (á): opt+e followed by the necessary letter.
 - acute (à): opt+` followed by letter.
@@ -54,7 +55,7 @@ Now you can open individual files simply by selecting them in the left column.
 ![bbedit window](/images/bbedit-openfolder.png "BBEdit folders open")
 
 ### Change Case
-The SE toolset offer a way to change case, but frankly the workflow I’ve developed makes using BBEdit’s built in Change Case function. Out of the box there is no keyboard shortcut assigned to the various change case functions—
+The SE toolset offer a way to change case, but frankly the workflow I’ve developed makes using BBEdit’s built in Change Case function. Out of the box there is no keyboard shortcut assigned to the various change case functions:
 - All Upper Case,
 - All Lower Case,
 - Make Title Case,
@@ -63,6 +64,8 @@ The SE toolset offer a way to change case, but frankly the workflow I’ve devel
 - Capitalize Words.
 
 But BBEdit is highly customizable and it is easy enough to go to *BBEdit > Preferences > Menus & Shortcuts > Text* and assign a keyboard shortcut to any one of the above (or any other menu function).
+
+Be careful with Title Case as it  may use a slightly different set of rules than Standard ebook’s own Title Case command, but I’ve never found any real conflicts.
 
 ### External scripts
 BBEdit also offers a way to run external scripts to extend its functionality. I have made a few to cover some of the more repetitive tasks like “rename file to clipboard” and “lowercase and dashes” (makes text url friendly) which you do a lot of when making headers for compilations and these again have keyboard shortcuts assigned to them. 
@@ -123,21 +126,19 @@ Remember to open your project (see above) rather than individual files. The sele
 The search and replace in the image will find words in all caps and replace them with upper/lower. We will look at the specifics of that later.
 
 ## <a id="search_replaces_and_regexes">Search & Replaces and Regexes [↺](#toc)
-**More soon:** 
-- a beginners guide to regexes
-- BBEdit and advanced searches
+A guide ro regexes is beyond the scope of this project and there are tons and tons of tutorial and videos about there that will attempt to teach you how to use them. If you are like me there won’t make a lot of sense until you start using them and suddenly the lightbulbs will go off. So let’s dive in with some simple ones you can expand on later.
 
 ### A Basic Pattern
-Let's say you wanted to search for `<h2>This is the title</h2>` and replace it with `<h2 epub:type="title">This is the title</h2>`. First you identify the pattern, which in this case is text between two `<h2>` tags. Then you build a regex to identify this pattern:
+Let's say you wanted to search for **<h2>This is the title</h2>** and replace it with **<h2 epub:type="title">This is the title</h2>**. First you identify the pattern, which in this case is text between two `<h2>` tags. Then you build a regex to identify this pattern:
 - `<h2>.*?</h2>`
 
-The `.*?` wildcards will find the `<h2>` tags with all text and characters between the two h2s. But in order to replace it we need to copy the text between the tags into the replace statement. This is accomplished by placing the wildcard pattern between in parentheses: `(.*?)`. This essentially writes that text into memory and can then be called back on the replace statement using a backslash and the number of the occurrence. So...
+The `.*?` wildcards will find all text and characters between the opening and closing h2s. But in order to replace the whole statement we need to copy the text between the tags into the replace statement. This is accomplished by placing the wildcard pattern between in parentheses (called a group): `(.*?)`. This essentially writes that text into memory and can then be called back on the replace statement using a backslash and the number of the occurrence. So...
 
 Find: `<h2>(.*?)</h2>`
 
 Replace: `<h2 epub:type="title">\1</h2>`
 
-Or if you had multiple tags you wanted to replace or delete like getting rid of the extra tags in the opening paragraphs: `<p class="nind">A <small>GIRL</small> stood on the shingle that fringes Millbourne Bay</p>`:
+Or if you had multiple tags you wanted to replace or delete like getting rid of the extra tags in the opening paragraphs: **<p class="nind">A <small>GIRL</small> stood on the shingle that fringes Millbourne Bay</p>**. You would then create multiple groups:
 
 Find: `<p class="nind">(.*?)<small>(.*?)</small>(.*?)</p>`
 
@@ -145,7 +146,9 @@ Replace: `<p>\1\2\3</p>`
 
 This will result in `<p>A GIRL stood on the shingle that fringes Millbourne Bay</p>`. 
 
-You will then have to run another regex to change the all caps to lowercase. You can see if you needed to change the opening paragraphs across one or two chapters it might be easier to do it by hand, but if you had 30 or 40 chapters to fix it is definitely easier to spend a moment building the regex.
+You will then have to run another regex to change the all caps to lowercase. If you needed to change the opening paragraphs across one or two chapters it might be easier to do it by hand, but if you had 30 or 40 chapters to fix it is definitely easier to spend a moment building the regex.
+
+>**Note**: When building regexes remember spaces, tabs and line breaks count so always try to accommodate them in your search. 
 
 #### Basic wildcards/metacharacters
 - `\n` — find new line (i.e paragraph break)
@@ -153,8 +156,8 @@ You will then have to run another regex to change the all caps to lowercase. You
 - `\s` — find white space (including line breaks)
 - `^` beginning of a line
 - `$` end of line
-- `[]` — find set e.g. `[A-Z]` capital letters between A and Z
-- `{x,y}` — limit set e.g. `[A-Z]` 
+- `[]` — find set e.g. `[A-Z]` capital letters between A and Z; `[0-9]` single digits between 0 and 9
+- `{x,y}` — limit set e.g. `[A-Z]{1,3}` finds words with 1–3 capital letters in a row 
 
 **Note:** if you need to search for characters like a period, dollar sign or question mark etc. you will need to 'escape' it by preceding it with a backslash e.g. `\$` will find any dollar signs and `$` will find the end of a line.
 
@@ -205,88 +208,76 @@ Here is a handy [RegEx Cheat Sheet](https://gist.github.com/ccstone/5385334) to 
 - `([A-Z])([A-Z]{2,})` with `\U\1\L\2`
 	- This would replace a word that starts with a capital and is followed by 2 or more capitals (e.g. SOD) with a single capital and the rest lowercase (e.g. Sod), but it would not change AD or BC.
 
-## <a id="github_desktop"></a>Github Desktop [↺](#toc)
-**Coming soon:**
-- Step by step 
-
-
 ## <a id="css"></a>CSS [↺](#toc)
-**Coming soon:**
-- targeting 
 
+As mentioned previously CSS is a big part of producing any ebook, and following standards is, after all, eponymous with producing a Standard ebook.
 
-# <a id="hints_tips"></a>Hints & Tips [↺](#toc)
-### First Projects
-You will be ***strongly*** encouraged to pick a book off the [First Production list](https://standardebooks.org/contribute/wanted-ebooks) as your first project. Many people come to the list because they have a project in mind and balk at this restriction. After what is often a lot of argument, some reluctantly agree to do it the Standard Ebooks way and some depart unhappily. 
+Much of the CSS you will need to use is prescribed by [The Standard Ebooks Manual of Style](https://standardebooks.org/manual/latest). Often all you will need to be able to do is identify the particular type of style you are looking at  (the most common ones will be dedications, letters, poems etc.) and then find the appropriate css from the manual to copy into the local.css file.
 
-The reason for this restriction is two-fold. As a producer you will discover in some cases it is harder than it looks to balance the editorial and structural demands of a text (even little things like letters or posters pose some semantic and coding problems). And length is a big factor in being able to balance the many dimensions of producing a quality project—many projects are abandoned each year because the producer just couldn’t sustain the effort. The other main reason is it is highly likely you will make errors on your first attempt and the reviewer assigned to you is left having to scrutinize not only the basics, but all that extra length and/or complexities involved in a longer, more complicated book.
+This is the base css for including poetry, straight from section [7.5.7  of the Manual](https://standardebooks.org/manual/latest/7-high-level-structural-patterns#7.5.7):
 
-So stick to some thing say for the first book—and if you are new to coding, maybe the fist couple of books—before you strike out in an attempt to bring your favourite piece of literature to the world. The good new is that a first production was categorized as 40,000 words when I started and is now, thanks to improvements in the toolset, set at < 100,000 words.
+```
+[epub|type~="z3998:poem"] p{
+	text-align: initial;
+	text-indent: 0;
+}
 
-Remember though, even given the restrictions you are free to use the methodology and toolset to produce you own book—it just won’t be eligible for inclusion in the Standard Ebook corpus.
+[epub|type~="z3998:poem"] p > span{
+	display: block;
+	padding-left: 1em;
+	text-indent: -1em;
+}
 
-#### Some quick hints
-- Make it easy on reviewers: include the links to your repos (repositories), include attachments with images, link to specific pages when providing source material etc.
-- You need to use escaped html text for the long description in the content.opf file. But you also need to ensure that each paragraph is indented by 3 tabs. This might be corrected by the latest version of lint.
-- finding errors: (coming soon)
-- .DS_Store files: managing etc. (coming soon)
+[epub|type~="z3998:poem"] p > span + br{
+	display: none;
+}
 
-### Semantication
-**Coming soon:** 
-- hints
+[epub|type~="z3998:poem"] p + p{
+	margin-top: 1em;
+}
+```
+What this does is find text in the project that is marked as poetry and apply certain styles to it. For example:
 
-### Sources
-As a Canadian, finding texts (especially for cover searches) can often be problematic. Because of geo-blocking due to territorial rights and differing copyright periods often books that are freely available in the U.S. are not available to Canadian producers—I find Google Books especially frustrating on the score and rarely use it. 
+```<blockquote epub:type="z3998:poem”>
+	<p>
+		<span>O Lady! we receive but what we give,</span>
+		<br/>
+		<span>And in our life alone does nature live:</span>
+	</p>
+	<p>
+		<span>Ah! from the soul itself must issue forth</span>
+		<br/>
+		<span>A light, a glory, a fair luminous cloud,</span>
+	</p>
+</blockquote>
+```
 
-There are often multiple sources for finding original texts and sorting through them to find the best, copyright free version is just another challenge.
+This poem appears in a blockquote (a standard html tag) with a tag (class) of z:3998:poem (an international web standard tag). Anything within that blockquote will have the above CSS applied to it.
 
-- [Internet Archive](https://archive.org/) — The go-to. Start here when looking for page scans of pre-1925 books.
-- [HathiTrust](https://www.hathitrust.org/) — Not quite as user-friendly as the Internet Archive, but a good source for scanned books if you strike out there.
-- [Google books](https://books.google.com/) — As mentioned above, not as accessible to non-American locations.
-- [Distributed Proofreaders](https://www.pgdp.org/ols/index.php) — The online home of the proofreaders who are supplying the main Gutenberg projects. Page scans are available as individual files so it makes it more cumbersome to work with.
+This CSS essential states all `p`’s will have an indent of “0”; all `span`’s within that `p` will have a hanging indent and any two `p`s will be separated by a space between. You’ll get the hang of it but don’t worry too much. 
 
+### Selectors
+Generally you can do a quick google to find any css you might want to clarify or add. The only other css I will touch on are a few of the selectors. You will likely here are some point that you shouldn’t use a class for one instance—in fact there is an error that will pop up if you try.
 
+To get around that you can target the text you was to format with a selection of pseudoclasses. Let’s say in Chapter 2 you have a poster that is supposed to appear centered. Rather than inventing a class called poster and specifying that it should be centered you could target it with some thing like:
+```
+#chapter-2 blockquote{
+	text-align: center;
+}
+```
+If there was more than one blockquote and the poster was in the second one you could use:
+```
+#chapter-2 blockquote:nth-of-type(2){
+	text-align: center;
+}
+```
 
-## <a id="handy_links"></a>Handy links [↺](#toc)
-Start with the Standard Ebook [Get Involved](https://standardebooks.org/contribute) page. It has most of the links you’ll need.
-- [Step by step](https://standardebooks.org/contribute/producing-an-ebook-step-by-step) — This is the one to read first to see if you are up to the challenge.
-- [One page style guide](https://standardebooks.org/manual/latest/single-page) — There is an extensive style guide but this version displays it all on one huge page making it easer to search.
-- [Escaped text page](https://www.freeformatter.com/xml-escape.html) — You will be asked to use escaped text for the long description and this site can help do that automatically.
-
-
-## <a id="my_notes"></a>Some of My Notes [↺](#toc)
-### Forking (copying)
-Forking is a way to make a copy of an existing repo, apply some changes and then resubmit it. Its much more than that, but for Standard Ebook purposes it acts as a way to submit changes to a book. Here is a basic guide to forking for further reference: [fork-a-repo](https://help.github.com/articles/fork-a-repo/).
-
-This is my step-by-step to fork a project  so you can work on it.
-
-#### Make a Fork
-Go to [Standard Ebook repository](https://github.com/standardebooks) and find the repository you want to edit.
-- Click fork (upper right). This make a fork (copy) of the project in your Github account.
-- Go to Github Desktop on your computer.
-- Click on the arrow that says curent repository and select *Add*.
-- Select *Clone Repository* and find the fork you just made. 
-  - Ensure you are going to download it to the proper folder for where you store your projects and click *Clone*.
-
-Open the project (in BBEdit) and make changes.
-
-#### Submit Changes
-Once you've made all the changes , now you need to submit it to the original "owner" for a approval and integration into the main  project. This is where the usage of  version management schemes like Github are  really useful. The owner of the project can continue to make changes to their files and still be able integrate changes from outside teven though the original project isn't the same.
-
-- Navigate to the original repository you created your fork from.
-- Select *Pull requests* from beside *Issues*.
-  - Click New pull request.
-- Select the link that says *Compare across forks*. Its at the end of the sentence under the heading **Compare changes**.
-
-There are drop-down menus for choosing the head and base repositories.
-- The **base repository** is where the main files are (the repository you originally got the files from and where you'd like to merge changes into.
-- Use the **head repository** drop-down menu to select the branch you made your changes in.
-	
-- Edit the Pull request title and description fields
-  - Type a title and description for your pull request.
-
-- Create pull request button
-  - To create a pull request that is ready for review, click *Create Pull Request*.
-  
-You will be notified if the/when the changes are accepted.
-
+**nth-** selectors are very, very useful for more complex selection tasks. If you encounter something that Neds special CSS, take a stab at it yourself with a little Googling, then ask the list to let you know if you are on the right track. Here are a few other [selectors](https://www.w3schools.com/cssref/css_selectors.asp) you might use:
+- :first-child
+- :only-child
+- :last-child
+- :nth-child
+- :first-of-type
+- :last-of-type
+- :only-of-type
+- :nth-of-type
