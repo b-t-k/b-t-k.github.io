@@ -8,8 +8,8 @@
 4. [Get Started](/a-guide/#get_started)
 
 #### Part 2
-5. [How To’s](how-to/#howto)
-	1. [BBEdit](how-to/#bbedit)
+5. [How To’s](/a-guide/how-to/#howto)
+	1. [BBEdit](/how-to/#bbedit)
 		2. [Search & Replaces and Regexes](how-to/#search_replaces_and_regexes)
 	1. [CSS](how-to/#css)
 6. [Quick Hints](how-to/#quick_hints)
