@@ -17,4 +17,4 @@
 
 #### Part 3
 5. [Step by Step Explained](/step_by_step/)
-	1. [BBEdit](step_by_step/#the_steps)
+	1. [The Steps](step_by_step/#the_steps)
