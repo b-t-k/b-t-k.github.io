@@ -206,18 +206,20 @@ Just follow the step-by-step in the tools repository README.md. Remember it’s 
 - `pipx` commands install the python programs
 - `sudo` is a terminal command that allows the the install to take place at *root* level i.e as an administrator. It will likely  ask for your password for permission.
 
-I would ignore the *Optional* elements at the this point unless you know what they mean. From time to time you be required to update the SE software as new versions come out.
+I would ignore the *Optional* elements at the this point unless you know what they mean. 
+
+From time to time you be required to update the SE software as new versions come out. You will find out about these on the Google mailing list.
 
 `sudo pip3 install --upgrade standardebooks`
 
 ### Github
-[Github](https://github.com/) is a website that employs [Git](https://www.atlassian.com/git/tutorials/what-is-git), a source control system. Normally used as a way of managing source code (and if you think about it, that’s what making an ebook essentially is), it’s what Standard Ebooks uses to manage and control the various projects. I am a real noob at using `Git` and Github and I frequently have to resort to using google-foo to figure out how to fix what I did wrong.
+[Github](https://github.com/) is a website that employs [Git](https://www.atlassian.com/git/tutorials/what-is-git), a source control system. Normally used as a way of managing source code for computer programs (and if you think about it, that’s what making an ebook essentially is), it’s what Standard Ebooks uses to manage and control the various projects. I am a real noob at using *Git* and Github and I frequently have to resort to using google-foo to figure out how to fix what I did wrong.
 
-In a nutshell, `Git` is a process to exercise version control over your project and Github is a website that allows you store this online. You create an initial repository (with the folder containing your files) and as you move through the steps, you sync your local version to the GitHub website. This allows you to keep track of the steps you have taken and, more importantly, to revert any changes you made that weren’t appropriate or were outright mistakes. The repository is often referred to as the repo.
+In a nutshell, *Git* is a process to exercise version control over your project and Github is a website that allows you store this online. In a nutshell, you create an initial repository with the folder containing your files and as you move through the steps, you sync your local version to the GitHub website. This allows you to keep track of the steps you have taken and, more importantly, to revert any changes you made that weren’t appropriate or were outright mistakes. The repository is usually referred to as the repo.
 
-You will have to create a [GitHub account](https://github.com/).  Its pretty standard and once you are signed up you will have your own place to store your work as you progress. 
+You will have to create a [GitHub account](https://github.com/).  It’s pretty standard and once you are signed up you will have your own place to store your work as you progress. 
 
-When a project is finalized and approved then Standard Ebooks will clone it to their [own GitHub repositories](https://github.com/standardebooks/) in preparation to publishing. Incidentally those repos give you access to all the ebooks that have been already published, providing a plethora of examples on how to solve various issues.
+When a project is finalized and approved then Standard Ebooks will clone it to their [own GitHub repository](https://github.com/standardebooks/) in preparation to publishing. Incidentally those repos give you access to all the ebooks that have been already published, providing a plethora of examples on how to solve all sorts of issues and special cases.
 
 ### A brief introduction to Regular Expressions (regex)
 Regular Expressions, generally known as regexes, are, roughly speaking, a way to search and manipulate text through a series of wildcards and pattern matching. I will freely admit that, while I am pretty bad at constructing proper regexes, I am a huge fanboy. Imagine being able to replace every instance of a particular word in the first paragraph of a chapter across multiple files with Title Case. It saves a whole lot of legwork. Standard Ebooks step by step includes a bunch of regexes to replace a lot of manual labour, and you can quickly learn to build some yourself.
@@ -231,8 +233,8 @@ Ok enough background. I remember this making my head explode way back when, but 
 But to review:
 - ebooks are essentially packaged websites
 - xhtml is easy—just give it a chance to grow on you.
-- Standard Ebooks are designed  to be well formed and accessible
-- Python is as simple as cut & paste.
+- Standard Ebooks are designed to be well-formed and accessible
+- Python can be as simple as cut & paste.
 - Github will try to be your friend. Let it.
 
 ## <a id="tools"></a>Tools [↺](#toc)
@@ -243,7 +245,7 @@ Ok. Now we are into the meat of it. This is my setup. There are many ways to ski
 
 And, in case you haven’t figured it out, editing text is a large part of what making an ebook is about. And editing text means exactly that: you will be editing raw text. Not rich text with bolds and italics and definitely not word processor text with all sorts of hidden code. Raw [ASCII](https://en.wikipedia.org/wiki/ASCII) text. 
 
-The advantage of BBEdit (or other code/xml editors) is that it allows you to work more efficiently — you can do things like open entire folders in one window, do regex-based search-and-replaces across the entire project, or  see hidden characters like spaces and tabs (very important that last one). It’s a tool mostly designed to doing exactly this job so why not use something that will bring added functionality the process? I use the free version—there is very little reason to upgrade to the paid one.
+The advantage of BBEdit (or other code/xml editors) is that it allows you to work more efficiently — you can do things like open entire folders in one window, do regex-based search-and-replaces across the entire project or see hidden characters like spaces and tabs (very important that last one). It’s a tool mostly designed to doing exactly this job — so why not use something that will bring added functionality the process? I use the free version—there is very little reason to upgrade to the paid one. (**Note**: since originally writing the last sentence I have broken down and bought the paid version. While it provides some cool features it is not really helpful in working on a Standard ebook project.)
 
 ### Github Desktop
 As I mentioned above, you will have to use Github. Access to Github is usually managed by “real” coders using the command line. It is one of the more arcane processes when working on a SE project — frankly it almost made me give up when I first started. Thankfully I found [Github Desktop](https://desktop.github.com/) which is a GUI interface, which brought most of the process back to the click-my-mouse world and that made my life a lot easier.
@@ -263,38 +265,39 @@ It's helpful to know a bare minimum of Terminal commands. Depending on how old y
 
 ![terminal window](/images/terminal.png "A Terminal window")
 
-When you open Terminal it will give you a prompt similar to `bob@my-mac ~ %`. As I said the exact prompt will vary from shell to shell. You will generally start in your user/home folder. If your user name is Bob then it will be in the Bob ‘home’ folder. Typing `ls` and hitting enter will list the folders and files so you can check if that’s where you are—you can compare it to the Finder window and should be able to see exactly the same files and folders.
+When you open Terminal it will give you a prompt similar to `bob@my-mac ~ %`. As I said the exact prompt will vary from shell to shell. You will generally start in your user/home folder. If your user name is Bob then it will be in the Bob ‘home’ folder. Typing `ls` (list) and hitting enter will list the folders and files so you can check if that’s where you are—you can compare it to the Finder window and should be able to see exactly the same files and folders.
 
 #### Basic terminal commands
 - **`ls`** list — lists files and folders
 - **`cd`** change directory (followed by the directory you want to change to) — allows you to change your directory. For example `cd /bob/Documents/Projects` would switch you to the Projects folder found in your Documents folder. Just like if you had double-clicked on the Document folder and then double-clicked on the Project folder.
- - Don’t panic! You can — and I always do — simply type `cd` followed by a space and then drag the folder you want to be in from the Finder onto Terminal and, voila, you have the correct path name automatically ready for you to hit `enter`. Saves on the frustration.
+  - Don’t panic! You can — and I always do — simply type `cd` followed by a space and then drag the folder you want to be in from the Finder onto Terminal and, voila, you have the correct path name automatically ready for you to hit `enter`. Saves on the frustration.
  
 ![terminal window](/images/terminal-directory.png "A Terminal window with a directory")
 
 - **`cd ..`** Change directory up one level. If you are in /Projects/Bob’s Book and you want to be in /Projects/ this will do the trick.
 
+>**Note**: One of the gotchas when using terminal on a Mac is spaces and special characters. If you try typing `cd Bob’s Books` it won’t work. That’s because Terminal won’t recognize the space or the apostrophe. You would need to “escape” the special characters with a backslash (\): `cd Bob\’s\ Books`. It’s one of the reasons I generally use the *drag folder into terminal* method.
+
 And finally there is a whole raft of Standard ebook commands that are again cut and paste from the guide. Here’s a common one: 
- - **`se clean .`** This tells terminal to use the `se` toolset, find the command `clean` and apply it to all the files and folders in the current directory `.` .
+ - **`se clean .`** This tells terminal to use the `se` toolset, find the command `clean` and apply it to all the files and folders in the current directory `.`. (Make sure you are in the right directory!)
 You will primarily be using Terminal to invoke these sorts of SE toolset commands. This one cleans up the files, removes extraneous spaces and returns and then lines everything up neatly.
 
 ### Photoshop/GIMP
 The last tool you will have to use is an image editor. All you really need to use it for will be to crop the final cover image to exactly 2100 pixels by 1400 pixels, but occasionally you might want to colour correct the image a bit or edit out a bad scratch.
 
-I have Photoshop as a part of my working suite but [GIMP](https://www.gimp.org/) is a totally free and open source image editor that is pretty highly regarded.
+I have Photoshop as a part of my working suite but [GIMP](https://www.gimp.org/) is a totally free and open source image editor that is pretty highly regarded. This isn’t 100% necessary and there are lots of online tools that you could use instead, but its par of my everyday workflow so I’ve never bothered to look for other ways to do it.
 
 ### Ebook Reader
 Of course it always good to have a stand alone ebook reader (i.e. a Kindle or a Kobo) to try out your projects on but a desktop one is easier (in my opinion) to use when proofing. I generally use the built in Apple Books, but occasionally also use the Calibre ebook reader built into the excellent [Calibre e-book Management](https://calibre-ebook.com/) software. There are plenty of options out there.
 
-
 ## <a id="get_started"></a>Get Started [↺](#toc)
 So. Time to start. First off you need to subscribe to the [Standard Ebooks Google Group](https://groups.google.com/g/standardebooks) which is where 99% of the communication back and forth happens.
 
-Then you need to visit [Wanted Books](https://standardebooks.org/contribute/wanted-ebooks) page and find a book that appeals to you from the **First Production** section. Alex (and everyone else who has reviewed a book project) will strongly discourage you from choosing a book that isn’t on the list for a first project. Not only do you have to learn all the ins and outs, but then a reviewer has to go through it closely to ensure you’ve done everything correctly. The longer and more complex the book, the harder it is for both parties. After you've done your first project successfully you will likely be invited to try something a bit harder.
+Then you need to visit [Wanted Books](https://standardebooks.org/contribute/wanted-ebooks) page and find a book that appeals to you from the **First Production** section. Alex (and everyone else who has reviewed a book project) will strongly discourage you from choosing a book that isn’t on the list for a first project. Not only do you have to learn all the ins and outs, but a reviewer has to go through a first-time production more closely to ensure you’ve done everything correctly. The longer and more complex the book, the harder it is for both parties. After you've done your first project successfully you will likely be invited to try something a bit harder.
 
 Start a new thread in the Google Group and send off a note with your chosen book and wait (patiently) to see if it's approved. Then you are on your way and can follow the [Step by Step](https://standardebooks.org/contribute/producing-an-ebook-step-by-step).
 
-For your first projects you should start by following the provided *Step by Step* pretty closely, feeling free to ask questions as often as necessary. People are generally pretty helpful with beginners but a lot of it can be found in the manual if you look there first.
+For your first projects you should start by following the provided *Step by Step* closely, feeling free to ask questions as often as necessary. People are generally pretty helpful with beginners but a lot of it can be found in the manual if you look there first.
 
 ***
 
