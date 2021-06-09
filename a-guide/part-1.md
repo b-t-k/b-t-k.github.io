@@ -64,6 +64,18 @@ Some common html tags you will need to know:
 
 - **span**: `<span>…</span>` — generally used mid-sentence to surround something you might want to add information to when it isn’t appropriate to use any of the above tags e.g.`<span class="poetry"> ... </span>`. We will get into classes next.
 
+```
+<h2>This is an h2</h2>
+	<p>This is paragraph one. This is<b> bold</b> and this is <i> italic.</i></p>
+	<p>This is paragraph two. This is<strong> Strong</strong> and this is <em> Emphasis (em).</em></p>
+	<blockquote>
+		<p>And of course, this is some text set aside in a blockquote.</p> 
+		<p>There may be multiple paragraphs in a given blockquote.</p> 
+	</blockquote>
+```
+
+![html](/images/html_render.jpg "html")
+
 ##### CSS & Classes
 Many tags accept additional parameters which are part of the CSS (Cascading Style Sheet) file. The CSS style sheet is where Standard Ebooks specifies such things as the size of the `p`’s first line indent or top and bottom margins.
 
