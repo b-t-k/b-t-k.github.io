@@ -4,12 +4,9 @@ title: "How To’s"
 permalink: how-to/
 ---
 
-{% include test.md %}
-
-![standard ebooks logo](/images/selogo.png)
 
 # <a id="howto"></a>Intro [↺](#toc)
-This section focuses a bit more on specific methods I use, some hints and tricks I have discovered along the way and some in-depth tips on specific actions.
+This section is a work in progress and focusses a bit more on specific methods I use, some hints and tricks I have discovered along the way and some in-depth tips on specific actions.
 
 ## The Mac Keyboard and Typography
 We all know the difference between straight quotes and curly quotes right?  ("" v. “”) How about a regular dash and an n-dash? These are important distinctions and unlike when using your helpful word processor, you are going to have to learn to enter them properly from the keyboard. 
@@ -266,3 +263,5 @@ If there was more than one blockquote and the poster was in the second one you c
 - :last-of-type
 - :only-of-type
 - :nth-of-type
+
+## More to come

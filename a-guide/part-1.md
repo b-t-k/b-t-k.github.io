@@ -4,6 +4,7 @@ title: "A non-programmers guide to contributing to Standard Ebooks"
 permalink: /a-guide/
 ---
 
+{% include menu.md %}
 
 ## <a id="introduction"></a>Introduction <span class="notbold">[↺](#toc)</span>
 ### Why this guide
