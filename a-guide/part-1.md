@@ -106,7 +106,7 @@ We talked about what an ebook is: essentially a self-contained website. The cons
 - **text folder** — Contains the text files for your project including several standard files common to all Standard ebook projects: titlepage.xhtml, imprint.xhtml, chapter-1.xhtml etc.
 
 ### xhtml
-As stated, an ebook is made up of many xhtml files. Each file represents a section of the book: Title page, chapter, endnotes etc. While an xhtml file may look complex and a bit indecipherable they really are just made up of logical sets of nested text. Depending on the text editor you use it will often colour code the various bits to make it easier to separate everything. Some editors will hav ea little arrow on the right side that will allow you to hide all the text between two tags—this makes it all a lot less cluttered looking. This is a collapsed version of the page seen below:
+As stated, an ebook is made up of many xhtml files. Each file represents a section of the book: Title page, chapter, endnotes etc. While an xhtml file may look complex and a bit indecipherable they really are just made up of logical sets of nested text. Depending on the text editor you use it will often colour code the various bits to make it easier to separate everything. Some editors will have a little arrow on the right side that will allow you to hide all the text between two tags—this makes it all a lot less cluttered looking. This is a collapsed version of the page seen below:
 
 ![collapsed](/images/collapsed.jpg "collapsed")
 
