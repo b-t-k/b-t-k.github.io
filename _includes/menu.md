@@ -16,5 +16,5 @@
 	1. [Handy Links](how-to/#handy_links)
 
 #### Part 3
-5. [Step by Step Explained](/step_by_step/)
-	1. [The Steps](step_by_step/#the_steps)
+5. [Step by Step Explained](/step-by-step/)
+	1. [The Steps](step-by-step/#the_steps)
