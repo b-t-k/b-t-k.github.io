@@ -221,7 +221,8 @@ This is the base css for including poetry, straight from section [7.5.7  of the 
 ```
 What this does is find text in the project that is marked as poetry and apply certain styles to it. For example:
 
-```<blockquote epub:type="z3998:poem”>
+```
+<blockquote epub:type="z3998:poem”>
 	<p>
 		<span>O Lady! we receive but what we give,</span>
 		<br/>
@@ -266,3 +267,6 @@ If there was more than one blockquote and the poster was in the second one you c
 - :nth-of-type
 
 ## More to come
+
+### Escaped html
+ 

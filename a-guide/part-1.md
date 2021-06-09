@@ -43,7 +43,7 @@ Html is formed by surrounding text with tags. Each tag set has an opening and a 
 
 > `<p>This is a paragraph. It may have all sorts of text in it.</p>`
 
-The text will then be displayed and treated as a paragraph with whatever settings (first line indent, space after etc.) that have been assigned to paragraphs. Unlike  programs like Microsoft Word or other rich text editors, if you want something to appear bold or italics you will need to tag it e.g. `<b>This is bold</b>` and `<i>This is italic.</i>`.
+The text will then be displayed and treated as a paragraph with whatever settings (first line indent, space after etc.) that have been assigned to paragraphs. Unlike  programs like Microsoft Word or other rich text editors, if you want something to appear bold or italics you will need to tag it e.g. `<strong>This is strong</strong>` and `<em>This is empahsised.</em>`. (for those of you with some olde-tymie experience with html `<b>` and `<i>`, bold and italics, have been related to specific semantic uses and aren't the go to's anymore for highlighting text.)
 
 Some common html tags you will need to know: 
 - **emphasis**: `<em>…</em>` — is usually visually identical to, and used in place of, italics.
@@ -57,12 +57,12 @@ Some common html tags you will need to know:
 
 ```
  <blockquote> 
-      <p>May contain multiple paragraphs<br/>
-      lines, or other parts.</p>
+      <p>To my buddy Cheryl,<br/>
+      Wherever she may have ended up.</p>
  </blockquote>
 ```
 
-- **span**: `<span>…</span>` — generally used mid-sentence to surround something you might want to add information to when it isn’t appropriate to use any of the above tags e.g.`<span class="poetry"> ... </span>`. We will get into classes next.
+- **span**: `<span>…</span>` — generally used mid-sentence to surround something you might want to add information to when it isn’t appropriate to use any of the above tags e.g.`<span epub:type="z3998:roman">II</span>`. We will get into classes next.
 
 So the following code in html...
 
@@ -219,7 +219,7 @@ From time to time you be required to update the SE software as new versions come
 ### Github
 [Github](https://github.com/) is a website that employs [Git](https://www.atlassian.com/git/tutorials/what-is-git), a source control system. Normally used as a way of managing source code for computer programs (and if you think about it, that’s what making an ebook essentially is), it’s what Standard Ebooks uses to manage and control the various projects. I am a real noob at using *Git* and Github and I frequently have to resort to using google-foo to figure out how to fix what I did wrong.
 
-In a nutshell, *Git* is a process to exercise version control over your project and Github is a website that allows you store this online. In a nutshell, you create an initial repository with the folder containing your files and as you move through the steps, you sync your local version to the GitHub website. This allows you to keep track of the steps you have taken and, more importantly, to revert any changes you made that weren’t appropriate or were outright mistakes. The repository is usually referred to as the repo.
+In a nutshell, *Git* is a process to exercise version control over your project and Github is a website that allows you store this online. You create an initial repository with the folder containing your files and as you move through the steps, you sync your local version to the GitHub website. This allows you to keep track of the steps you have taken and, more importantly, to revert any changes you made that weren’t appropriate or were outright mistakes. The repository is usually referred to as the repo.
 
 You will have to create a [GitHub account](https://github.com/).  It’s pretty standard and once you are signed up you will have your own place to store your work as you progress. 
 
@@ -245,7 +245,7 @@ But to review:
 Ok. Now we are into the meat of it. This is my setup. There are many ways to skin this particular furry mammal but this is what I use. Try to remember that each tool can be approached by ignoring 90% of its functionality and then you can add in bits and pieces as they start to make sense.
 
 ### BBEdit & Text Editors
-[BBEdit](https://www.barebones.com/products/bbedit/index.html) is basically a text editor — but it is one especially designed for coding. There are a lot of other options ([Visual Studio Code](https://code.visualstudio.com/), [Brackets](http://brackets.io/) etc.), all of which are more or less free.
+[BBEdit](https://www.barebones.com/products/bbedit/index.html) is a “basic” text editor — but it is one especially designed for coding. There are a lot of other options ([Visual Studio Code](https://code.visualstudio.com/), [Brackets](http://brackets.io/) etc.), all of which are more or less free.
 
 And, in case you haven’t figured it out, editing text is a large part of what making an ebook is about. And editing text means exactly that: you will be editing raw text. Not rich text with bolds and italics and definitely not word processor text with all sorts of hidden code. Raw [ASCII](https://en.wikipedia.org/wiki/ASCII) text. 
 
@@ -286,10 +286,12 @@ And finally there is a whole raft of Standard ebook commands that are again cut 
  - **`se clean .`** This tells terminal to use the `se` toolset, find the command `clean` and apply it to all the files and folders in the current directory `.`. (Make sure you are in the right directory!)
 You will primarily be using Terminal to invoke these sorts of SE toolset commands. This one cleans up the files, removes extraneous spaces and returns and then lines everything up neatly.
 
-### Photoshop/GIMP
+### Preview/Photoshop/GIMP
 The last tool you will have to use is an image editor. All you really need to use it for will be to crop the final cover image to exactly 2100 pixels by 1400 pixels, but occasionally you might want to colour correct the image a bit or edit out a bad scratch.
 
-I have Photoshop as a part of my working suite but [GIMP](https://www.gimp.org/) is a totally free and open source image editor that is pretty highly regarded. This isn’t 100% necessary and there are lots of online tools that you could use instead, but its par of my everyday workflow so I’ve never bothered to look for other ways to do it.
+This can be done easily enough using Mac's built in image viewer Preview.
+
+I have Photoshop as a part of my working suite but [GIMP](https://www.gimp.org/) is a totally free and open source image editor that is pretty highly regarded. This isn’t 100% necessary and there are lots of online tools like [Pixlr](https://pixlr.com/) that you could use instead, but it's part of my everyday workflow so I’ve never bothered to look for other ways to do it.
 
 ### Ebook Reader
 Of course it always good to have a stand alone ebook reader (i.e. a Kindle or a Kobo) to try out your projects on but a desktop one is easier (in my opinion) to use when proofing. I generally use the built in Apple Books, but occasionally also use the Calibre ebook reader built into the excellent [Calibre e-book Management](https://calibre-ebook.com/) software. There are plenty of options out there.
