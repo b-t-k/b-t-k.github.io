@@ -11,5 +11,4 @@
 5. [How To’s](#methodologies)
 	1. [BBEdit](#bbedit)
 		2. [Search & Replaces and Regexes](#search_replaces_and_regexes)
-	1. [GitHub Desktop](#github_desktop)
 	1. [CSS](#css)

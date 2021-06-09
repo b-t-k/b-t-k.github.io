@@ -4,6 +4,7 @@ title: "How To’s"
 permalink: how-to/
 ---
 
+{% include menu.md %}
 
 # <a id="howto"></a>Intro [↺](#toc)
 This section is a work in progress and focusses a bit more on specific methods I use, some hints and tricks I have discovered along the way and some in-depth tips on specific actions.
@@ -48,55 +49,6 @@ The SE toolset offer a way to change case, but frankly the workflow I’ve devel
 But BBEdit is highly customizable and it is easy enough to go to *BBEdit > Preferences > Menus & Shortcuts > Text* and assign a keyboard shortcut to any one of the above (or any other menu function).
 
 Be careful with Title Case as it  may use a slightly different set of rules than Standard ebook’s own Title Case command, but I’ve never found any real conflicts.
-
-### External scripts
-BBEdit also offers a way to run external scripts to extend its functionality. I have made a few to cover some of the more repetitive tasks like “rename file to clipboard” and “lowercase and dashes” (makes text url friendly) which you do a lot of when making headers for compilations and these again have keyboard shortcuts assigned to them. 
-
-Macs come with a program called *Script Editor* and it’s pretty easy to write (or download) simple scripts:
-
-**Rename Active Document to clipboard.scpt**
-```
-on run
-	tell application "BBEdit"
-		activate
-		
-		set doc to active document of text window 1
-		set oldName to name of doc
-		set newName to my promptForName(oldName)
-		-- If the name did not change we can bail.
-		if newName = oldName then return true
-		my renameDoc(doc, oldName, newName)
-		
-	end tell
-end run
-```
-
-**lowercase and dashes.scpt**
-```
-tell application "BBEdit"
-	tell window 1
-		change case selection making lower case with replacing target
-		copy selection
-		set theString to the clipboard
-		set L to length of theString
-		set P to the offset of space in theString
-		repeat until P = 0
-			if P = 1 then
-				set theString to "_" & texts 2 through -1 of theString
-			else if P = L then		
-				set theString to texts 1 through (L - 1) of theString & "_"
-			else
-				set theString to texts 1 through (P - 1) of theString & "-" & texts (P + 1) through -1 of theString
-			end if
-			set P to the offset of space in theString
-		end repeat
-		set the clipboard to theString
-		paste
-		select
-	end tell
-end tell
-```
-There are lots of help files available but essentially you can just drop these files in the BBEdit scripts folder and then assign a shortcut to them.
 
 ### Search and Replaces
 This is where using an editor like BBEdit shines. Much of the work you do in creating a Standard ebook is searching out patterns created by the original producer and replacing them with a properly formatted ‘standard’ pattern. BBEDit’s *Multi-File Search* can make short work of a lot of the tediousness.
@@ -189,6 +141,55 @@ Here is a handy [RegEx Cheat Sheet](https://gist.github.com/ccstone/5385334) to 
 - `[0-9]{2,}` — find any 2 digit numbers containing 0 to 9
 - `([A-Z])([A-Z]{2,})` with `\U\1\L\2`
 	- This would replace a word that starts with a capital and is followed by 2 or more capitals (e.g. SOD) with a single capital and the rest lowercase (e.g. Sod), but it would not change AD or BC.
+
+### External scripts
+BBEdit also offers a way to run external scripts to extend its functionality. I have made a few to cover some of the more repetitive tasks like “rename file to clipboard” and “lowercase and dashes” (makes text url friendly) which you do a lot of when making headers for compilations and these again have keyboard shortcuts assigned to them. 
+
+Macs come with a program called *Script Editor* and it’s pretty easy to write (or download) simple scripts:
+
+**Rename Active Document to clipboard.scpt**
+```
+on run
+	tell application "BBEdit"
+		activate
+		
+		set doc to active document of text window 1
+		set oldName to name of doc
+		set newName to my promptForName(oldName)
+		-- If the name did not change we can bail.
+		if newName = oldName then return true
+		my renameDoc(doc, oldName, newName)
+		
+	end tell
+end run
+```
+
+**lowercase and dashes.scpt**
+```
+tell application "BBEdit"
+	tell window 1
+		change case selection making lower case with replacing target
+		copy selection
+		set theString to the clipboard
+		set L to length of theString
+		set P to the offset of space in theString
+		repeat until P = 0
+			if P = 1 then
+				set theString to "_" & texts 2 through -1 of theString
+			else if P = L then		
+				set theString to texts 1 through (L - 1) of theString & "_"
+			else
+				set theString to texts 1 through (P - 1) of theString & "-" & texts (P + 1) through -1 of theString
+			end if
+			set P to the offset of space in theString
+		end repeat
+		set the clipboard to theString
+		paste
+		select
+	end tell
+end tell
+```
+There are lots of help files available but essentially you can just drop these files in the BBEdit scripts folder and then assign a shortcut to them.
 
 ## <a id="css"></a>CSS [↺](#toc)
 
