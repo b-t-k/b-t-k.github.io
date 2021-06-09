@@ -246,7 +246,7 @@ Ok. Now we are into the meat of it. This is my setup. There are many ways to ski
 
 ### BBEdit & Text Editors
 
-[BBEdit](https://www.barebones.com/products/bbedit/index.html) is a text editor. Unlike word-processing programs like Word or Pages, which are designed to produce formatted documents, text editors just edit plain text, like the XHTML code we will edit for the SE book. There are a lot of other options ([Visual Studio Code](https://code.visualstudio.com/), [Brackets](http://brackets.io/) etc.), all of which are more or less free.
+[BBEdit](https://www.barebones.com/products/bbedit/index.html) is a text editor. Unlike word-processing programs like Word or Pages, which are designed to produce formatted documents, text editors just edit plain text, like the XHTML code we will use for the SE book. There are a lot of other options ([Visual Studio Code](https://code.visualstudio.com/), [Brackets](http://brackets.io/) etc.), all of which are more or less free.
 
 And, in case you haven’t figured it out, editing text is a large part of what making an ebook is about. And editing text means exactly that: you will be editing raw text. Not rich text with bolds and italics and definitely not word processor text with all sorts of hidden code. Raw [ASCII](https://en.wikipedia.org/wiki/ASCII) text. 
 
