@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "A Step by Step for the Step by Step
-permalink: step_by_step/
+permalink: /step_by_step/
 ---
 
 {% include menu.md %}
