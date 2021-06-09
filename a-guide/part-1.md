@@ -182,7 +182,7 @@ This is the programming/computer stuff. Don’t despair — it’s not actually 
 #### Terminal
 Most of the Standard ebook tools are not housed in a GUI (Graphical User Interface) — the thing you point and click with your mouse. You will need to become fairly comfortable with the terminal interface to work on a project. But again, it’s mostly cut and paste from the [Manual](https://standardebooks.org/manual/) so as soon as you adjust to the interface it is pretty simple. 
 
-> Hint: if you triple click on a command in the Step-by-Step it will select the line you need. Keyboard commands are your friend. So if you triple click a command, then hit cmd-c, cmd-tab, cmd-v and then enter you can efficiently accomplish a step.
+> **Hint**: if you triple click on a command in the Step-by-Step it will select the line you need. Keyboard commands are your friend. So if you triple click a command, then hit cmd-c, cmd-tab, cmd-v and then enter you can efficiently accomplish a step without having to expend too much effort.
 - triple click: select paragraph/line
 - cmd-c: copy
 - cmd-tab: switch to previous window (presumable the terminal)
@@ -196,7 +196,7 @@ On a Mac *Terminal* can be found by searching for terminal using Spotlight (Cmd+
 We will talk more about this later, but you will need to use this application in order to install the tools.
 
 #### Brew 
-To install and maintain the tools on a Mac you use the [Homebrew package manager](https://brew.sh/). Homebrew is similar to an “app store” — it is basically non-gui software that does the heavy lifting of installing and updating for you. There are instructions on the [tools Github](https://github.com/standardebooks/tools) (More on Github in the next section) to get up and running. In a nutshell you will copy the command from   the website into terminal and hit enter. At this point this is the command (but it may change so be safe and copy it from the website):
+To install and maintain the tools on a Mac you use the [Homebrew package manager](https://brew.sh/). Homebrew is similar to an “app store” — it is basically non-gui software that does the heavy lifting of installing and updating for you. There are instructions on the [tools Github](https://github.com/standardebooks/tools) (more on Github in the next section) to get up and running. In a nutshell you will copy the command from   the website into terminal and hit enter. At this point this is the command (but it may change so be safe and copy it from the website):
 
 `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)”`
 
