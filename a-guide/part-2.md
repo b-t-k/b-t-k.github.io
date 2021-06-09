@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "How To’s"
-permalink: how-to/
+permalink: /how-to/
 ---
 
 {% include menu.md %}
