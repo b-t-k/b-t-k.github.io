@@ -301,4 +301,4 @@ For your first projects you should start by following the provided *Step by Step
 
 ***
 
-On to [Part 2: How To’s](how-to/)
+On to [Part 2: How To’s](/how-to/)
