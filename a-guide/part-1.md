@@ -164,13 +164,15 @@ The main sorts of metadata you will be responsible for adding will be a book des
 
 ### Output File Types
 Once your project is complete  you will run a `build` command to build the folders into an ebook that you can proofread. Additional error checking will also happen at this stage and it is not unusual to catch an error at this point that wasn’t previously caught by other tools.
-- The build will create 4 files: an epub, kepub, azw3 and advanced pub (epub3). Depending on you reader you can check the one that is most applicable to you.
+- The build will create 4 files: an epub, kepub, azw3 and advanced pub (epub3). Depending on your reader you can check the one that is most applicable to you.
 
 ### Wrap up
-That’s a lot. But it really is very logical and rule bound. The rules can be come a bit convoluted (especially when dealing with complex css) but no more so that English grammar so it’s just a matter of learning the basics and checking back with Manual/rule book as much as necessary and some time even more than that.
+That’s a lot. But it really is very logical and rule bound. The rules can be come a bit convoluted (especially when dealing with complex css) but no more so that English grammar so it’s just a matter of learning the basics and checking back with Manual as much as necessary and some time even more than that.
 
 ***
+
 Take a break and rest your mind!
+
 ***
 
 ## <a id="computer_stuff"></a>The Computer Stuff <span class="notbold">[↺](#toc)</span>
