@@ -7,6 +7,10 @@ p {
     margin: 0 0 1em;
 }
 
+.small {
+    font-size: .7em;
+}
+
 #container{
     margin:0 auto;
     max-width:50rem;
