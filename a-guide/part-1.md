@@ -261,6 +261,8 @@ Github Desktop provides a visual/graphical tool to manage your repository. I pre
 
 The red highlighted text above was the original, the green highlighted text contains the sole change I made between versions. This can be really helpful and in fact makes at least one of the steps in the official step-by-step redundant.
 
+I will take a look at some of the basic concepts surrounding using Git in Part II.
+
 ### Terminal
 On a Mac the command line interface is accessed through a program called *Terminal*. Simply hit cmd+spacebar and type "terminal" or go to *Applications: Utilities* and double click on the Terminal icon.
 
