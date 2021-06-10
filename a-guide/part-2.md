@@ -308,7 +308,7 @@ If there was more than one blockquote and the poster was in the second one you c
 - Tor Browser for geo blocking (coming soon)
 
 
-### <a id=“myprocess”></a>My Process [↺](#toc)
+### <a id="myprocess"></a>My Process [↺](#toc)
 1. Create general working folder in your projects folder i.e. Wodehouse Ukridge Stories
 2. Open Terminal and type "cd " (then drag the working folder into terminal). Hit enter.
 2. Follow steps 1–3.
