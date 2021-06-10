@@ -348,5 +348,3 @@ Start with the Standard Ebook [Get Involved](https://standardebooks.org/contribu
 
 ## More to come
 
-***
-*Modified {{ site.time }}*
