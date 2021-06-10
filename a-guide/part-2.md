@@ -349,4 +349,4 @@ Start with the Standard Ebook [Get Involved](https://standardebooks.org/contribu
 ## More to come
 
 ***
-*Modified {{ page.last-modified-date | date: '%B %d, %Y' }}**
+*Modified {{ site.time }}*
