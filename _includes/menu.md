@@ -9,6 +9,7 @@
 
 #### Part 2
 5. [How To’s](/how-to/#howto)
+	1. [The Mac Keyboard and Typography](/how-to/#keyboard)
 	1. [BBEdit](/how-to/#bbedit)
 		2. [Search & Replaces and Regexes](/how-to/#search_replaces_and_regexes)
 	1. [Git and Github](/how-to/#git)

@@ -9,7 +9,7 @@ permalink: how-to/
 ## <a id="howto"></a>Intro [↺](#toc)
 This section is a work in progress and focusses a bit more on specific methods I use, some hints and tricks I have discovered along the way and some in-depth tips on specific actions.
 
-## The Mac Keyboard and Typography
+## <a id="keyboard">The Mac Keyboard and Typography</a> [↺](#toc)
 We all know the difference between straight quotes and curly quotes right?  ("" v. “”) How about a regular dash and an n-dash? These are important distinctions and unlike when using your helpful word processor, you are going to have to learn to enter them properly from the keyboard. 
 #### quotes
 - left quote (“): opt+[
