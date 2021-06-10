@@ -192,19 +192,19 @@ end tell
 There are lots of help files available but essentially you can just drop these files in the BBEdit scripts folder and then assign a shortcut to them.
 
 ## <a id="git"></a>Git and Github [↺](#toc)
-The most important thing to know about Git is that if you do a good job of following the steps for producing a book and take it slow you won't need to know more than the basics. The next most important thing to realize is if you do screw up, chances are Git will provide a way to recover from you mistake — it just might take some working through the more complex git functions.
+The most important thing to know about Git is that if you do a good job of following the steps for producing a book and take it slow you won't need to know more than the basics. The next most important thing to realize is if you do screw up, chances are Git will provide a way to recover from your mistake — it just might take some working through the more complex git functions.
 
 ### Basics
 When you create a new project you also create a new git “project.” This project is a series of files and folders that are in the same folder as your Standard Ebooks project but are hidden from the users view.
 
 #### 3 steps — 3 states
-1. The current state of the files is “recorded” in the working directory. 
+1. The current state of your project files is “recorded” in the working directory. 
 2. After you make a set of changes (generally as defined in the step-by-step) you will “add” them to the “staging area.” The state of the files is now “staged.” For the purposes of an SE project you will almost always move on to them next step before making any other changes.
 3. The staged files are now “committed” to the the repository. The repository contains a record of all the previous states so it is generally possible to revert one or all of the files to any previous iteration.
 
-The fourth step is to “push” the files to the online repo (Github) so that it is publicly visible.
+The “fourth” step is to “push” the files to the online repo (Github) so that it is publicly visible. Technically this isn’t necessary until you already to share it with your reviewers but it’s good to do it anyway incase you have questions and others what to check your work.
 
-All of this can be done using Terminal and the command line—in fact it was designed to be used that way. If you want to learn properly right from the get-go that is probably the best way to proceed. But I started with Github Desktop and generally think that’s the better route for beginners. Some of the other texts editors like Visual Code and Sublime have built in git tools so you can manage your text and repos from the same spot.
+All of this can be done using Terminal and the command line—in fact it was designed to be used that way. If you want to learn properly right from the get-go that is probably the best way to proceed. But I started with Github Desktop and generally think that’s the better route for beginners. Some of the other texts editors like Visual Code and Sublime also have built in git tools so you can manage your text and repos from the same spot.
 
 #### Some links to help you learn
 - https://learngitbranching.js.org/
@@ -220,15 +220,12 @@ Check the [My Process](#myprocess) hint below to  see how I step though using th
 
 You can always go to your Github page and check to see if your files and changes are there. And dig around to see what sort of information/history is available.
 
+#### Seeing Changes
+Git provides a tool to allow you see what has changed (just type `git diff` in the terminal), but this is way easier to do in the GUI. 
 
+![GitHub Desktop](/images/github-desktop.png "A GitHub Desktop window")
 
-
-
-
-
-
-
-
+So when you have done big global steps like `typogrify` or `semanticate` you can easily go through everything to see if the everything was done properly.
 
 ## <a id="css"></a>CSS [↺](#toc)
 
@@ -339,7 +336,7 @@ If there was more than one blockquote and the poster was in the second one you c
 8. In GitHub Desktop type “Initial Commit” in the “Summary (required)” box and click “Commit to master”
 9. Click Publish repository and then uncheck “Keep this code private”
 
-You should then be a able to just follow the rest of the steps and add commits when the Step-by-Step calls for them, ignoring the command line commands that are supplied.
+You should then be a able to just follow the rest of the steps and add commits when the Step-by-Step calls for them, ignoring the command line commands that are supplied. Be sure to send the url for your GitHub repo to the list so they know you have started.
 
 
 ### <a id="handy_links"></a>Handy links [↺](#toc)
@@ -351,5 +348,5 @@ Start with the Standard Ebook [Get Involved](https://standardebooks.org/contribu
 
 ## More to come
 
-
- 
+***
+*Modified {{ page.last-modified-date | date: '%B %d, %Y' }}**
