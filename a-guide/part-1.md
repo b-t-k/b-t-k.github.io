@@ -14,7 +14,7 @@ It is a volunteer driven project and if you are interested in  adding to the ava
 
 The downside is that it is very programmer-centric. While admittedly, a lot of what you need to know/do for complicated projects is beyond the ken of your basic computer user, thankfully, with SE’s [detailed instructions](https://standardebooks.org/contribute/producing-an-ebook-step-by-step) and the provided [SE toolset](https://github.com/standardebooks/tools), getting started on basic projects is well within the means of the average user. You just have to have a grasp of some basics first.
 
-And that’s what this tutorial is all about. I think it would be great if more of the right-brained set became a part of the project and I thought I would see if I could lay out the basics. 
+And that’s what this tutorial is all about. I think it would be great if more of the right-brained (I know...I know...) set became a part of the project and I thought I would see if I could lay out the basics. 
 
 Be sure to visit the [Contributors page](https://standardebooks.org/contribute) if you want see the various ways you can help out even if this guide still leaves you too nervous to give it a try. 
 
