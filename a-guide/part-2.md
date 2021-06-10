@@ -191,6 +191,45 @@ end tell
 ```
 There are lots of help files available but essentially you can just drop these files in the BBEdit scripts folder and then assign a shortcut to them.
 
+## <a id="git"></a>Git and Github [↺](#toc)
+The most important thing to know about Git is that if you do a good job of following the steps for producing a book and take it slow you won't need to know more than the basics. The next most important thing to realize is if you do screw up, chances are Git will provide a way to recover from you mistake — it just might take some working through the more complex git functions.
+
+### Basics
+When you create a new project you also create a new git “project.” This project is a series of files and folders that are in the same folder as your Standard Ebooks project but are hidden from the users view.
+
+#### 3 steps — 3 states
+1. The current state of the files is “recorded” in the working directory. 
+2. After you make a set of changes (generally as defined in the step-by-step) you will “add” them to the “staging area.” The state of the files is now “staged.” For the purposes of an SE project you will almost always move on to them next step before making any other changes.
+3. The staged files are now “committed” to the the repository. The repository contains a record of all the previous states so it is generally possible to revert one or all of the files to any previous iteration.
+
+The fourth step is to “push” the files to the online repo (Github) so that it is publicly visible.
+
+All of this can be done using Terminal and the command line—in fact it was designed to be used that way. If you want to learn properly right from the get-go that is probably the best way to proceed. But I started with Github Desktop and generally think that’s the better route for beginners. Some of the other texts editors like Visual Code and Sublime have built in git tools so you can manage your text and repos from the same spot.
+
+#### Some links to help you learn
+- https://learngitbranching.js.org/
+- https://rogerdudler.github.io/git-guide/
+
+### Github Desktop
+[Github Desktop](https://desktop.github.com/) is the tool I started with and I am pretty happy with it. 
+
+Check the [My Process](#myprocess) hint below to  see how I step though using the GUI but there are just a few essential steps:
+1. Add the repo to GitHub Desktop
+2. Make your commits
+3. Publish or Push your changes to the Github website.
+
+You can always go to your Github page and check to see if your files and changes are there. And dig around to see what sort of information/history is available.
+
+
+
+
+
+
+
+
+
+
+
 ## <a id="css"></a>CSS [↺](#toc)
 
 As mentioned previously CSS is a big part of producing any ebook, and following standards is, after all, eponymous with producing a Standard ebook.
@@ -267,15 +306,48 @@ If there was more than one blockquote and the poster was in the second one you c
 - :nth-of-type
 
 ## <a id="quick_hints_"></a>Some quick hints [↺](#toc)
-- Make it easy on reviewers: include the links to your repos (repositories), include attachments with images, link to specific pages when providing source material etc.
- soon)
+- Make it easy on reviewers: include the links to your repos (repositories), include attachments with images, link to specific pages when providing source material etc.- If there is a translator then you need to use the translator switch: `se create-draft –author=“August Strindberg” –title=“The Ghost Sonata” –translator=“Edwin Björkman” --pg-id=44302`
 - .DS_Store files: managing etc. (coming soon)
 - Tor Browser for geo blocking (coming soon)
+
+
+### <a id=“myprocess”></a>My Process [↺](#toc)
+1. Create general working folder in your projects folder i.e. Wodehouse Ukridge Stories
+2. Open Terminal and type "cd " (then drag the working folder into terminal). Hit enter.
+2. Follow steps 1–3.
+3. I then create a “notes” file for storing important information: 
+  * the full title, author and pub date
+  * the Gutenberg url
+  * the wikipedia urls (author and book)
+  * archive.org (or hathi trust) url for the scans
+  * eventually I will also add links to the cover art, artist and copyright “proof”
+  * I also store my long description here after I write it.
+
+>In this file I copy the command from the step-by-step:
+
+>`se create-draft --author="Robert Louis Stevenson" --title="The Strange Case of Dr. Jekyll and Mr. Hyde" --pg-id=43`
+
+>And change it to reflect my own project:
+
+>`se create-draft --author="P. G. Wodehouse" --title="Ukridge Stories" --pg-id=61507`
+
+5. Change directory in Terminal to newly created directory: type "cd " and drag the se folder into it
+5. Open the SE project folder with BBEdit
+6. In GitHub Desktop: Add  (upper left where it says current repository)
+- Add > Add Existing Repository > select created directory > Add Repository
+8. Follow Step 5 and do a rough cleanup
+8. In GitHub Desktop type “Initial Commit” in the “Summary (required)” box and click “Commit to master”
+9. Click Publish repository and then uncheck “Keep this code private”
+
+You should then be a able to just follow the rest of the steps and add commits when the Step-by-Step calls for them, ignoring the command line commands that are supplied.
+
 
 ### <a id="handy_links"></a>Handy links [↺](#toc)
 Start with the Standard Ebook [Get Involved](https://standardebooks.org/contribute) page. It has most of the links you’ll need.
 - [Step by step](https://standardebooks.org/contribute/producing-an-ebook-step-by-step) — This is the one to read first to see if you are up to the challenge.
 - [One page style guide](https://standardebooks.org/manual/latest/single-page) — There is an extensive style guide but this version displays it all on one huge page making it easer to search.
+- [codepen](https://codepen.io/pen/ )
+- [regex101.com](regex101.com)
 
 ## More to come
 
