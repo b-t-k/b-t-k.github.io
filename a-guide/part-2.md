@@ -343,8 +343,12 @@ You should then be a able to just follow the rest of the steps and add commits w
 Start with the Standard Ebook [Get Involved](https://standardebooks.org/contribute) page. It has most of the links you’ll need.
 - [Step by step](https://standardebooks.org/contribute/producing-an-ebook-step-by-step) — This is the one to read first to see if you are up to the challenge.
 - [One page style guide](https://standardebooks.org/manual/latest/single-page) — There is an extensive style guide but this version displays it all on one huge page making it easer to search.
-- [codepen](https://codepen.io/pen/ )
-- [regex101.com](regex101.com)
+#### online tools
+- [Escaped text](https://www.freeformatter.com/xml-escape.html) converter
+- [codepen](https://codepen.io/pen/) for testing out css
+- [regex101.com](https://regex101.com)
+- [regexpal.com](https://www.regexpal.com/)
+
 
 ## More to come
 
