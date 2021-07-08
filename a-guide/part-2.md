@@ -348,7 +348,8 @@ Start with the Standard Ebook [Get Involved](https://standardebooks.org/contribu
 - [codepen](https://codepen.io/pen/) for testing out css
 - [regex101.com](https://regex101.com)
 - [regexpal.com](https://www.regexpal.com/)
-
+#### tutorials
+- [learn git branching](https://learngitbranching.js.org/)
 
 ## More to come
 

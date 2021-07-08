@@ -11,6 +11,14 @@ permalink: step-by-step/
 ## <a id="step_by_step"></a>Intro [↺](#toc)
 This is just a brief look at the [step by step guide](https://standardebooks.org/contribute/producing-an-ebook-step-by-step) with a few additional hints/suggestions/explanations that might make it easier to understand if you are still struggling with the basics.
 
+## About the Manual
+- hints for searching
+
+## Definitions
+- lint
+- 
+
+
 ## <a id="the_steps"></a>The Steps [↺](#toc)
 
 ### 1. The Tools

@@ -43,7 +43,7 @@ Html is formed by surrounding text with tags. Each tag set has an opening and a 
 
 > `<p>This is a paragraph. It may have all sorts of text in it.</p>`
 
-The text will then be displayed and treated as a paragraph with whatever settings (first line indent, space after etc.) that have been assigned to paragraphs. Unlike  programs like Microsoft Word or other rich text editors, if you want something to appear bold or italics you will need to tag it e.g. `<strong>This is strong</strong>` and `<em>This is empahsised.</em>`. (for those of you with some olde-tymie experience with html `<b>` and `<i>`, bold and italics, have been related to specific semantic uses and aren't the go to's anymore for highlighting text.)
+The text will then be displayed and treated as a paragraph with whatever settings (first line indent, space after etc.) that have been assigned to paragraphs. Unlike  programs like Microsoft Word or other rich text editors, if you want something to appear bold or italics you will need to tag it e.g. `<strong>This is strong</strong>` and `<em>This is emphasized.</em>`. (for those of you with some olde-tymie experience with html `<b>` and `<i>`, bold and italics, have been relegated to specific semantic uses and aren't the go-to's anymore for highlighting text.)
 
 Some common html tags you will need to know: 
 - **emphasis**: `<em>…</em>` — is usually visually identical to, and used in place of, italics.
