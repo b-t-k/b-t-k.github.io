@@ -12,6 +12,7 @@
 	1. [The Mac Keyboard and Typography](/how-to/#keyboard)
 	1. [BBEdit](/how-to/#bbedit)
 		2. [Search & Replaces and Regexes](/how-to/#search_replaces_and_regexes)
+    3. [External Scripts](/how-to/#external_scripts) 
 	1. [Git and Github](/how-to/#git)
 	1. [CSS](/how-to/#css)
 6. [Quick Hints](/how-to/#quick_hints)

@@ -59,7 +59,7 @@ Remember to open your project (see above) rather than individual files. The sele
 
 The search and replace in the image will find words in all caps and replace them with upper/lower. We will look at the specifics of that later.
 
-## <a id="search_replaces_and_regexes">Search & Replaces and Regexes [↺](#toc)
+### <a id="search_replaces_and_regexes"></a>Search & Replaces and Regexes [↺](#toc)
 A guide ro regexes is beyond the scope of this project and there are tons and tons of tutorial and videos about there that will attempt to teach you how to use them. If you are like me there won’t make a lot of sense until you start using them and suddenly the lightbulbs will go off. So let’s dive in with some simple ones you can expand on later.
 
 ### A Basic Pattern
@@ -142,29 +142,13 @@ Here is a handy [RegEx Cheat Sheet](https://gist.github.com/ccstone/5385334) to 
 - `([A-Z])([A-Z]{2,})` with `\U\1\L\2`
 	- This would replace a word that starts with a capital and is followed by 2 or more capitals (e.g. SOD) with a single capital and the rest lowercase (e.g. Sod), but it would not change AD or BC.
 
-### External scripts
+### <a id="external_scripts">External scripts
 BBEdit also offers a way to run external scripts to extend its functionality. I have made a few to cover some of the more repetitive tasks like “rename file to clipboard” and “lowercase and dashes” (makes text url friendly) which you do a lot of when making headers for compilations and these again have keyboard shortcuts assigned to them. 
 
-Macs come with a program called *Script Editor* and it’s pretty easy to write (or download) simple scripts:
-
-**Rename Active Document to clipboard.scpt**
-```
-on run
-	tell application "BBEdit"
-		activate
-		
-		set doc to active document of text window 1
-		set oldName to name of doc
-		set newName to my promptForName(oldName)
-		-- If the name did not change we can bail.
-		if newName = oldName then return true
-		my renameDoc(doc, oldName, newName)
-		
-	end tell
-end run
-```
+Macs come with a program called *Script Editor* and it’s pretty easy to write (or download) simple scripts to take some of the drudgery out of making big changes:
 
 **lowercase and dashes.scpt**
+Converts selected text to lowercase and replaces spaces with dashes e.g. "The Tale of Bobby McGee" —> "the-tale-of-bobby-mcgee". Great for creating ids:
 ```
 tell application "BBEdit"
 	tell window 1
@@ -189,9 +173,48 @@ tell application "BBEdit"
 	end tell
 end tell
 ```
-There are lots of help files available but essentially you can just drop these files in the BBEdit scripts folder and then assign a shortcut to them.
 
-See [Step-by-Step tools section](/step-by-step/#the_tools) on how to add and assign keyboard shortcuts to `se` commands. 
+**Rename Active Document to clipboard.scpt**
+Rename the file to copied text (usually from the section id):
+```
+on run
+	tell application "BBEdit"
+		activate
+		
+		set doc to active document of text window 1
+		set oldName to name of doc
+		set newName to my promptForName(oldName)
+		-- If the name did not change we can bail.
+		if newName = oldName then return true
+		my renameDoc(doc, oldName, newName)
+		
+	end tell
+end run
+```
+
+**add code on input.scpt**
+This one takes a tag as input and  wraps the selected text in it—very handy when adding lots of <blockquote>s or <em>s:
+```
+tell application "BBEdit"
+	tell window 1
+		copy selection
+
+		set theString to the clipboard
+		set theResponse to display dialog "Enter html code without < >" default answer "i" buttons {"Continue"} default button "Continue"
+		set theResponse to text returned of the theResponse	
+		set newString to "<" & theResponse & ">" & theString & "</" & theResponse & ">"
+		
+		set the clipboard to newString
+		
+		paste
+		select
+	end tell
+end tell
+```
+
+There are lots of help files available but essentially you can just drop these files in the BBEdit scripts folder and then assign a keyboard shortcut to them in BBEdit's preferences.
+
+See [Step-by-Step tools section](/step-by-step/#the_tools) on how to build a script and assign keyboard shortcuts for the `se` tools commands. 
 
 ## <a id="git"></a>Git and Github [↺](#toc)
 The most important thing to know about Git is that if you do a good job of following the steps for producing a book and take it slow you won't need to know more than the basics. The next most important thing to realize is if you do screw up, chances are Git will provide a way to recover from your mistake — it just might take some working through the more complex git functions.
