@@ -10,7 +10,7 @@ permalink: how-to/
 This section is a work in progress and focusses a bit more on specific methods I use, some hints and tricks I have discovered along the way and some in-depth tips on specific actions.
 
 ## <a id="keyboard">The Mac Keyboard and Typography</a> [↺](#toc)
-We all know the difference between straight quotes and curly quotes right?  ("" v. “”) How about a regular dash and an n-dash? These are important distinctions and unlike when using your helpful word processor, you are going to have to learn to enter them properly from the keyboard. 
+We all know the difference between straight quotes and curly quotes right?  (&#34;	&#34; vs. “ ”) How about a regular dash and an n-dash? These are important distinctions and unlike when using your helpful word processor, you are going to have to learn to enter them properly from the keyboard. 
 #### quotes
 - left quote (“): opt+[
 - right quote (”): opt+shift+[
@@ -18,8 +18,8 @@ We all know the difference between straight quotes and curly quotes right?  ("" 
 - right single quote (’): opt+shift+]
 
 #### dashes
-- n-dash: opt+-
-- m-dash: opt+shift+-
+- n-dash(–): opt+-
+- m-dash(—): opt+shift+-
 
 #### accents
 - grave (á): opt+e followed by the necessary letter.
@@ -48,7 +48,7 @@ The SE toolset offer a way to change case, but frankly the workflow I’ve devel
 
 But BBEdit is highly customizable and it is easy enough to go to *BBEdit > Preferences > Menus & Shortcuts > Text* and assign a keyboard shortcut to any one of the above (or any other menu function).
 
-Be careful with Title Case as it  may use a slightly different set of rules than Standard ebook’s own Title Case command, but I’ve never found any real conflicts.
+Be careful with Title Case as it uses a slightly different set of rules than Standard Ebook’s own Title Case command: `se titlecase` — generally it works just the same but it does have a harder time with subtle things like retaining the lowercase "d" in "Marchioness de Merteuil".
 
 ### Search and Replaces
 This is where using an editor like BBEdit shines. Much of the work you do in creating a Standard ebook is searching out patterns created by the original producer and replacing them with a properly formatted ‘standard’ pattern. BBEDit’s *Multi-File Search* can make short work of a lot of the tediousness.
