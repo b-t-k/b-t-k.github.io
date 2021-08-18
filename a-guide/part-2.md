@@ -191,6 +191,8 @@ end tell
 ```
 There are lots of help files available but essentially you can just drop these files in the BBEdit scripts folder and then assign a shortcut to them.
 
+See [Step-by-Step tools section](/step-by-step/#the_tools) on how to add and assign keyboard shortcuts to `se` commands. 
+
 ## <a id="git"></a>Git and Github [↺](#toc)
 The most important thing to know about Git is that if you do a good job of following the steps for producing a book and take it slow you won't need to know more than the basics. The next most important thing to realize is if you do screw up, chances are Git will provide a way to recover from your mistake — it just might take some working through the more complex git functions.
 
