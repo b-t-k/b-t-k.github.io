@@ -62,7 +62,7 @@ The search and replace in the image will find words in all caps and replace them
 ### <a id="search_replaces_and_regexes"></a>Search & Replaces and Regexes [↺](#toc)
 A guide ro regexes is beyond the scope of this project and there are tons and tons of tutorial and videos about there that will attempt to teach you how to use them. If you are like me there won’t make a lot of sense until you start using them and suddenly the lightbulbs will go off. So let’s dive in with some simple ones you can expand on later.
 
-### A Basic Pattern
+#### A Basic Pattern
 Let's say you wanted to search for **<h2>This is the title</h2>** and replace it with **<h2 epub:type="title">This is the title</h2>**. First you identify the pattern, which in this case is text between two `<h2>` tags. Then you build a regex to identify this pattern:
 - `<h2>.*?</h2>`
 
@@ -84,7 +84,7 @@ You will then have to run another regex to change the all caps to lowercase. If 
 
 >**Note**: When building regexes remember spaces, tabs and line breaks count so always try to accommodate them in your search. 
 
-#### Basic wildcards/metacharacters
+##### Basic wildcards/metacharacters
 - `\n` — find new line (i.e paragraph break)
 - `\t` — find a tab
 - `\s` — find white space (including line breaks)
@@ -98,17 +98,17 @@ You will then have to run another regex to change the all caps to lowercase. If 
 - `|` — Or i.e. `this|that` will find 'this' or 'that'
 - `.*?` — is your basic wildcard e.g. \<p>.*?\</p> will find everything between the two tags. See *Advanced Patterns* for a breakdown of this combination.
 
-#### Basic replace functions
+##### Basic replace functions
 - `\L` — set all text to the right as lowercase
 - `\l` — first letter to the right as lowercase
 - `\U` — set all text to the right as uppercase
 - `\u` — first letter to the right as uppercase
 - `\E` — end change case i.e. \U or \L 
 
-### A bit more advanced
+#### A bit more advanced
 So what else can you do? In reality the options are unlimited but parsing the code can be a bit of a nightmare. There are online regex testers ([regextester.com](https://www.regextester.com/), [freeformatter.com/regex-tester.html](https://www.freeformatter.com/regex-tester.html) etc.) that will allow you to test out patterns before you try them on your project. Testing is often a good idea because while the undo function will often rescue you if you make a typo, every once in a while you will find you’ve made a mistake that is unrecoverable.
 
-#### Look ahead or Look behind
+##### Look ahead or Look behind
 - `(?=text)` — finds the position that immediately follows 'text'
 - `(?<=text)` — finds the position that immediately precedes 'text'
 - `(?!text)` — asserts that what immediately follows the position is not 'text'
@@ -142,11 +142,13 @@ Here is a handy [RegEx Cheat Sheet](https://gist.github.com/ccstone/5385334) to 
 - `([A-Z])([A-Z]{2,})` with `\U\1\L\2`
 	- This would replace a word that starts with a capital and is followed by 2 or more capitals (e.g. SOD) with a single capital and the rest lowercase (e.g. Sod), but it would not change AD or BC.
 
-### <a id="external_scripts">External scripts
+### <a id="external_scripts">External scripts</a>
 BBEdit also offers a way to run external scripts to extend its functionality. I have made a few to cover some of the more repetitive tasks like “rename file to clipboard” and “lowercase and dashes” (makes text url friendly) which you do a lot of when making headers for compilations and these again have keyboard shortcuts assigned to them. 
 
-Macs come with a program called *Script Editor* and it’s pretty easy to write (or download) simple scripts to take some of the drudgery out of making big changes:
+Macs come with a program called *Script Editor* and it’s pretty easy to write (or download) simple scripts to take some of the drudgery out of making big changes
 
+
+#### Sample scripts
 **lowercase and dashes.scpt**
 Converts selected text to lowercase and replaces spaces with dashes e.g. "The Tale of Bobby McGee" —> "the-tale-of-bobby-mcgee". Great for creating ids:
 ```
