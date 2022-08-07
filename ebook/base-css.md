@@ -93,7 +93,7 @@ i > em{
 }
 
 ```
-### cover images
+### Cover Images
 ```
 body.fullpage {
 	margin: 0;
@@ -193,6 +193,7 @@ margin-top: 20%;
 ```
 ### Praise (Page Two)
 **HTML:**
+
 `<p class="Endorsements">“This is an endosement”</p>`
 `<p class="EndorsementAttri"><span class="AttriEndorseName">Endorser_Name</span>, Their titles</p>`
 
@@ -248,7 +249,12 @@ font-weight:bold;
 ```
 
 
-## SVG etc
+## SVG etc.
+Using SVG will scale and be more responsive. SVGs can be created by: copy of material in InDesign and Paste in Place in Adobe Illustrator. Group, then rasterize the content. Right click on rasterized image and choose export as collection. THen choose SVG as the export option */
+Standard:
+`<img alt="" src="../images/titlepage.svg" epub:type="se:image.color-depth.black-on-transparent"/>` or  
+`<img alt="" class="epub-type-se-image-color-depth-black-on-transparent" src="../images/titlepage.png"/>`
+
 ```
 /* Cover & Title Page */
 
@@ -259,16 +265,25 @@ font-weight:bold;
 	object-position: center;
 }
 
-.title-page { /* Where posisble, use SVG. This will scale and be more responsive. SVGs can be created by: copy of material in InDesign and Paste in Place in Adobe Illustrator. Group, then rasterize the content. Right click on rasterized image and choose export as collection. THen choose SVG as the export option */
+.title-page { 
 	width:100vw;
 	height:100vh;
 	object-fit:contain; /* or :cover, which provides a more resposive experience, but will cut off the image if it is bigger than the container */
 	object-position: center;
 }
+
+/* Standard */
+section.epub-type-titlepage img{
+	display: block;
+	margin-top: 3em;
+	margin-right: auto;
+	margin-bottom: auto;
+	margin-left: auto;
+	width: 100%;
 ```
 
 
-### sup and sub
+### `sup` and `sub` Suggestions
 ```
 PREVENT SUB- AND SUPER- SCRIPT FROM AFFECTING LINE-HEIGHT - Sub- and super- script will affect line-height if you just use their dedicated keyword for vertical-align. By decreasing line-height to the minimum value Kindle supports (i.e. 1.2) and using % for vertical-align, we solve this problem and can vertically-align sub- and superscript more accurately.
 */
@@ -286,4 +301,9 @@ sup {
  vertical-align: super;
  vertical-align: 35%;
 }
+
+a[epub|type~="noteref"]{
+	font-size: .75em;
+	font-style: normal !important;
+	vertical-align: super;
 ```
