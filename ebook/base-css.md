@@ -307,3 +307,41 @@ a[epub|type~="noteref"]{
 	font-style: normal !important;
 	vertical-align: super;
 ```
+
+### Verse etc.
+**HTML**
+
+```
+<p>
+	<span>A line in a stanza</span>
+	<br/>
+	<span>Another line in a stanza</span>
+</p>
+<p>
+	<span>First line</span>
+	<br/>
+	<span class="i1">indented line.</span>
+</p>
+```
+
+**CSS**
+```
+.poem p > span{
+	display: block;
+	padding-left: 1em;
+	text-indent: -1em;
+}
+.poem p > span + br{
+	display: none;
+}
+
+p span.i1{
+	padding-left: 2em;
+	text-indent: -1em;
+}
+```
+
+## Special characters
+- nonbreaking space:  `&#160;`
+- nonbreaking character `&#8239;`
+- thin space: `&#8201;`
