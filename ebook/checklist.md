@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Checklist"
-permalink: ebook/
+permalink: checklist/
 ---
 
 {% include menu2.md %}
