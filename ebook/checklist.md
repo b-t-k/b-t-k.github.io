@@ -13,8 +13,8 @@ permalink: checklist/
 2. Re-add fonts
 3. Run Sigil subset plugin
 
-### Run checks
-[] run epubcheck
-[] Ace by Daisy
-[] FlightDeck
+## Run checks
+[] run epubcheck  
+[] Ace by Daisy  
+[] FlightDeck  
 
