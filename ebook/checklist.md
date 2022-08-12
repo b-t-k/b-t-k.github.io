@@ -27,7 +27,12 @@ permalink: checklist/
 #### fixes
 1. DroptoScript
  - move lang:tag
- - fix titles
+ - fix titles (only H1)
  - clean classes
+  - `"classMatch": "/_idGenCharOverride-\\d*/",`
+	`"classMatch": "/_idGenParaOverride-\\d*/",`
+	`"classMatch": "/_idGenDropcap-\\d*/",`
+	`"classMatch": "/_idGenObjectLayout-\\d*/",`
+	`"classMatch": "/_idGenObjectAttribute-\\d*/",`
 
 ##
