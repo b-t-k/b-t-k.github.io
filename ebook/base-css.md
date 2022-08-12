@@ -94,43 +94,43 @@ i > em{
 
 ```
 ### Cover Images
+#### HTML
 ```
-body.fullpage {
-	margin: 0;
-	padding: 0;
-}
-div.cover {
+<figure class="cover-img">
+	<img src="image/cover.jpg" class="cover-image" epub:type="cover" role="doc-cover" alt="this_is_alt_test."/>
+</figure>
+
+```
+
+#### CSS
+```
+figure.cover-img {
 	display: block;
 	text-align: center;
-	height: 95%;
 }
-img.coverimage {
+
+img.cover-image {
 	height: 95%;
+	object-fit:contain;
 	width: auto;
 }
 
-img.coverimage:only-of-type { /*overrides the previous setting, but only in newer systems that support CSS3 */
+img.cover-image:only-of-type { /*overrides the previous setting, but only in newer systems that support CSS3 */
 	height: 95vh;
 }
 
 @media amzn-kf8 {
-		/* CSS for KF8 devices */
-img.coverimage:only-of-type { /*overrides the previous setting, but only in newer systems that support CSS3 */
+	/* CSS for KF8 devices */
+	img.cover-image:only-of-type { /*overrides the previous setting, but only in newer systems that support CSS3 */
 	 height: 95%;
-}
-img.fullim:only-of-type { /*overrides the previous setting, but only in newer systems that support CSS3 */
-	height: 85%;
-}
+	}
 }
 
 @media amzn-mobi {
-		/* CSS for Mobi devices */
-img.coverimage:only-of-type { /*overrides the previous setting, but only in newer systems that support CSS3 */
+	/* CSS for Mobi devices */
+	img.cover-image:only-of-type { /*overrides the previous setting, but only in newer systems that support CSS3 */
 	 height: 95%;
-}
-img.fullim:only-of-type { /*overrides the previous setting, but only in newer systems that support CSS3 */
-	height: 85%;
-}
+	}
 }
 ```
 ## Common CSS
@@ -192,12 +192,11 @@ margin-top: 20%;
 }
 ```
 ### Praise (Page Two)
-**HTML:**
-
+#### HTML:
 `<p class="Endorsements">“This is an endosement”</p>`
 `<p class="EndorsementAttri"><span class="AttriEndorseName">Endorser_Name</span>, Their titles</p>`
 
-**CSS:**
+#### CSS:
 ```
 /*praise*/
 .Endorsements {
@@ -309,8 +308,7 @@ a[epub|type~="noteref"]{
 ```
 
 ### Verse etc.
-**HTML**
-
+#### HTML
 ```
 <p>
 	<span>A line in a stanza</span>
@@ -324,7 +322,7 @@ a[epub|type~="noteref"]{
 </p>
 ```
 
-**CSS**
+#### CSS
 ```
 .poem p > span{
 	display: block;
@@ -345,3 +343,7 @@ p span.i1{
 - nonbreaking space:  `&#160;`
 - nonbreaking character `&#8239;`
 - thin space: `&#8201;`
+
+## notes to sort
+
+`text-align: initial;` is used instead of `text-align: left;` whenever it's necessary to explicitly set left-aligned text. This allows the reading system to opt to use `text-align: justify;` if the user prefers.

@@ -18,3 +18,6 @@ permalink: checklist/
 [] Ace by Daisy  
 [] FlightDeck  
 
+## Page list
+1. pagestaker
+2. epubgify
