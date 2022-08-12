@@ -18,6 +18,16 @@ permalink: checklist/
 [] Ace by Daisy  
 [] FlightDeck  
 
-## Page list
+## Basic Edits
+
+### Page list
 1. pagestaker
-2. epubgify
+2. epubgrify
+
+#### fixes
+1. DroptoScript
+ - move lang:tag
+ - fix titles
+ - clean classes
+
+##
