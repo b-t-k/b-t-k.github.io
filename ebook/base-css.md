@@ -6,6 +6,9 @@ permalink: ebook/
 
 {% include menu2.md %}
 
+## TO DO
+Check into `p.first-child` class — it needs to be added as `p:first-child` isn't respected
+
 ## Base CSS
 ### Core CSS
 ```

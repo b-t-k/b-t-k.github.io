@@ -22,7 +22,8 @@ permalink: checklist/
 
 ### Page list
 1. pagestaker
-2. epubgrify
+2. epubogrify (not currently working)
+1. pagestakesearch_droplet
 
 #### fixes
 1. DroptoScript
