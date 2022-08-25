@@ -19,7 +19,21 @@ permalink: checklist/
 [] FlightDeck  
 
 ## Basic Edits
+- add aria roles
+- change <div> —> <section>
+- add urls (non space followed by dotcom followed by line break etc)
+```
+([^\s]+)\.(ca|com|org|uk|au|edu).*?(?=\n|\.| |<)
+```
+- remove pages from toc?
+- doublecheck <br/>s
 
+- check landmarks etc
+
+Objectstyle figure->to images
+Inline images also as figure
+
+- spine (hidden) `linear="no"`
 ### Page list
 1. pagestaker
 2. epubogrify (not currently working)

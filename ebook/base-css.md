@@ -9,6 +9,17 @@ permalink: ebook/
 ## TO DO
 Check into `p.first-child` class — it needs to be added as `p:first-child` isn't respected
 
+## Basic template
+```
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en-US" xml:lang="en-US">
+	<head>
+		<title>Title</title>
+		<link href="css/styles.css" rel="stylesheet" type="text/css"/>
+	</head>
+	<body>
+```
+
 ## Base CSS
 ### Core CSS
 ```
@@ -179,6 +190,27 @@ th, td, tr {
 }
 ```
 
+
+### sidebar, backgrounds
+```
+blockquote.sidebar{
+	margin: 0.5em;
+	padding: 1em;
+	-webkit-column-break-inside: avoid;
+	page-break-inside: avoid;
+	break-inside: avoid;
+}
+```
+
+```
+header{
+	background: url("../image/sharkbackground_aqua.png") no-repeat;
+	background-position: center center;
+	background-size: contain;
+	margin: 2em 0;
+	padding: 1em 0 2em;
+}
+```
 ### Copyright and Dedication
 ```
 /*copyright*/
@@ -348,5 +380,26 @@ p span.i1{
 - thin space: `&#8201;`
 
 ## notes to sort
-
+- look at Circular Flow for fixed layout
 `text-align: initial;` is used instead of `text-align: left;` whenever it's necessary to explicitly set left-aligned text. This allows the reading system to opt to use `text-align: justify;` if the user prefers.
+
+## Accessibility
+[https://kb.daisy.org/publishing/docs/metadata/schema.org/index.html#prop]
+```
+<metadata>
+  <meta property="schema:accessibilitySummary">
+     This publication conforms to WCAG 2.0 Level AA.
+  </meta>
+  <meta property="schema:accessMode">textual</meta>
+  <meta property="schema:accessMode">visual</meta>
+  <meta property="schema:accessModeSufficient">textual</meta>
+  <meta property="schema:accessibilityFeature">structuralNavigation</meta>
+  <meta property="schema:accessibilityFeature">MathML</meta>
+  <meta property="schema:accessibilityFeature">alternativeText</meta>
+  <meta property="schema:accessibilityFeature">longDescription</meta>
+  <meta property="schema:accessibilityHazard">noFlashingHazard</meta>
+  <meta property="schema:accessibilityHazard">noSoundHazard</meta>
+  <meta property="schema:accessibilityHazard">noMotionSimulationHazard</meta>
+  …
+</metadata>
+```
