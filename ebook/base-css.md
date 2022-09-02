@@ -6,19 +6,6 @@ permalink: ebook/
 
 {% include menu2.md %}
 
-## TO DO
-Check into `p.first-child` class — it needs to be added as `p:first-child` isn't respected
-
-## Basic template
-```
-<?xml version="1.0" encoding="utf-8"?>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en-US" xml:lang="en-US">
-	<head>
-		<title>Title</title>
-		<link href="css/styles.css" rel="stylesheet" type="text/css"/>
-	</head>
-	<body>
-```
 
 ## Base CSS
 ### Core CSS
@@ -107,6 +94,10 @@ i > em{
 }
 
 ```
+
+## Images
+
+**Note:** `max-width` not supported in KF8 (Kindle)
 ### Cover Images
 #### HTML
 ```
@@ -146,7 +137,52 @@ img.cover-image:only-of-type { /*overrides the previous setting, but only in new
 	 height: 95%;
 	}
 }
+
+
+.titlepage img{
+	display: block;
+	margin-top: 3em;
+	margin-right: auto;
+	margin-bottom: auto;
+	margin-left: auto;
+	width: 100%;
+
 ```
+
+### SVG for covers, full pages
+A "SVG wrapper" is sometimes applied to an image in order to scale it as large as possible on a page without distortion. This is not possible using just using HTML because screens can have widely differing aspect ratios. Title pages probably should fall back to png.
+
+```
+	<section id="cover" epub:type="cover">
+		<figure class="cover-img">
+			<svg xmlns="http://www.w3.org/2000/svg" height="100%" preserveAspectRatio="xMidYMid meet" version="1.1" viewBox="0 0 1428 2200" width="100%" xmlns:xlink="http://www.w3.org/1999/xlink">
+			<image width="1428" height="2200" xlink:href="../images/cover.jpg"/>
+			</svg>
+		</figure>
+	</section>
+```
+
+**Note**  
+6" x 9" = 1400px x 2100px  
+
+### content.opf
+`<item href="page_name.html" id="" media-type="application/xhtml+xml" properties="svg"/>`
+`<item href="Images/image_name_.svg" id="" media-type="image/svg+xml" />`
+
+*CSS*
+### Suggested
+```
+/* Cover & full page */
+
+.cover,
+.full-page {
+	width:100vw;
+	height:100vh;
+	object-fit:contain;
+	object-position: center;
+}
+```
+
 ## Common CSS
 
 ### Lists
@@ -249,6 +285,7 @@ font-weight:bold;
 ```
 
 ## Font Faces
+Check EULAs
 ```
 @font-face {
 	font-family:"Graphik";
@@ -281,40 +318,72 @@ font-weight:bold;
 	src : url("../font/Graphik-Black.otf");
 }
 ```
-
-
-## SVG etc.
-Using SVG will scale and be more responsive. SVGs can be created by: copy of material in InDesign and Paste in Place in Adobe Illustrator. Group, then rasterize the content. Right click on rasterized image and choose export as collection. THen choose SVG as the export option */
-Standard:
-`<img alt="" src="../images/titlepage.svg" epub:type="se:image.color-depth.black-on-transparent"/>` or  
-`<img alt="" class="epub-type-se-image-color-depth-black-on-transparent" src="../images/titlepage.png"/>`
-
+### A potential fix
+To remove font-weight and font-styles in css you can….  
+Change:
 ```
-/* Cover & Title Page */
-
-.cover {
-	width:100vw;
-	height:100vh;
-	object-fit:contain; /* or :cover, which provides a more resposive experience, but will cut off the image if it is bigger than the container */
-	object-position: center;
+	font-family:Graphik;
+	font-style:italic;
+	font-weight:normal;
+	src : url("../font/Graphik-Italic.otf");
+}
+@font-face {
+	font-family:Graphik;
+	font-style:normal;
+	font-weight:bold;
+	src : url("../font/Graphik-Bold.otf");
+}
+```
+to:
+```
+@font-face {
+	font-family:"Graphik Italic";
+	font-style:normal;
+	font-weight:normal;
+	src : url("../font/Graphik-Italic.otf");
 }
 
-.title-page { 
-	width:100vw;
-	height:100vh;
-	object-fit:contain; /* or :cover, which provides a more resposive experience, but will cut off the image if it is bigger than the container */
-	object-position: center;
+@font-face {
+	font-family:"Graphik Bold";
+	font-style:normal;
+	font-weight:normal;
+	src : url("../font/Graphik-Bold.otf");
 }
-
-/* Standard */
-section.epub-type-titlepage img{
-	display: block;
-	margin-top: 3em;
-	margin-right: auto;
-	margin-bottom: auto;
-	margin-left: auto;
-	width: 100%;
 ```
+
+### To subset fonts
+```
+@font-face {
+	font-family:JapaneseWithGentium;	src : url(font/Gentium.ttf);
+	unicode-range:U+0-2FF;
+}
+```
+### iBooks (from 2014)
+**NOT SURE IF THIS IS RELEVANT**
+Create file named `com.apple.ibooks.display-options.xml` in META-INF folder
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<display_options>
+	<platform name="*">
+		<option name-"specified-fonts">true</option>
+	</platform>
+</display_options>
+```
+And then in content.opf change:
+```
+<package version="3.0" unique-identifier="bookid" prefix="ibooks: http://vocabulary.itunes.apple.com/rdf/ibooks/vocabulary-extensions-1.0/" xmlns="http://www.idpf.org/2007/opf">
+```
+To:
+```
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="bookid" version="3.0"  prefix="rendition:http://idpfg.org/vocab/rendition/#ibooks:http://vocabulary.itunes.apple.com/rdf/ibooks/vocabulary-extensions-1.0/" >
+```
+
+```
+<package  xmlns=“http://www.idpf.org/2007/opf” version=“3.0” unique-identifier=“bookid” prefix=“ibooks: http://vocabulary.itunes.apple.com/rdf/ibooks/vocabulary-extensions-1.0/”>
+```
+Be sure to add `<meta property="iBooks:specified-fonts">true</meta>` to metadata in content.opf
+
+
 
 
 ### `sup` and `sub` Suggestions
