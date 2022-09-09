@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "BAse Templates"
+title: "Base Templates"
 permalink: templates/
 ---
 
@@ -53,3 +53,7 @@ permalink: templates/
 - `<meta property="schema:accessibilityFeature">noFlashingHazard</meta>`
 - `<meta property="schema:accessibilityFeature">noSoundHazard</meta>`
 - `<meta property="schema:accessibilityFeature">noMotionSimulationHazard</meta>`
+
+
+## T0C
+> Reference all text sections, even front and back matter, directly from the navigation file. If an HTML document is referenced in the spine, it should be referenced in the navigation file as well. Comprehensive navigation points to all parts of the book’s content ensure that all readers will be able to access the desired information efficiently.

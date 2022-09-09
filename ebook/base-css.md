@@ -87,12 +87,22 @@ p:first-child{
 	text-indent: 0;
 }
 
+cite{
+	font-style:italic;
+}
+
 i > i,
 em > i,
-i > em{
+i > em,
+cite > i{
 	font-style: normal;
 }
 
+hr{
+	border: none;
+	width: 0;
+	margin: 1em 0;
+}
 ```
 
 ## Images

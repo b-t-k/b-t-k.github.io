@@ -31,13 +31,16 @@ permalink: checklist/
 
 Check into `p.first-child` class — it needs to be added as `p:first-child` isn't respected
 
+### Specific changes
+- context breaks --> `<hr/>`
+
 ## Edit CSS
 - see [base css](/ebook/)
 
 ## Check navigation
 ### toc
-Check to see if it includes...
-- remove pages from toc?
+Check nav-toc vs contents.xhtml...
+- remove pages from nav-toc?
 
 
 ### Landmarks
@@ -96,7 +99,9 @@ Check to see if it includes...
 [] FlightDeck  
 
 
-
+# Indesign Checklist
+Alt text via object export style
+Story order via articles or Story
 
 
 
