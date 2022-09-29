@@ -28,8 +28,9 @@ permalink: templates/
     <dc:identifier>urn:isbn:9781459827585</dc:identifier>
 ```
 
-hide spine items
-`	<itemref idref="nav.xhtml" linear="no"/>`
+### Spine
+To hide spine items:
+`<itemref idref="nav.xhtml" linear="no"/>`
 
 
 
@@ -47,8 +48,7 @@ hide spine items
 	<meta property="schema:accessibilityHazard">none</meta>
 ```
 **Extra bits**
-- `<meta property="a11y:certifiedBy">Benetech</meta>`
-- `<meta property="a11y:certifierCredential">https://bornaccessible.org/certification/gca-credential/</meta>`
+
 - `<dc:source>print_source_ISBN</dc:source>`
 - `<meta property="schema:accessibilityFeature">printPageNUmbers</meta>`
 - `<meta property="schema:accessibilityFeature">alternativeText</meta>`
@@ -58,6 +58,25 @@ hide spine items
 - `<meta property="schema:accessibilityFeature">noFlashingHazard</meta>`
 - `<meta property="schema:accessibilityFeature">noSoundHazard</meta>`
 - `<meta property="schema:accessibilityFeature">noMotionSimulationHazard</meta>`
+
+### Certifiers
+- `<meta property="a11y:certifiedBy">Benetech</meta>`
+- `<meta property="a11y:certifierCredential">https://bornaccessible.org/certification/gca-credential/</meta>`
+
+The following example shows an EPUB 3 Publication that has been self-certified by the publisher (the values of the dc:publisher and a11y:certifiedBy property are the same).
+```
+<metadata>
+  …
+  <dc:publisher>Acme Publishing Inc.</dc:publisher>
+  <meta property="a11y:certifiedBy">Acme Publishing Inc.</meta>
+  <link rel="dcterms:conformsTo" href="http://www.idpf.org/epub/a11y/accessibility-20170105.html#wcag-aa"/>
+  …
+</metadata>
+```
+The following example shows a credential.
+
+`<meta property="a11y:certifierCredential">A+ Accessibility Rating</meta>`
+
 
 
 ## T0C
