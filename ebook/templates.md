@@ -28,6 +28,11 @@ permalink: templates/
     <dc:identifier>urn:isbn:9781459827585</dc:identifier>
 ```
 
+hide spine items
+`	<itemref idref="nav.xhtml" linear="no"/>`
+
+
+
 ### Accessibility Metadata
 ```
 	<meta property="schema:accessibilitySummary">This publication conforms to WCAG 2.1 Level AA.</meta>

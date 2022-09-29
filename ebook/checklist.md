@@ -74,6 +74,11 @@ Check nav-toc vs contents.xhtml...
 [templates](/templates/)
 - check textual or textual *and* visual
 
+## Metadata
+<dc:source id="src-id">urn:isbn:9780765331458</dc:source>
+
+?????? <meta property="identifier-type" refines="#uid" scheme="onix:codelist5">15</meta>
+
 ## Fonts
 ### Remove encryption
 [] removed
@@ -98,11 +103,21 @@ Check nav-toc vs contents.xhtml...
 [] Ace by Daisy  
 [] FlightDeck  
 
+# Accessibility Checklist
+1. Semantics, i, em lang etc.
+1. Proper alt descriptions and decorative images
+2. Proper hierarchy
+1. Sectioning and Aria roles
+1. Page lists
+1. Navigation: landmarks 
 
 # Indesign Checklist
+(https://helpx.adobe.com/indesign/using/export-content-epub-cc.html)
 Alt text via object export style
 Story order via articles or Story
 
-
-
+Preserve appearance
+image object styles?
+sidebar object styles
+adjust iamges manually
 

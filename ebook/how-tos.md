@@ -13,6 +13,10 @@ permalink: howtos/
 - export Inline images also as figure
 
 
+#pdfs
+- Use article panel to convey reading order
+
+
 #epub
 ## Fonts
 ### Remove encryption
@@ -38,3 +42,22 @@ permalink: howtos/
 	`"classMatch": "/_idGenDropcap-\\d*/",`
 	`"classMatch": "/_idGenObjectLayout-\\d*/",`
 	`"classMatch": "/_idGenObjectAttribute-\\d*/",`
+	
+# NOTES to sort
+Object export options 
+EPUB tab 
+relative to text flow
+Grouped image anchored and
+Rasterize container and customize alt text
+
+Add object styles:
+Export tag: figure
+Alt text can use xmp data
+Anchored object options
+
+
+# Thngs to ponder 
+ - filename conventions
+ - Adobe Bridge (metadata; XMP)
+
+ -  check python libraires
