@@ -159,6 +159,48 @@ img.cover-image:only-of-type { /*overrides the previous setting, but only in new
 
 ```
 
+#### Laura's (Blitz) CSS
+```
+img.Cover {
+    height:95vh;
+    object-fit:contain;
+    max-width:100%;
+}
+
+img.titlepage {
+    height:95vh;
+}
+
+
+hr.dbat {
+  height: 1em;
+  background: transparent url("../image/dbat.png") no-repeat center;
+  background-size: 2.5em 1.25em;
+  overflow: hidden;
+  page-break-inside: avoid;
+  break-inside: avoid;
+  border:none;
+}
+
+```
+
+
+```
+sub {
+  font-size: 0.675em;
+  line-height: 1.2;
+  vertical-align: sub;
+  vertical-align: -20%;
+}
+
+sup {
+  font-size: 0.675em;
+  line-height: 1.2;
+  vertical-align: super;
+  vertical-align: 35%;
+}
+```
+
 ### SVG for covers, full pages
 A "SVG wrapper" is sometimes applied to an image in order to scale it as large as possible on a page without distortion. This is not possible using just using HTML because screens can have widely differing aspect ratios. Title pages probably should fall back to png.
 

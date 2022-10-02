@@ -58,6 +58,7 @@ To hide spine items:
 - `<meta property="schema:accessibilityFeature">noFlashingHazard</meta>`
 - `<meta property="schema:accessibilityFeature">noSoundHazard</meta>`
 - `<meta property="schema:accessibilityFeature">noMotionSimulationHazard</meta>`
+- `<meta property="schema:accessibilitySummary">This publication conforms to WCAG 2.1 Level AA.</meta>`
 
 ### Certifiers
 - `<meta property="a11y:certifiedBy">Benetech</meta>`
@@ -77,7 +78,8 @@ The following example shows a credential.
 
 `<meta property="a11y:certifierCredential">A+ Accessibility Rating</meta>`
 
-
+### Summary
+o	GCA partners will no longer be required to include an `accessibilitySummary` and will be discouraged to add one unless the summary is including additional information not already provided in the metadata
 
 ## T0C
 > Reference all text sections, even front and back matter, directly from the navigation file. If an HTML document is referenced in the spine, it should be referenced in the navigation file as well. Comprehensive navigation points to all parts of the book’s content ensure that all readers will be able to access the desired information efficiently.
