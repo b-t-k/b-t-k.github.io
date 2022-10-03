@@ -184,6 +184,31 @@ hr.dbat {
 
 ```
 
+**Custom Lists**
+```
+ul {
+  list-style-image: url(star.svg);
+}
+
+ul {
+  padding-left: 2rem;
+  list-style-type: none;
+}
+
+ul li {
+  padding-left: 2rem;
+  background-image: url(star.svg);
+  background-position: 0 0;
+  background-size: 1.6rem 1.6rem;
+  background-repeat: no-repeat;
+}
+```
+
+**Abbr**
+Abbreviation markup: `<abbr title="Laugh Out Loud">LOL</abbr>`
+
+
+### Sub and Sup
 
 ```
 sub {
