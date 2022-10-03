@@ -510,6 +510,7 @@ Borrowed from [Standard ebooks](https://standardebooks.org/manual/1.7.0/7-high-l
 ```
 
 #### CSS
+
 ```
 .poem p > span{
 	display: block;
@@ -526,17 +527,25 @@ p span.i1{
 }
 ```
 
+# MISC
+
 ## Special characters
 - nonbreaking space:  `&#160;`
 - nonbreaking character `&#8239;`
 - thin space: `&#8201;`
+
+## Page breaks
+`page-break-inside:avoid;`
+- * rigidly applied
 
 ## notes to sort
 - look at Circular Flow for fixed layout
 `text-align: initial;` is used instead of `text-align: left;` whenever it's necessary to explicitly set left-aligned text. This allows the reading system to opt to use `text-align: justify;` if the user prefers.
 
 ## Accessibility
-(https://kb.daisy.org/publishing/docs/metadata/schema.org/index.html#prop)  
+
+(https://kb.daisy.org/publishing/docs/metadata/schema.org/index.html#prop)
+  
 See [templates](/templates/)
 ```
 <metadata>
