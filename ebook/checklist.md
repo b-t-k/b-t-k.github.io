@@ -70,6 +70,9 @@ Check nav-toc vs contents.xhtml...
 - glossary
 - acknowledgments
 
+## Nav toc
+- add in all extras (i.e. bio, about, etc) not in print ToC
+
 ## Add accessibility metadata
 [templates](/templates/)
 - check textual or textual *and* visual

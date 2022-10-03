@@ -33,6 +33,8 @@ permalink: howtos/
 ## Hide pages
 - spine (hidden) `linear="no"`
 
+## image size limit: 4 million pixels
+
 ## DroptoScript
  - move lang:tag
  - fix titles (only H1)
@@ -44,17 +46,24 @@ permalink: howtos/
 	`"classMatch": "/_idGenObjectAttribute-\\d*/",`
 	
 # NOTES to sort
-Object export options 
-EPUB tab 
-relative to text flow
-Grouped image anchored and
-Rasterize container and customize alt text
+- Object export options 
+- EPUB tab 
+- relative to text flow
+- Grouped image anchored and
+- Rasterize container and customize alt text
 
 Add object styles:
 Export tag: figure
 Alt text can use xmp data
 Anchored object options
 
+- Asides: navigated by header
+
+## Indesign export hints
+
+Auto leading for styles!
+Copy and paste emages to clean document
+Export as 1 chapter and split later
 
 # Thngs to ponder 
  - filename conventions
