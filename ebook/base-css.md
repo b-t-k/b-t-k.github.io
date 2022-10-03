@@ -39,10 +39,10 @@ h1, h2, h3, h4, h5, h6 {
 	break-inside: avoid;	
 	page-break-inside: avoid;
 	hyphens: none !important;
-		adobe-text-layout: optimizeSpeed; /* For Nook */
-		-webkit-hyphens: none !important;
-		-moz-hyphens: none !important;
-		-epub-hyphens: none;
+	adobe-text-layout: optimizeSpeed; /* For Nook */
+	-webkit-hyphens: none !important;
+	-moz-hyphens: none !important;
+	-epub-hyphens: none;
 	margin:	0;
 	padding:0;
 	text-indent: 0;
@@ -106,6 +106,10 @@ hr{
 ```
 
 ## Images
+### Decorative Images
+Correctly labeled they are skippable by readers
+`<img class="dingbat" src="images/asterisks.png" alt="" role="presentation"/>`
+
 
 **Note:** `max-width` not supported in KF8 (Kindle)
 ### Cover Images
@@ -489,6 +493,8 @@ a[epub|type~="noteref"]{
 ```
 
 ### Verse etc.
+Borrowed from [Standard ebooks](https://standardebooks.org/manual/1.7.0/7-high-level-structural-patterns#7.5)
+
 #### HTML
 ```
 <p>
@@ -530,7 +536,8 @@ p span.i1{
 `text-align: initial;` is used instead of `text-align: left;` whenever it's necessary to explicitly set left-aligned text. This allows the reading system to opt to use `text-align: justify;` if the user prefers.
 
 ## Accessibility
-[https://kb.daisy.org/publishing/docs/metadata/schema.org/index.html#prop]
+(https://kb.daisy.org/publishing/docs/metadata/schema.org/index.html#prop)  
+See [templates](/templates/)
 ```
 <metadata>
   <meta property="schema:accessibilitySummary">

@@ -7,10 +7,9 @@ permalink: checklist/
 
 {% include menu2.md %}
 
-
+# epub Checklist
 - deploy HTML 5 and clean up html
   - clean up all overrides
-  - add href to urls
 - edit the CSS down
 - check navigation
   - standardize toc
@@ -18,9 +17,22 @@ permalink: checklist/
   - add ncx
 - add accessibility metadata
 - check fonts (encryption and subsets)
-- search and delete erroneous language declarations (extra fr or la etc.), move language declarations and fix emphasis and italics
+- search and delete erroneous language declarations (extra fr or la etc.), move language declarations 
+- fix emphasis and italics, bold and strong etc. 
 - Add epub:type and ARIA roles
+- add external https links and urls
 - run though epubchecker and Ace by DAISY
+- Flightdeck if available
+
+# Accessibility Checklist
+1. Semantics, i, em lang etc.
+2. Double check `<li>` structures
+1. Proper alt descriptions and decorative images
+2. Proper hierarchy
+1. Correct sectioning and ARIA roles
+1. Page lists
+1. Navigation: landmarks 
+1. LOI and LOT (list of tables)
 
 ## Fix HTML
 - change `<div>` --> `<section>`
@@ -38,9 +50,9 @@ Check into `p.first-child` class — it needs to be added as `p:first-child` isn
 - see [base css](/ebook/)
 
 ## Check navigation
-### toc
-Check nav-toc vs contents.xhtml...
-- remove pages from nav-toc?
+### Nav toc
+- add in all extras (i.e. bio, about, etc) not in print ToC
+- leave toc.xhtml as is
 
 
 ### Landmarks
@@ -49,13 +61,15 @@ Check nav-toc vs contents.xhtml...
 <nav epub:type="landmarks" hidden="">
   <ol>
     <li><a epub:type="cover" href="cover.xhtml">Cover</a></li>
-    <li><a epub:type="titlepage" href="copyright.xhtml#title">Title Page</a></li>
-    <li><a epub:type="toc" href="toc.xhtml#TOC">Table of Contents</a></li>
+    <li><a epub:type="frontmatter" href="copyright.xhtml#title">Preface</a></li>
+    <li><a epub:type="toc" href="toc.xhtml">Table of Contents</a></li>
     <li><a epub:type="bodymatter" href="chapter1.xhtml">Start of Content</a></li>
+    <li><a epub:type="backmatter" href="afterword.xhtml#title">Afterword</a></li>
+    <li><a epub:type="loi" href="loi.xhtml">List of Illustrations</a></li>
   </ol>
 </nav>
 ```
-**Possible Landmarks**
+#### Possible Landmarks
 - cover – the book cover(s), jacket information, etc.
 - toc – table of contents
 - bodymatter – First "real" page of content (e.g. "Chapter 1")
@@ -70,8 +84,13 @@ Check nav-toc vs contents.xhtml...
 - glossary
 - acknowledgments
 
-## Nav toc
-- add in all extras (i.e. bio, about, etc) not in print ToC
+According to Laura Brady extensive landmarks are not really used. You can limit it to:
+COVER  
+FRONTMATTER  
+BODYMATTER  
+BACKMATTER  
+LOI etc.  
+
 
 ## Add accessibility metadata
 [templates](/templates/)
@@ -100,19 +119,14 @@ Check nav-toc vs contents.xhtml...
 ## Add ARIA roles and double check epub:type
 - [Daisy aria roles](https://kb.daisy.org/publishing/docs/html/dpub-aria/)
 - check spreadsheet (/Projects/ Ebook Production/Doc-roles.xlsx)
+- avoid overuse of ARIA roles
 
 ## Run checks
 [] run epubcheck  
 [] Ace by Daisy  
 [] FlightDeck  
 
-# Accessibility Checklist
-1. Semantics, i, em lang etc.
-1. Proper alt descriptions and decorative images
-2. Proper hierarchy
-1. Sectioning and Aria roles
-1. Page lists
-1. Navigation: landmarks 
+
 
 # Indesign Checklist
 (https://helpx.adobe.com/indesign/using/export-content-epub-cc.html)
