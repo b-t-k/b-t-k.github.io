@@ -464,10 +464,26 @@ To:
 ```
 Be sure to add `<meta property="iBooks:specified-fonts">true</meta>` to metadata in content.opf
 
+### consider adding more fonts to CSS
+`font-family:"Janson Text", serif;` --> `font-family:"Janson Text", "Georgia", "Times", serif;`
+
+## Drop caps best practice
+```
+
+.FirstParagraph {
+display: inline-block;
+}
+.Dropcap, .FirstParagraph::first-letter {
+font-size: 2.5em;
+font-weight: bold;
+}
+
+`<p class=”FirstParagraph”>It was a dark and stormy night when the cowboy set out in search of adventure.</p>`
 
 
+```
 
-### `sup` and `sub` Suggestions
+## `sup` and `sub` Suggestions
 ```
 PREVENT SUB- AND SUPER- SCRIPT FROM AFFECTING LINE-HEIGHT - Sub- and super- script will affect line-height if you just use their dedicated keyword for vertical-align. By decreasing line-height to the minimum value Kindle supports (i.e. 1.2) and using % for vertical-align, we solve this problem and can vertically-align sub- and superscript more accurately.
 */

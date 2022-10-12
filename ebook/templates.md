@@ -81,5 +81,13 @@ The following example shows a credential.
 ### Summary
 - GCA partners will no longer be required to include an `accessibilitySummary` and will be discouraged to add one unless the summary is including additional information not already provided in the metadata
 
+## Poetry/verse
+see [https://kb.daisy.org/publishing/docs/html/poetry.html](https://kb.daisy.org/publishing/docs/html/poetry.html)
+
+and [https://standardebooks.org/manual/1.7.0/7-high-level-structural-patterns#7.5](https://standardebooks.org/manual/1.7.0/7-high-level-structural-patterns#7.5)
+
 ## ToC
 > Reference all text sections, even front and back matter, directly from the navigation file. If an HTML document is referenced in the spine, it should be referenced in the navigation file as well. Comprehensive navigation points to all parts of the book’s content ensure that all readers will be able to access the desired information efficiently.
+
+## Accessibility?
+`<time datetime="1895">1895</time>`
