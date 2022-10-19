@@ -39,7 +39,7 @@ To hide spine items:
 	<meta property="schema:accessibilitySummary">This publication conforms to WCAG 2.1 Level AA.</meta>
 	<link href="http://www.idpf.org/epub/a11y/accessibility-20170105.html#wcag-aa" rel="dcterms:conformsTo"/>
 	<meta property="schema:accessMode">textual</meta>
-	<meta property="schema:accessMode">Visual</meta>
+	<meta property="schema:accessMode">visual</meta>
 	<meta property="schema:accessModeSufficient">textual, visual</meta>
 	<meta property="schema:accessibilityFeature">structuralNavigation</meta>
 	<meta property="schema:accessibilityFeature">tableOfContents</meta>
@@ -50,15 +50,31 @@ To hide spine items:
 **Extra bits**
 
 - `<dc:source>print_source_ISBN</dc:source>`
-- `<meta property="schema:accessibilityFeature">printPageNUmbers</meta>`
+- `<meta property="schema:accessibilityFeature">printPageNumbers</meta>`
+
 - `<meta property="schema:accessibilityFeature">alternativeText</meta>`
-- `<meta property="schema:accessibilityFeature">tableOfContents</meta>`
 - `<meta property="schema:accessibilityAPI">ARIA</meta>`
 - `<meta property="schema:accessibilityFeature">displayTransformability</meta>`
+
 - `<meta property="schema:accessibilityFeature">noFlashingHazard</meta>`
 - `<meta property="schema:accessibilityFeature">noSoundHazard</meta>`
 - `<meta property="schema:accessibilityFeature">noMotionSimulationHazard</meta>`
+
 - `<meta property="schema:accessibilitySummary">This publication conforms to WCAG 2.1 Level AA.</meta>`
+
+**Remember page source if using printPageNumbers**
+
+### Page list
+```
+<nav epub:type="page-list" id="pagelist" role="doc-pagelist">
+<h1>Print Page List</h1>
+  <ol>
+    <li><a href="cover.xhtml#page_i">page i</a></li>
+    <li><a href="page212.xhtml#page_210">210</a></li>
+  </ol>
+</nav>
+```
+
 
 ### Certifiers
 - `<meta property="a11y:certifiedBy">Benetech</meta>`
