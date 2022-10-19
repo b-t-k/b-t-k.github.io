@@ -13,20 +13,20 @@ permalink: howtos/
 - export Inline images also as figure
 
 
-#pdfs
+# pdfs
 - Use article panel to convey reading order
 
 
 # xml:lang
-Subtags: (https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry)
+Subtags: [https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry]
 
-*Non-linguistic** Use the subtag zxx when the text is known to be not in any language.
+**Non-linguistic** Use the subtag *zxx* when the text is known to be not in any language.  
 `xml:lang="zxx"`
-`<p>Here is a list of part numbers: <span lang="zxx">9RUI34 8XOS12 3TYY85</span>.</p>`
+`<p>Here is a list of part numbers: <span xml:lang="zxx">9RUI34 8XOS12 3TYY85</span>.</p>`
 
-*Undetermined*:
-`xml:lang="und"`
-**However you should only tag text as undetermined if you can't just leave it as is. In practice, this means you should only use this markup if the undetermined text is embedded in content that has already been labeled for language in some way.**
+**Undetermined**:
+`xml:lang="und"`  
+*However you should only tag text as undetermined if you can't just leave it as is. In practice, this means you should only use this markup if the undetermined text is embedded in content that has already been labeled for language in some way.*
 
 
 Athapascan languages ath  
@@ -49,9 +49,9 @@ Slave (Athapascan) den
 Tlingit tli  
 Tsimshian tsi  
 Wakashan languages wak  
-(https://www.nationsonline.org/oneworld/language_code.htm)
+[https://www.nationsonline.org/oneworld/language_code.htm]
 
-#epub
+# epub
 ## Fonts
 ### Remove encryption
 [] removed
