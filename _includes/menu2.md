@@ -3,3 +3,4 @@
 1. [base css](/ebook/)
 2. [checklist](/checklist)
 2. [templates](/templates)
+2. [how-to's](/howtos)
