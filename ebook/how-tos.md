@@ -18,7 +18,7 @@ permalink: howtos/
 
 
 # xml:lang
-Subtags: [https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry]
+Subtags: [https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry](https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry)
 
 **Non-linguistic** Use the subtag *zxx* when the text is known to be not in any language.  
 `xml:lang="zxx"`
@@ -49,7 +49,7 @@ Slave (Athapascan) den
 Tlingit tli  
 Tsimshian tsi  
 Wakashan languages wak  
-[https://www.nationsonline.org/oneworld/language_code.htm]
+[https://www.nationsonline.org/oneworld/language_code.htm](https://www.nationsonline.org/oneworld/language_code.htm)
 
 # epub
 ## Fonts
