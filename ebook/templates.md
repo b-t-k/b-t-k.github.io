@@ -14,12 +14,36 @@ permalink: templates/
 		<title>Title</title>
 		<link href="css/styles.css" rel="stylesheet" type="text/css"/>
 	</head>
-	<body>
-		<section>
+		<body epub:type="bodymatter">
+		<section aria-labelledby="ch01" role="doc-chapter" epub:type="chapter">
+			<h1 class="chapter-name" id="ch01" epub:type="title">CHAPTER NUMBER</h1>
 		
 		</section>
 	</body>
 </html>
+```
+
+```
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" epub:prefix="z3998: http://www.daisy.org/z3998/2012/vocab/structure/" xml:lang="en-GB">
+	<head>
+		<title>Chapter IV: Al-Kantara, or “The Bridge”</title>
+		<link href="../css/core.css" rel="stylesheet" type="text/css"/>
+		<link href="../css/local.css" rel="stylesheet" type="text/css"/>
+	</head>
+	<body epub:type="bodymatter z3998:fiction">
+		<section id="chapter-4" epub:type="chapter">
+			<header>
+				<p xml:lang="ar">القنطرة</p>
+				<hgroup>
+					<h2>
+						<span epub:type="label">Chapter</span>
+						<span epub:type="ordinal z3998:roman">IV</span>
+					</h2>
+					<h3 epub:type="title"><i xml:lang="ar-Latn">Al-Kantara</i>, or “The Bridge”</h3>
+				</hgroup>
+			</header>
+			<p>When the hour of public executions had arrived and the boys were assembled once more at their uncle’s feet to hear the story of his fortunes, (their minds full of his last success), the old man, still occupied with that pleasing memory, began at once the continuation of his life.</p>
 ```
 
 ## Content OPF

@@ -10,6 +10,7 @@ permalink: howtos/
 
 # Indesign
 - add Object style: figure -> to images
+- add object style: aside -> sidebars
 - export Inline images also as figure
 
 

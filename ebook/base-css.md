@@ -82,7 +82,7 @@ h5 + p,
 h6 + p,
 header + p,
 hr + p,
-p.first-child,
+p.no-indent,
 p:first-child{
 	text-indent: 0;
 }
@@ -103,6 +103,21 @@ hr{
 	width: 0;
 	margin: 1em 0;
 }
+
+p.spbf {
+	margin-top: 1em;
+}
+
+p.spaf {
+	margin-bottom: 1em;
+}
+
+a {
+	color:initial !important;
+	font-size:inherit;
+	text-decoration:none;	
+}
+
 ```
 
 ## Images
@@ -115,7 +130,7 @@ Correctly labeled they are skippable by readers
 ### Cover Images
 #### HTML
 ```
-<figure class="cover-img">
+<figure class="cover">
 	<img src="image/cover.jpg" class="cover-image" epub:type="cover" role="doc-cover" alt="this_is_alt_test."/>
 </figure>
 
@@ -123,37 +138,37 @@ Correctly labeled they are skippable by readers
 
 #### CSS
 ```
-figure.cover-img {
+figure.cover {
 	display: block;
 	text-align: center;
 }
 
-img.cover-image {
+img.cover {
 	height: 95%;
 	object-fit:contain;
 	width: auto;
 }
 
-img.cover-image:only-of-type { /*overrides the previous setting, but only in newer systems that support CSS3 */
+img.cover:only-of-type { /*overrides the previous setting, but only in newer systems that support CSS3 */
 	height: 95vh;
 }
 
 @media amzn-kf8 {
 	/* CSS for KF8 devices */
-	img.cover-image:only-of-type { /*overrides the previous setting, but only in newer systems that support CSS3 */
+	img.cover:only-of-type { /*overrides the previous setting, but only in newer systems that support CSS3 */
 	 height: 95%;
 	}
 }
 
 @media amzn-mobi {
 	/* CSS for Mobi devices */
-	img.cover-image:only-of-type { /*overrides the previous setting, but only in newer systems that support CSS3 */
+	img.cover:only-of-type { /*overrides the previous setting, but only in newer systems that support CSS3 */
 	 height: 95%;
 	}
 }
 
 
-.titlepage img{
+.fullpage img{
 	display: block;
 	margin-top: 3em;
 	margin-right: auto;
