@@ -347,6 +347,8 @@ If there was more than one blockquote and the poster was in the second one you c
   * eventually I will also add links to the cover art, artist and copyright “proof”
   * I also store my long description here after I write it.
 
+(**dajare** created a [GIST template](https://gist.github.com/dajare/f30f4be78c50d7a56485254a38adff1d) for his version which you can use if you would like )
+
 >In this file I copy the command from the step-by-step:
 
 >`se create-draft --author="Robert Louis Stevenson" --title="The Strange Case of Dr. Jekyll and Mr. Hyde" --pg-id=43`
