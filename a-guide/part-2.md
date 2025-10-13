@@ -53,14 +53,14 @@ Be careful with Title Case as it uses a slightly different set of rules than Sta
 ### Search and Replaces
 This is where using an editor like BBEdit shines. Much of the work you do in creating a Standard ebook is searching out patterns created by the original producer and replacing them with a properly formatted ‘standard’ pattern. BBEDit’s *Multi-File Search* can make short work of a lot of the tediousness.
 
-Remember to open your project (see above) rather than individual files. The select *Multi-File Search* and ensure your project folder is selected in the *Search in:* box. You will also want to ensure that in most cases Case Sensitive, Entire Word and Grep are selected. Grep stands for “global regular expression print” and is the utility that uses any regexes you build to search the files.
+Remember to open your project (see above) rather than individual files. Then select *Multi-File Search* and ensure your project folder is selected in the *Search in:* box. You will also want to ensure that in most cases Case Sensitive, Entire Word and Grep are selected. Grep stands for “global regular expression print” and is the utility that uses any regexes you build to search the files.
 
 ![multi file find window](/images/multi-file.png "BBEdit Multi-file find")
 
 The search and replace in the image will find words in all caps and replace them with upper/lower. We will look at the specifics of that later.
 
 ### <a id="search_replaces_and_regexes"></a>Search & Replaces and Regexes [↺](#toc)
-A guide ro regexes is beyond the scope of this project and there are tons and tons of tutorial and videos about there that will attempt to teach you how to use them. If you are like me there won’t make a lot of sense until you start using them and suddenly the lightbulbs will go off. So let’s dive in with some simple ones you can expand on later.
+A guide to regexes is beyond the scope of this project and there are tons and tons of tutorial and videos about there that will attempt to teach you how to use them. If you are like me there won’t make a lot of sense until you start using them and suddenly the lightbulbs will go off. So let’s dive in with some simple ones you can expand on later.
 
 #### A Basic Pattern
 Let's say you wanted to search for **<h2>This is the title</h2>** and replace it with **<h2 epub:type="title">This is the title</h2>**. First you identify the pattern, which in this case is text between two `<h2>` tags. Then you build a regex to identify this pattern:
